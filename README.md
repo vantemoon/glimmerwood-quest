@@ -1,3 +1,3 @@
-# glimmerwood-quest
- 
+# Glimmerwood Quest
+
 **Glimmerwood Quest** is a single-player, stage-based puzzle combat game. The player has to clear different stages of the game to escape Glimmerwood. At the start of the game, the player will get to choose between different character classes to play, which determines the solutions that are available to clear the stages. As the player advances each stage, their character will obtain pieces of an amulet and unlock new abilities. Each stage increases in difficulty as it introduces more obstacles, such as different monsters or timed mechanics. The game ends when the character completes the final stage and escapes Glimmerwood.
