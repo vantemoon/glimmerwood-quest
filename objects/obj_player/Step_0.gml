@@ -12,15 +12,15 @@ hsp = _move * walksp;
 vsp = vsp + grv;
 
 // Single jump
-if (place_meeting(x, y + 1, oWall)) && key_jump
+if (place_meeting(x, y + 1, obj_wall)) && key_jump
 {
 	vsp = -9.5;
 }
 
 // Horizontal Collision
-if (place_meeting(x + hsp, y, oWall))
+if (place_meeting(x + hsp, y, obj_wall))
 {
-	while (!place_meeting(x + sign(hsp), y, oWall))
+	while (!place_meeting(x + sign(hsp), y, obj_wall))
 	{
 		x  = x + sign(hsp);
 	}
@@ -29,9 +29,9 @@ if (place_meeting(x + hsp, y, oWall))
 x = x + hsp;
 
 // Vertical Collision
-if (place_meeting(x, y + vsp, oWall))
+if (place_meeting(x, y + vsp, obj_wall))
 {
-	while (!place_meeting(x, y + sign(vsp), oWall))
+	while (!place_meeting(x, y + sign(vsp), obj_wall))
 	{
 		y = y + sign(vsp);
 	}
