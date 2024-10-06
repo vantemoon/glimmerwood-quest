@@ -2,7 +2,7 @@
 
 hsp = 0;
 vsp = 0;
-grv = 0.4;
+grv = 0.8;
 walksp = 4;
 
 key_left = false;
