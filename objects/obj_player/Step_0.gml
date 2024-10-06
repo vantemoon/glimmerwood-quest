@@ -14,7 +14,7 @@ vsp = vsp + grv;
 // Single jump
 if (place_meeting(x, y + 1, obj_wall)) && key_jump
 {
-	vsp = -27;
+	vsp = -20;
 }
 
 // Horizontal Collision
