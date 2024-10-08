@@ -1,6 +1,6 @@
 /// @description Movement control
 
-#region// Get Player Input
+#region Get Player Input
 
 if (has_control)
 {
@@ -17,7 +17,7 @@ else
 
 #endregion
 
-#region // Calculate Movement
+#region Calculate Movement
 
 var _move = key_right - key_left;
 

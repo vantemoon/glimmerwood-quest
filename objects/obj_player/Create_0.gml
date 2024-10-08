@@ -10,3 +10,6 @@ key_right = false;
 key_jump = false;
 
 has_control = true;
+
+max_hp = 3;
+curr_hp = max_hp;
