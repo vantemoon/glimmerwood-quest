@@ -8,3 +8,5 @@ walksp = 4;
 key_left = false;
 key_right = false;
 key_jump = false;
+
+has_control = true;

@@ -1,18 +1,31 @@
 /// @description Movement control
 
-// Get Player Input
-key_left = keyboard_check(vk_left);
-key_right = keyboard_check(vk_right);
-key_jump = keyboard_check_pressed(vk_space);
+#region// Get Player Input
 
-// Calculate Movement
+if (has_control)
+{
+	key_left = keyboard_check(vk_left);
+	key_right = keyboard_check(vk_right);
+	key_jump = keyboard_check_pressed(vk_space);
+}
+else
+{
+	key_left = false;
+	key_right = false;
+	key_jump = false;
+}
+
+#endregion
+
+#region // Calculate Movement
+
 var _move = key_right - key_left;
 
 hsp = _move * walksp;
 vsp = vsp + grv;
 
 // Single jump
-if (place_meeting(x, y + 1, obj_wall)) && key_jump
+if (place_meeting(x, y + 1, obj_wall)) and key_jump
 {
 	vsp = -20;
 }
@@ -38,3 +51,5 @@ if (place_meeting(x, y + vsp, obj_wall))
 	vsp = 0;
 }
 y = y + vsp;
+
+#endregion
