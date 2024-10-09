@@ -1,3 +1,3 @@
 /// @description Restart (debug)
 
-slide_trnasition(TRANS_MODE.RESTART);
+slide_transition(TRANS_MODE.RESTART);
