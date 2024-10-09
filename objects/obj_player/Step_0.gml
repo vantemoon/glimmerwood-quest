@@ -42,6 +42,14 @@ if (place_meeting(x + hsp, y, obj_wall))
 	}
 	hsp = 0;
 }
+if (place_meeting(x + hsp, y, obj_tile_ground))
+{
+	while (!place_meeting(x + sign(hsp), y, obj_tile_ground))
+	{
+		x  = x + sign(hsp);
+	}
+	hsp = 0;
+}
 x = x + hsp;
 
 // Vertical Collision
