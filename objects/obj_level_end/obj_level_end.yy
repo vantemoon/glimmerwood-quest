@@ -8,8 +8,8 @@
   "name":"obj_level_end",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Utilities",
+    "path":"folders/Objects/Utilities.yy",
   },
   "parentObjectId":null,
   "persistent":false,
