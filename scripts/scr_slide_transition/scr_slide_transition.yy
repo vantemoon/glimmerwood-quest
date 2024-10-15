@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"SlideTransition",
+  "%Name":"scr_slide_transition",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"SlideTransition",
+  "name":"scr_slide_transition",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",

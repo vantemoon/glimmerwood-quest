@@ -133,8 +133,8 @@
   ],
   "name":"rm_one",
   "parent":{
-    "name":"Rooms",
-    "path":"folders/Rooms.yy",
+    "name":"Archive",
+    "path":"folders/Rooms/Archive.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

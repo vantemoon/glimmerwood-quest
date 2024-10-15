@@ -87,8 +87,8 @@
   ],
   "name":"rm_two",
   "parent":{
-    "name":"Rooms",
-    "path":"folders/Rooms.yy",
+    "name":"Archive",
+    "path":"folders/Rooms/Archive.yy",
   },
   "parentRoom":null,
   "physicsSettings":{
