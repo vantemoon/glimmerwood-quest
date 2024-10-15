@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":7,
   "parent":{
-    "name":"Glimmerwood Quest",
-    "path":"Glimmerwood Quest.yyp",
+    "name":"Obstacles",
+    "path":"folders/Sprites/Obstacles.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

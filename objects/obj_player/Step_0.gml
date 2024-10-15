@@ -19,9 +19,9 @@ else
 
 #region // Calculate Movement
 
-var _move = key_right - key_left;
+// var _move = key_right - key_left;
 
-hsp = _move * walksp;
+// hsp = _move * walksp;
 vsp = vsp + grv;
 
 var _jumping = false;
@@ -29,7 +29,7 @@ var _jumping = false;
 // Single jump
 if (place_meeting(x, y + 1, obj_tile_ground)) and key_jump
 {
-	vsp = -20;
+	vsp = -23;
 	_jumping = true;
 }
 
