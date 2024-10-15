@@ -7,6 +7,7 @@ function ground_check()
 		ducking = true;
 		jumping = false;
 		falling = true;
+		slashing = false;
 	}
 		
 	if (place_meeting(x, y + 1, obj_tile_ground))
