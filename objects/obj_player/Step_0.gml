@@ -9,3 +9,4 @@ slash_check();
 collision_check();
 
 set_sprite();
+health_check();
