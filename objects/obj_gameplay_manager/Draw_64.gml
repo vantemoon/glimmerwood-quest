@@ -14,6 +14,6 @@ draw_set_halign(fa_left);
 draw_text(100, 200,
 		  "Zone " + string(global.current_zone + 1));
 draw_text(100, 240,
-		  "Speed " + string(global.ground_speed * global.speed_modifier));
+		  "Speed " + string(abs(global.ground_speed * global.speed_modifier)));
 draw_text(100, 280, 
 		  "Magical  flower " + string(obj_player.num_flower));

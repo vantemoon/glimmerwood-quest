@@ -2,5 +2,5 @@
 
 x += global.ground_speed * global.speed_modifier;
 
-if (x <= -100)
+if (x <= -300)
 	instance_destroy();

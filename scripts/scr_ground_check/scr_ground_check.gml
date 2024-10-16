@@ -15,7 +15,8 @@ function ground_check()
 		// Player is touching the ground
 		vsp = 0;
 		jumping = false;
-		falling = false;
+		if (place_meeting(x, y + 5, obj_tile))
+			falling = false;
 		
 		if (!duck_key)
 			ducking = false;
@@ -38,9 +39,9 @@ function ground_check()
 		{
 			if (vsp <= termsp) 
 				vsp += grv;
-				
-			if (sign(vsp) == 1) 
-				falling = true;
 		}
+		
+		//if (vsp > 0) 
+		//	falling = true;
 	}
 }

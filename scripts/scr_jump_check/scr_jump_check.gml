@@ -3,6 +3,7 @@
 function jump_check(){
 	if (jumping)
 	{
+
 		if (vsp < 0)
 		{
 			jumping = true;

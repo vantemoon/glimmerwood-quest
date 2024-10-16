@@ -8,16 +8,18 @@ switch (choose(0, 0, 0, 1, 2, 2, 3, 4, 4)) {
 	
 	case 0: // Generating magical flowers on the ground
 		instance_create_layer(room_width + 520, _ypos, "Instances", obj_magical_flower_blue);
-		instance_create_layer(room_width + 584, _ypos, "Instances", obj_magical_flower_purple);
-		instance_create_layer(room_width + 648, _ypos, "Instances", obj_magical_flower_pink);
+		instance_create_layer(room_width + 600, _ypos, "Instances", obj_magical_flower_purple);
+		instance_create_layer(room_width + 680, _ypos, "Instances", obj_magical_flower_pink);
 		alarm[0] = irandom_range(game_get_speed(gamespeed_fps) * 1, game_get_speed(gamespeed_fps) * 2);
 		break;
 		
 	case 1:
-		instance_create_layer(room_width + 520, _ypos, "Instances", obj_slope_left);
+		// instance_create_layer(room_width + 520, _ypos, "Instances", obj_slope_left);
 		instance_create_layer(room_width + 714, _ypos, "Instances", obj_spikes);
 		instance_create_layer(room_width + 714, _ypos - 300, "Instances", obj_magical_flower_blue);
-		instance_create_layer(room_width + 908, _ypos, "Instances", obj_slope_right);
+		instance_create_layer(room_width + 842, _ypos, "Instances", obj_spikes);
+		instance_create_layer(room_width + 842, _ypos - 300, "Instances", obj_magical_flower_blue);
+		// instance_create_layer(room_width + 1036, _ypos, "Instances", obj_slope_right);
 		alarm[0] = irandom_range(game_get_speed(gamespeed_fps), game_get_speed(gamespeed_fps) * 2);
 		break;
 		
