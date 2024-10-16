@@ -10,7 +10,7 @@ function ground_check()
 		slashing = false;
 	}
 		
-	if (place_meeting(x, y + 1, obj_tile_ground))
+	if (place_meeting(x, y + 1, obj_tile))
 	{
 		// Player is touching the ground
 		vsp = 0;

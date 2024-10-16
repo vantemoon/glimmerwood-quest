@@ -13,8 +13,12 @@ enum ZONE
 	BOSS
 }
 
+global.current_zone = ZONE.ONE;
+global.zone_one_complete = false;
+global.zone_two_complete = false;
+global.zone_three_complete = false;
+global.zone_boss_complete = false;
 global.game_over = false;
-global.current_stage = ZONE.ONE;
 
 global.current_score = 0;
 alarm[0] = 5;

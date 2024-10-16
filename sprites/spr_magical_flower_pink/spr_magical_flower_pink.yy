@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":7,
   "parent":{
-    "name":"Items",
-    "path":"folders/Sprites/Items.yy",
+    "name":"Magical flowers",
+    "path":"folders/Sprites/Items/Magical flowers.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

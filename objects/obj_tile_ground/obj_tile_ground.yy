@@ -11,7 +11,10 @@
     "name":"Tiles",
     "path":"folders/Objects/Tiles.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_tile",
+    "path":"objects/obj_tile/obj_tile.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

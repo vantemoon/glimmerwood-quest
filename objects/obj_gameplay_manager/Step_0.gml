@@ -1,6 +1,56 @@
 /// @description Check every frame
 
-global.speed_modifier += 0.0001;
+// Check magical flowers
+if (obj_player.num_flower < 30 and !global.zone_one_complete)
+{
+	global.current_zone = ZONE.ONE;
+}
+else if (obj_player.num_flower < 50 and !global.zone_two_complete)
+{
+	global.zone_one_complete = true;
+	global.current_zone = ZONE.TWO;
+	obj_player.num_flower = 0;
+}
+else if (obj_player.num_flower < 70 and !global.zone_three_complete)
+{
+	global.zone_two_complete = true;
+	global.current_zone = ZONE.THREE;
+	obj_player.num_flower = 0;
+}
+else
+{
+	global.zone_three_complete = true;
+	global.current_zone = ZONE.BOSS;
+	obj_player.num_flower = 0;
+}
+
+// Update game speed
+global.speed_modifier += 0.0002;
+
+// Cap game speed for each zone
+switch (global.current_zone)
+{
+	case ZONE.ONE:
+		if (global.speed_modifier >= 1.5)
+			global.speed_modifier = 1.5;
+		break;
+	
+	case ZONE.TWO:
+		if (global.speed_modifier >= 2)
+			global.speed_modifier = 2;
+		break;
+		
+	case ZONE.THREE:
+		if (global.speed_modifier >= 2.5)
+			global.speed_modifier = 2.5;
+		break;
+		
+	case ZONE.BOSS:
+		if (global.speed_modifier >= 3)
+			global.speed_modifier = 3;
+		break;
+
+}
 
 var _prev_game_over = global.game_over;
 global.game_over = obj_player.died;

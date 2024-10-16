@@ -1,7 +1,8 @@
 /// @description Hit detection
 
-if (!other.hit_once)
+if (!hit_once and !other.hit_once)
 {
 	curr_hp -= 1;
+	hit_once = true;
 	other.hit_once = true;
 }
