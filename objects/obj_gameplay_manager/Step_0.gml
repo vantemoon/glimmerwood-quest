@@ -1,6 +1,6 @@
 /// @description Check every frame
 
-global.speed_modifier += 0.005;
+global.speed_modifier += 0.0001;
 
 var _prev_game_over = global.game_over;
 global.game_over = obj_player.died;

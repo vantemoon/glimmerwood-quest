@@ -6,3 +6,9 @@ draw_set_halign(fa_right);
 draw_set_valign(fa_top);
 draw_text(display_get_gui_width() - 20, 100, 
 		  string_repeat("0", 4-string_length(string(global.current_score))) + string(global.current_score));
+
+// Debugging
+draw_text(250, 200,
+		  string(global.ground_speed * global.speed_modifier));
+draw_text(500, 300, 
+		  "Magical  flower " + string(obj_player.num_flower));

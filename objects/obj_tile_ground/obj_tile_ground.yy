@@ -8,8 +8,8 @@
   "name":"obj_tile_ground",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Tiles",
+    "path":"folders/Objects/Tiles.yy",
   },
   "parentObjectId":null,
   "persistent":false,
