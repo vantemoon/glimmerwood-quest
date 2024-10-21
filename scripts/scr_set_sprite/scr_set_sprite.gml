@@ -4,7 +4,6 @@ function set_sprite()
 {
 	if (jumping)
 	{
-		show_debug_message("jumping");
 		sprite_index = spr_player_jumping;
 		image_speed = 2;
 		if (image_index >= image_number - 1)
@@ -15,7 +14,6 @@ function set_sprite()
 	
 	if (falling)
 	{
-		show_debug_message("falling");
 		sprite_index = spr_player_falling;
 		image_speed = 2;
 		if (image_index >= image_number -1)

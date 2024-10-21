@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"obj_tile_ground",
+  "%Name":"obj_ground",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_tile_ground",
+  "name":"obj_ground",
   "overriddenProperties":[],
   "parent":{
     "name":"Tiles",

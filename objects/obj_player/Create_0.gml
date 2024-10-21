@@ -5,6 +5,7 @@ vsp = 0;
 grv = 0.8;
 jumpsp = 23;
 termsp = 23;
+clip_y = true;
 
 has_control = true;
 

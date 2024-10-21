@@ -23,7 +23,7 @@
   ],
   "name":"spr_hill_small",
   "nineSlice":null,
-  "origin":7,
+  "origin":1,
   "parent":{
     "name":"Tiles",
     "path":"folders/Sprites/Tiles.yy",
@@ -76,7 +76,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":260,
-    "yorigin":260,
+    "yorigin":0,
   },
   "swatchColours":null,
   "swfPrecision":0.5,
