@@ -1,6 +1,5 @@
 /// @description Set up game manager
 
-
 //initialise high score
 global.high_score = 0;
 if (file_exists("save.txt")) {
