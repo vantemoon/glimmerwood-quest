@@ -12,7 +12,7 @@ function set_sprite()
 		}
 	}
 	
-	if (falling)
+	if (falling and !ducking)
 	{
 		sprite_index = spr_player_falling;
 		image_speed = 2;
@@ -22,12 +22,32 @@ function set_sprite()
 		}
 	}
 	
-	if (ducking)
+	if (falling and ducking)
 	{
-		sprite_index = spr_player; // TODO: change to ducking animation
+		sprite_index = spr_player_sliding;
 		image_speed = 2;
+		if (image_index >= image_number -1)
+		{
+			image_index = image_number - 1;
+		}
 	}
 	
+	if (ducking and place_meeting(x, y + 1, obj_tile))
+	{
+		sprite_index = spr_player_sliding;
+		image_speed = 2;
+		if (image_index >= image_number -1)
+		{
+			image_index = image_number - 1;
+		}
+	}
+	
+	if (duck_up_key)
+	{
+		show_debug_message("getting up");
+		sprite_index = spr_player_sliding_up;
+		image_speed = 2;
+	}
 	
 	if (slashing)
 	{
@@ -37,7 +57,7 @@ function set_sprite()
 		// TODO: change back to normal animation after slashing ends
 	}
 	
-	else if (!jumping and !falling and !ducking and !slashing)
+	else if (!jumping and !falling and !ducking and !duck_up_key and !slashing)
 	{
 		sprite_index = spr_player_walking;
 		image_speed = 2;

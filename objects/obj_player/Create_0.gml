@@ -22,3 +22,13 @@ immune_frame = 60;
 hit_once = false;
 
 num_flower = 0;
+
+enum PLAYER_STATE
+{
+	FREE,
+	JUMP,
+	FALL,
+	SLIDE,
+	SLIDE_UP,
+	SLASH
+}

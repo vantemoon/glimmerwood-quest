@@ -5,6 +5,7 @@ function detect_key()
 	jump_key = keyboard_check_pressed(vk_space);
 	jump_key_alt = keyboard_check_pressed(vk_up);
 	duck_key = keyboard_check(ord("D"));
+	duck_up_key = keyboard_check_released(ord("D"));
 	slash_key = keyboard_check_pressed(ord("S"));
 	
 	

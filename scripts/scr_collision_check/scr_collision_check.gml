@@ -17,6 +17,6 @@ function collision_check()
 	// Horizontal collision
 	var _hsp = global.ground_speed * global.speed_modifier;
 	
-	if (place_meeting(x + abs(_hsp), y, obj_tile))
+	if (place_meeting(x + abs(_hsp), y - 10, obj_tile))
 		x += _hsp;
 }
