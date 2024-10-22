@@ -38,8 +38,8 @@ switch (global.current_zone)
 				break;
 		
 			case 3: // Three flowers below a platform with spike
-				instance_create_layer(_xpos2, _ypos - 310, "Instances", obj_platform);
-				instance_create_layer(_xpos2, _ypos - 200, "Instances", obj_spikes_down);
+				instance_create_layer(_xpos2, _ypos - 320, "Instances", obj_platform);
+				instance_create_layer(_xpos2, _ypos - 210, "Instances", obj_spikes_down);
 				instance_create_layer(_xpos1, _ypos - 30, "Instances", obj_magical_flower_blue);
 				instance_create_layer(_xpos2, _ypos - 30, "Instances", obj_magical_flower_purple);
 				instance_create_layer(_xpos3, _ypos - 30, "Instances", obj_magical_flower_pink);

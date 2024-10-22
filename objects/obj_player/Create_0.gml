@@ -5,14 +5,8 @@ vsp = 0;
 grv = 0.8;
 jumpsp = 23;
 termsp = 23;
-clip_y = true;
 
 has_control = true;
-
-ducking = false;
-jumping = false;
-falling = false;
-slashing = false;
 
 max_hp = 3;
 curr_hp = max_hp;
@@ -25,10 +19,16 @@ num_flower = 0;
 
 enum PLAYER_STATE
 {
-	FREE,
+	NORMAL,
 	JUMP,
 	FALL,
 	SLIDE,
-	SLIDE_UP,
 	SLASH
 }
+
+sliding = false;
+slashing = false;
+
+curr_state = PLAYER_STATE.NORMAL;
+prev_state = PLAYER_STATE.NORMAL;
+hit_list = ds_list_create();

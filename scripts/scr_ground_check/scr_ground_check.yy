@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scr_ground_check",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"Deprecated",
+    "path":"folders/Scripts/Deprecated.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

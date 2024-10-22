@@ -25,7 +25,7 @@
   ],
   "name":"spr_player_sliding_up",
   "nineSlice":null,
-  "origin":4,
+  "origin":9,
   "parent":{
     "name":"Player",
     "path":"folders/Sprites/Player.yy",
@@ -84,7 +84,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":128,
-    "yorigin":110,
+    "yorigin":200,
   },
   "swatchColours":null,
   "swfPrecision":0.5,

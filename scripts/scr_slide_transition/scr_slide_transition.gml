@@ -1,4 +1,4 @@
-/// @description SlideTransition(mode, target_room)
+/// @description slide_transition(mode, target_room)
 /// @param _mode sets transition mode between next, restart and goto.
 /// @param _target sets the target room when using the goto mode.
 

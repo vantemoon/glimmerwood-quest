@@ -1,6 +1,6 @@
 /// @description set_sprite() sets the current sprite/animation of the player
 
-function set_sprite()
+function set_sprite_n()
 {
 	if (jumping)
 	{
