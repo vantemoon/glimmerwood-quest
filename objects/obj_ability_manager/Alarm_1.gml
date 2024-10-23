@@ -1,3 +1,3 @@
 /// @description Slow down cooldown
 
-slowdown_ready = true;
+timeslow_ready = true;

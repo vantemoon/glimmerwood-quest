@@ -11,7 +11,10 @@
     "name":"Monsters",
     "path":"folders/Objects/Monsters.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_obstacle",
+    "path":"objects/obj_obstacle/obj_obstacle.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

@@ -15,6 +15,6 @@ function position_check()
 		
 		// Respawn at original position
 		x = 290;
-		y = 735;
+		y = 820;
 	}
 }
