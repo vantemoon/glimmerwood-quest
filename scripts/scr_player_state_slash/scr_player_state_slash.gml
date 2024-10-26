@@ -38,6 +38,7 @@ function player_state_slash()
 	ds_list_destroy(_curr_hit_list);
 	mask_index = _prev_mask;
 	
+	// End of attack
 	if (image_index > image_number - 1)
 	{
 		slashing = false;

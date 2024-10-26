@@ -5,7 +5,6 @@ if (!hit_once and !other.hit_once and !slashing)
 	if (!shield_activated)
 	{
 		curr_hp -= 1;
-		hit_once = true;
 		other.hit_once = true;
 	}
 	else

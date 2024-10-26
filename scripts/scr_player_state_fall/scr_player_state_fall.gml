@@ -20,4 +20,7 @@ function player_state_fall()
 		prev_state = PLAYER_STATE.FALL;
 		curr_state = PLAYER_STATE.SLASH;
 	}
+	
+	if (place_meeting(x, y + 1, obj_tile))
+		curr_state = PLAYER_STATE.NORMAL;
 }
