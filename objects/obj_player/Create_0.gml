@@ -29,6 +29,8 @@ enum PLAYER_STATE
 sliding = false;
 slashing = false;
 
+shield_activated = false;
+
 curr_state = PLAYER_STATE.NORMAL;
 prev_state = PLAYER_STATE.NORMAL;
 hit_list = ds_list_create();

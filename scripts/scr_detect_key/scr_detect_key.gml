@@ -2,8 +2,8 @@
 
 function detect_key()
 {
-	jump_key = keyboard_check_pressed(vk_space);
-	jump_key_alt = keyboard_check_pressed(vk_up);
-	slide_key = keyboard_check(ord("D"));
-	slash_key = keyboard_check_pressed(ord("S"));
+	jump_key = keyboard_check_pressed(vk_up);
+	jump_key_alt = keyboard_check_pressed(vk_space);
+	slide_key = keyboard_check(vk_down);
+	slash_key = keyboard_check_pressed(vk_right);
 }
