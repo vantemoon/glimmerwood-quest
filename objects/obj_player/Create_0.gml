@@ -26,7 +26,7 @@ enum PLAYER_STATE
 	SLASH
 }
 
-sliding = false;
+// sliding = false;
 slashing = false;
 
 shield_activated = false;

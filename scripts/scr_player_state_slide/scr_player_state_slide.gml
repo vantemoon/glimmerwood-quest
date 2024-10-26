@@ -10,10 +10,6 @@ function player_state_slide()
 		image_index = image_number - 1;
 	}
 	
-	//if (!sliding) 
-	//{
-	//	show_debug_message("key released");
-	//	sprite_index = spr_player_sliding_up;
-	//	image_speed = 2;
-	//}
+	if (!slide_key)
+		curr_state = PLAYER_STATE.NORMAL;
 }

@@ -41,6 +41,31 @@ function player_state_slash()
 	if (image_index > image_number - 1)
 	{
 		slashing = false;
-		curr_state = prev_state;
+		if (prev_state == PLAYER_STATE.SLIDE)
+		{
+			if (slide_key)
+			{
+				curr_state = prev_state;
+			}
+			else
+			{
+				curr_state = PLAYER_STATE.NORMAL;
+			}
+		}
+		else if (prev_state == PLAYER_STATE.FALL)
+		{
+			if (place_meeting(x, y + 1, obj_tile))
+			{
+				curr_state = PLAYER_STATE.NORMAL;
+			}
+			else
+			{
+				curr_state = prev_state;
+			}
+		}
+		else
+		{
+			curr_state = prev_state;
+		}
 	}
 }
