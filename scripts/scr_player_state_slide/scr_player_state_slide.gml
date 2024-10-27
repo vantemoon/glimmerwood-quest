@@ -2,6 +2,8 @@
 
 function player_state_slide()
 {
+	slashing = false;
+	
 	// Animation 
 	sprite_index = spr_player_sliding;
 	image_speed = 2;

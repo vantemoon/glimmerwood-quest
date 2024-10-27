@@ -2,6 +2,8 @@
 
 function player_state_fall()
 {
+	slashing = false;
+	
 	if (slide_key)
 	{
 		vsp += grv * 4;

@@ -2,6 +2,8 @@
 
 function player_state_normal()
 {
+	slashing = false;
+	
 	if (slash_key)
 	{
 		prev_state = PLAYER_STATE.NORMAL;

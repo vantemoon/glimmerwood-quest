@@ -32,6 +32,6 @@ switch (curr_state)
 
 //slash_check();
 
-immune_check();
+// immune_check();
 position_check();
 health_check();
