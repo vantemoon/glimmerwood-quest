@@ -93,6 +93,7 @@
     {"id":{"name":"obj_timeslow","path":"objects/obj_timeslow/obj_timeslow.yy",},},
     {"id":{"name":"obj_transition","path":"objects/obj_transition/obj_transition.yy",},},
     {"id":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},},
+    {"id":{"name":"rm_boss","path":"rooms/rm_boss/rm_boss.yy",},},
     {"id":{"name":"rm_game","path":"rooms/rm_game/rm_game.yy",},},
     {"id":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},},
     {"id":{"name":"rm_one","path":"rooms/rm_one/rm_one.yy",},},
@@ -158,6 +159,7 @@
     {"roomId":{"name":"rm_game","path":"rooms/rm_game/rm_game.yy",},},
     {"roomId":{"name":"rm_one","path":"rooms/rm_one/rm_one.yy",},},
     {"roomId":{"name":"rm_two","path":"rooms/rm_two/rm_two.yy",},},
+    {"roomId":{"name":"rm_boss","path":"rooms/rm_boss/rm_boss.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

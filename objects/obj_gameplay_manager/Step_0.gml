@@ -50,7 +50,7 @@ switch (global.current_zone)
 		if (global.speed_modifier >= 2.5)
 			global.speed_modifier = 2.5;
 		global.monster_worth = 6;
-		obj_ability_manager.slowdown_ready = true;
+		obj_ability_manager.timeslow_ready = true;
 		break;
 		
 	case ZONE.BOSS:
