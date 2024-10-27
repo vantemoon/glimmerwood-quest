@@ -28,10 +28,6 @@ switch (curr_state)
 		break;
 }
 
-
-
-//slash_check();
-
 immune_check();
 position_check();
 health_check();

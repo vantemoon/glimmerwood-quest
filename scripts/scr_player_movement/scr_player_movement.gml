@@ -22,9 +22,23 @@ function player_movement()
 	if (place_meeting(x, y + 1, obj_tile))
 	{
 		// Player is touching the ground
+		can_jump = 10;
+		
 		if (!slide_key and !slashing)
 			curr_state = PLAYER_STATE.NORMAL;
-		
+	}
+	else
+	{
+		if (place_meeting(x, y + 30, obj_tile))
+			can_jump = 10;
+		else
+		{
+			can_jump --;
+		}
+	}
+
+	if (can_jump > 0)
+	{
 		// Player wants to jump
 		if ((jump_key or jump_key_alt) and !slide_key)
 		{

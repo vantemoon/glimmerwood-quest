@@ -4,6 +4,8 @@ function player_state_jump()
 {
 	slashing = false;
 	
+	can_jump = 0;
+	
 	if (vsp >= 0)
 		// Player starts falling
 		obj_player.curr_state = PLAYER_STATE.FALL;
