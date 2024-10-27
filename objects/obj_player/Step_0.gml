@@ -35,3 +35,4 @@ switch (curr_state)
 // immune_check();
 position_check();
 health_check();
+character_flash();

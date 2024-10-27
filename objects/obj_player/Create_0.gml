@@ -34,3 +34,6 @@ shield_activated = false;
 curr_state = PLAYER_STATE.NORMAL;
 prev_state = PLAYER_STATE.NORMAL;
 hit_list = ds_list_create();
+
+flash_alpha = 0;
+flash_colour = c_white;
