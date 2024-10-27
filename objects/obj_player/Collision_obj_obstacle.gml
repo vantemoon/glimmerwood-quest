@@ -1,6 +1,6 @@
 /// @description Hit detection
 
-if (!other.hit_once  and curr_state != PLAYER_STATE.SLASH)
+if (!other.hit_once  and curr_state != PLAYER_STATE.SLASH and immune_frame <= 0)
 {
 	if (!shield_activated)
 	{

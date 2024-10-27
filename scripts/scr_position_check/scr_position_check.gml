@@ -11,7 +11,8 @@ function position_check()
 	
 	if (x < -70)
 	{
-		obj_player.curr_hp -= 1;
+		curr_hp -= 1;
+		immune_frame = 2 * global.game_fps;
 		
 		// Respawn at original position
 		x = 290;

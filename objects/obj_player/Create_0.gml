@@ -12,8 +12,7 @@ max_hp = 3;
 curr_hp = max_hp;
 died = false;
 
-immune_frame = 60;
-// hit_once = false;
+immune_frame = 0;
 
 num_flower = 0;
 
