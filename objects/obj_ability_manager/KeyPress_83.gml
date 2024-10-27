@@ -1,11 +1,10 @@
 /// @description Activate slowdoen
 
-if (obj_player.num_flower >= 10 and timeslow_ready)
+if (timeslow_ready and !timeslow_activated)
 {
+	timeslow_activated = true;
+	
 	obj_player.num_flower -= 10;
-	timeslow_ready = false;
 
 	instance_create_layer(x, y, "Abilities", obj_timeslow);
-	
-	alarm[1] = timeslow_cooldown;
 }

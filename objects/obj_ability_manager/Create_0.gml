@@ -1,11 +1,21 @@
 /// @description Intialise variables
 
 
-shield_ready = false;
-shield_cooldown = 5 * game_get_speed(gamespeed_fps);
+shield_unlocked = false;
+timeslow_unlocked = false;
+missile_unlocked = false;
 
-timeslow_ready = false;
-timeslow_cooldown = 7 * game_get_speed(gamespeed_fps);
+// Testing only
+//shield_unlocked = true;
+//timeslow_unlocked = true;
+//missile_unlocked = true;
 
-missile_ready = false;
-missile_cooldown = 10 * game_get_speed(gamespeed_fps);
+shield_ready = shield_unlocked;
+timeslow_ready = timeslow_unlocked;
+missile_ready = missile_unlocked;
+
+shield_activated = false;
+timeslow_activated = false;
+
+shield_duration = 3 * global.game_fps;
+timeslow_duration = 3 * global.game_fps;

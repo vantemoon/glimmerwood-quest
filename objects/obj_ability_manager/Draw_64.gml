@@ -1,4 +1,4 @@
-/// @description Display cooldowns
+/// @description Display status
 
 
 // Shield

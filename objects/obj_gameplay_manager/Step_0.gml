@@ -43,21 +43,21 @@ switch (global.current_zone)
 		if (global.speed_modifier >= 2)
 			global.speed_modifier = 2;
 		global.monster_worth = 4;
-		obj_ability_manager.shield_ready = true;
+		obj_ability_manager.shield_unlocked = true;
 		break;
 		
 	case ZONE.THREE:
 		if (global.speed_modifier >= 2.5)
 			global.speed_modifier = 2.5;
 		global.monster_worth = 6;
-		obj_ability_manager.timeslow_ready = true;
+		obj_ability_manager.timeslow_unlocked = true;
 		break;
 		
 	case ZONE.BOSS:
 		if (global.speed_modifier >= 3)
 			global.speed_modifier = 3;
 		global.monster_worth = 8;
-		obj_ability_manager.missile_ready = true;
+		obj_ability_manager.missile_unlocked = true;
 		break;
 
 }

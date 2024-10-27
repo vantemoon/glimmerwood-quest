@@ -9,8 +9,6 @@ if (!other.hit_once  and curr_state != PLAYER_STATE.SLASH)
 	}
 	else
 	{
-		shield_activated = false;
-		obj_shield.hit_once = true;
 		other.hit_once = true;
 	}
 }
