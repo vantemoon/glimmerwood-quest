@@ -5,7 +5,7 @@ if (num_fireball == 0)
 	shooting_ypos = obj_player.y - 200;
 }
 
-instance_create_layer(x - 100, shooting_ypos, "Instances", obj_fireball);
+instance_create_layer(x - 100, shooting_ypos, "Instances", obj_fireball_witch);
 num_fireball ++;
 
 if (num_fireball < 3)
