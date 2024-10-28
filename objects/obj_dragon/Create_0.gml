@@ -10,7 +10,3 @@ max_hp = 30;
 curr_hp = max_hp;
 
 curr_state = MONSTER_STATE.NORMAL;
-
-num_fireball = 0;
-shooting_ypos = 0;
-alarm[0] = 5 * game_get_speed(gamespeed_fps);

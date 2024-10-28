@@ -24,7 +24,6 @@ function player_state_slash()
 		{
 			// If this instance has not yet been hit by the current slash
 			var _hitid = ds_list_find_value(_curr_hit_list, _hit);
-			show_debug_message("hit: " + string(_hitid));
 			if (ds_list_find_index(hit_list, _hitid) == -1)
 			{
 				ds_list_add(hit_list, _hitid);

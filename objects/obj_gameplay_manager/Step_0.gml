@@ -1,15 +1,5 @@
 /// @description Check every frame
 
-if (room == rm_boss)
-{
-	
-	global.current_zone = ZONE.BOSS;
-	global.zone_one_complete = true;
-	global.zone_two_complete = true;
-	global.zone_three_complete = true;
-	global.speed_modifier = 3;
-}
-
 // Check magical flowers
 if (!global.zone_one_complete)
 {
@@ -64,8 +54,8 @@ switch (global.current_zone)
 		break;
 		
 	case ZONE.BOSS:
-		if (global.speed_modifier >= 3)
-			global.speed_modifier = 3;
+		if (global.speed_modifier >= 2.5)
+			global.speed_modifier = 2.5;
 		global.monster_worth = 8;
 		obj_ability_manager.missile_unlocked = true;
 		break;

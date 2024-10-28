@@ -311,7 +311,7 @@ switch (global.current_zone)
 	case ZONE.BOSS:
 		if (!dragon_exist)
 		{
-			instance_create_layer(1650, 400, "Instances", obj_dragon);
+			instance_create_layer(1890, 400, "Instances", obj_dragon);
 			dragon_exist = true;
 		}
 			
@@ -344,41 +344,80 @@ switch (global.current_zone)
 				instance_create_layer(_xpos2 + 390 * 5, _ypos - 350, "Instances", obj_witch);
 
 				boss_chunk_index ++;
-				alarm[0] = global.game_fps * 2.5;
+				alarm[0] = global.game_fps * 3;
 				break;
 			
 			case 1: // Normal chunk 2
-				instance_create_layer(_xpos2, _ypos - 350, "Instances", obj_slime);
 				instance_create_layer(_xpos2, _ypos - 320, "Instances", obj_platform);
 				instance_create_layer(_xpos2, _ypos - 320, "Instances", obj_spikes_down);
-				instance_create_layer(_xpos2 + 390 * 3, _ypos - 320, "Instances", obj_platform_large_left);
-				instance_create_layer(_xpos2 + 390 * 4, _ypos - 320, "Instances", obj_platform_large_middle);
+				instance_create_layer(_xpos2 + 390 * 4, _ypos - 320, "Instances", obj_platform_large_left);
 				instance_create_layer(_xpos2 + 390 * 5, _ypos - 320, "Instances", obj_platform_large_middle);
-				instance_create_layer(_xpos2 + 390 * 6, _ypos - 320, "Instances", obj_platform_large_right);
-				instance_create_layer(_xpos1 + 390 * 3, _ypos - 65, "Instances", obj_magical_flower_blue);
-				instance_create_layer(_xpos2 + 390 * 3, _ypos - 65, "Instances", obj_magical_flower_purple);
-				instance_create_layer(_xpos3 + 390 * 3, _ypos - 65, "Instances", obj_magical_flower_pink);
-				instance_create_layer(_xpos2 + 390 * 4, _ypos - 30, "Instances", obj_slime);
-				instance_create_layer(_xpos1 + 390 * 5, _ypos - 380, "Instances", obj_magical_flower_blue);
-				instance_create_layer(_xpos2 + 390 * 5, _ypos - 380, "Instances", obj_magical_flower_purple);
-				instance_create_layer(_xpos3 + 390 * 5, _ypos - 380, "Instances", obj_magical_flower_pink);
-				instance_create_layer(_xpos1 + 390 * 6, _ypos - 65, "Instances", obj_magical_flower_blue);
-				instance_create_layer(_xpos2 + 390 * 6, _ypos - 65, "Instances", obj_magical_flower_purple);
-				instance_create_layer(_xpos3 + 390 * 6, _ypos - 65, "Instances", obj_magical_flower_pink);
-				instance_create_layer(_xpos2 + 390 * 6, _ypos - 350, "Instances", obj_witch);
+				instance_create_layer(_xpos2 + 390 * 6, _ypos - 320, "Instances", obj_platform_large_middle);
+				instance_create_layer(_xpos2 + 390 * 7, _ypos - 320, "Instances", obj_platform_large_right);
+				instance_create_layer(_xpos1 + 390 * 4, _ypos - 65, "Instances", obj_magical_flower_blue);
+				instance_create_layer(_xpos2 + 390 * 4, _ypos - 65, "Instances", obj_magical_flower_purple);
+				instance_create_layer(_xpos3 + 390 * 4, _ypos - 65, "Instances", obj_magical_flower_pink);
+				instance_create_layer(_xpos2 + 390 * 5, _ypos - 30, "Instances", obj_slime);
+				instance_create_layer(_xpos1 + 390 * 6, _ypos - 380, "Instances", obj_magical_flower_blue);
+				instance_create_layer(_xpos2 + 390 * 6, _ypos - 380, "Instances", obj_magical_flower_purple);
+				instance_create_layer(_xpos3 + 390 * 6, _ypos - 380, "Instances", obj_magical_flower_pink);
+				instance_create_layer(_xpos1 + 390 * 7, _ypos - 65, "Instances", obj_magical_flower_blue);
+				instance_create_layer(_xpos2 + 390 * 7, _ypos - 65, "Instances", obj_magical_flower_purple);
+				instance_create_layer(_xpos3 + 390 * 7, _ypos - 65, "Instances", obj_magical_flower_pink);
+				instance_create_layer(_xpos2 + 390 * 7, _ypos - 350, "Instances", obj_witch);
+				
+				boss_chunk_index ++;
+				alarm[0] = global.game_fps * 4;
+				break;
+				
+			case 2: // Boss chunk 1
+				var _fireball_height = choose(1, 2);
+
+				instance_create_layer(_xpos2, _ypos - 320, "Instances", obj_platform);
+				instance_create_layer(_xpos2 + 390 * 4, _ypos - 320, "Instances", obj_platform_large_left);
+				instance_create_layer(_xpos2 + 390 * 5, _ypos - 320, "Instances", obj_platform_large_right);
+					
+				//if (_fireball_height == 1)
+				//{
+				//	instance_create_layer(_xpos1, _ypos - 100, "Instances", obj_fireball_dragon);
+				//	instance_create_layer(_xpos2, _ypos - 100, "Instances", obj_fireball_dragon);
+				//	instance_create_layer(_xpos3, _ypos - 100, "Instances", obj_fireball_dragon);
+				//	instance_create_layer(_xpos3 + _gap, _ypos - 100, "Instances", obj_fireball_dragon);
+				//	instance_create_layer(_xpos3 + _gap * 2, _ypos - 100, "Instances", obj_fireball_dragon);
+						
+				//	instance_create_layer(_xpos1 + 390 * 4, _ypos - 430, "Instances", obj_fireball_dragon);
+				//	instance_create_layer(_xpos2 + 390 * 4, _ypos - 430, "Instances", obj_fireball_dragon);
+				//	instance_create_layer(_xpos3 + 390 * 4, _ypos - 430, "Instances", obj_fireball_dragon);
+				//	instance_create_layer(_xpos3 + 390 * 4 + _gap, _ypos - 430, "Instances", obj_fireball_dragon);
+				//	instance_create_layer(_xpos3 + 390 * 4 + _gap * 2, _ypos - 430, "Instances", obj_fireball_dragon);
+				//}
+				//else
+				//{
+				//	instance_create_layer(_xpos1, _ypos - 430, "Instances", obj_fireball_dragon);
+				//	instance_create_layer(_xpos2, _ypos - 430, "Instances", obj_fireball_dragon);
+				//	instance_create_layer(_xpos3, _ypos - 430, "Instances", obj_fireball_dragon);
+				//	instance_create_layer(_xpos3 + _gap, _ypos - 430, "Instances", obj_fireball_dragon);
+				//	instance_create_layer(_xpos3 + _gap * 2, _ypos - 430, "Instances", obj_fireball_dragon);
+						
+				//	instance_create_layer(_xpos1 + 390 * 4, _ypos - 100, "Instances", obj_fireball_dragon);
+				//	instance_create_layer(_xpos2 + 390 * 4, _ypos - 100, "Instances", obj_fireball_dragon);
+				//	instance_create_layer(_xpos3 + 390 * 4, _ypos - 100, "Instances", obj_fireball_dragon);
+				//	instance_create_layer(_xpos3 + 390 * 4 + _gap, _ypos - 100, "Instances", obj_fireball_dragon);
+				//	instance_create_layer(_xpos3 + 390 * 4 + _gap * 2, _ypos - 100, "Instances", obj_fireball_dragon);
+				//}
+				
 				
 				boss_chunk_index ++;
 				alarm[0] = global.game_fps * 3;
 				break;
-				
-			case 2: // TODO: boss chunk 1
+			
+			case 3: // TODO: boss chunk 2
 				instance_create_layer(_xpos1, _ypos, "Instances", obj_spikes);
 				boss_chunk_index ++;
-				alarm[0] = global.game_fps * 2;
+				alarm[0] = global.game_fps * 3;
 				break;
 				
-			case 3: // Normal chunk 3
-				instance_create_layer(_xpos2 - 250, _ypos, "Instances", obj_large_obstacle);
+			case 4: // Normal chunk 3
 				instance_create_layer(_xpos2, _ypos - 350, "Instances", obj_slime);
 				instance_create_layer(_xpos2, _ypos - 320, "Instances", obj_platform);
 				instance_create_layer(_xpos2 + 390 * 2, 350, "Instances", obj_bat);
@@ -388,15 +427,16 @@ switch (global.current_zone)
 				instance_create_layer(_xpos1 + 390 * 4, _ypos - 30, "Instances", obj_magical_flower_blue);
 				instance_create_layer(_xpos2 + 390 * 4, _ypos - 30, "Instances", obj_magical_flower_purple);
 				instance_create_layer(_xpos3 + 390 * 4, _ypos - 30, "Instances", obj_magical_flower_pink);
-				instance_create_layer(_xpos2 + 390 * 4, _ypos - 330, "Instances", obj_platform);
-				instance_create_layer(_xpos2 + 390 * 4, _ypos - 350, "Instances", obj_witch);
+				instance_create_layer(_xpos2 + 390 * 4, _ypos - 330, "Instances", obj_platform_large_left);
+				instance_create_layer(_xpos2 + 390 * 5, _ypos - 330, "Instances", obj_platform_large_right);
+				instance_create_layer(_xpos2 + 390 * 5, _ypos - 350, "Instances", obj_witch);
 				instance_create_layer(_xpos2 + 390 * 4, _ypos - 320, "Instances", obj_spikes_down);
 				
 				boss_chunk_index ++;
-				alarm[0] = global.game_fps * 2;
+				alarm[0] = global.game_fps * 2.5;
 				break;
 			
-			case 4: // Normal chunk 4
+			case 5: // Normal chunk 4
 				instance_create_layer(_xpos2, _ypos - 320, "Instances", obj_platform_large_left);
 				instance_create_layer(_xpos2 + 390, _ypos - 350, "Instances", obj_slime);
 				instance_create_layer(_xpos2 + 390, _ypos - 320, "Instances", obj_platform_large_right);
@@ -405,25 +445,25 @@ switch (global.current_zone)
 				instance_create_layer(_xpos2 + 390, _ypos - 30, "Instances", obj_magical_flower_purple);
 				instance_create_layer(_xpos3 + 390, _ypos - 30, "Instances", obj_magical_flower_pink);
 				instance_create_layer(_xpos2 + 390 * 2, 350, "Instances", obj_bat);
-				instance_create_layer(_xpos2 + 390 * 4, _ypos - 320, "Instances", obj_platform_large_left);
-				instance_create_layer(_xpos2 + 390 * 4, _ypos - 320, "Instances", obj_spikes_down);
-				instance_create_layer(_xpos1 + 390 * 4, _ypos - 30, "Instances", obj_magical_flower_blue);
-				instance_create_layer(_xpos2 + 390 * 4, _ypos - 30, "Instances", obj_magical_flower_purple);
-				instance_create_layer(_xpos3 + 390 * 4, _ypos - 30, "Instances", obj_magical_flower_pink);
-				instance_create_layer(_xpos2 + 390 * 5, _ypos - 320, "Instances", obj_platform_large_right);
+				instance_create_layer(_xpos2 + 390 * 5, _ypos - 320, "Instances", obj_platform_large_left);
+				instance_create_layer(_xpos2 + 390 * 5, _ypos - 320, "Instances", obj_spikes_down);
 				instance_create_layer(_xpos1 + 390 * 5, _ypos - 30, "Instances", obj_magical_flower_blue);
 				instance_create_layer(_xpos2 + 390 * 5, _ypos - 30, "Instances", obj_magical_flower_purple);
 				instance_create_layer(_xpos3 + 390 * 5, _ypos - 30, "Instances", obj_magical_flower_pink);
-				instance_create_layer(_xpos2 + 390 * 5, _ypos - 350, "Instances", obj_witch);
+				instance_create_layer(_xpos2 + 390 * 6, _ypos - 320, "Instances", obj_platform_large_right);
+				instance_create_layer(_xpos1 + 390 * 6, _ypos - 30, "Instances", obj_magical_flower_blue);
+				instance_create_layer(_xpos2 + 390 * 6, _ypos - 30, "Instances", obj_magical_flower_purple);
+				instance_create_layer(_xpos3 + 390 * 6, _ypos - 30, "Instances", obj_magical_flower_pink);
+				instance_create_layer(_xpos2 + 390 * 6, _ypos - 350, "Instances", obj_witch);
 				
 				boss_chunk_index ++;
-				alarm[0] = global.game_fps * 2;
+				alarm[0] = global.game_fps * 3.5;
 				break;
 			
-			case 5: // TODO: boss chunk 2
+			case 6: // TODO: boss chunk 3
 				instance_create_layer(_xpos1, _ypos, "Instances", obj_spikes);
 				boss_chunk_index = 0;
-				alarm[0] = global.game_fps * 2;
+				alarm[0] = global.game_fps * 3;
 				break;
 		}
 }

@@ -11,7 +11,6 @@ draw_text(display_get_gui_width() - 20, 60,
 // Debugging
 draw_set_font(fnt_debug);
 draw_set_halign(fa_left);
-show_debug_message(string(global.current_zone))
 if (global.current_zone != ZONE.BOSS)
 {
 	draw_text(100, 200, "Zone " + string(global.current_zone + 1));
