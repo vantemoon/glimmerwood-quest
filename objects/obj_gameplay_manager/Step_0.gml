@@ -1,5 +1,15 @@
 /// @description Check every frame
 
+if (room == rm_boss)
+{
+	
+	global.current_zone = ZONE.BOSS;
+	global.zone_one_complete = true;
+	global.zone_two_complete = true;
+	global.zone_three_complete = true;
+	global.speed_modifier = 3;
+}
+
 // Check magical flowers
 if (!global.zone_one_complete)
 {

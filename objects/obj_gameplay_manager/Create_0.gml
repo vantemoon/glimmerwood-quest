@@ -4,7 +4,7 @@ global.speed_modifier = 1;
 
 global.game_fps = game_get_speed(gamespeed_fps);
 
-global.ground_speed = -10 * global.speed_modifier;
+global.ground_speed = -10;
 global.ground_level = 900;
 
 enum ZONE

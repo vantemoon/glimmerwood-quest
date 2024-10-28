@@ -11,9 +11,17 @@ draw_text(display_get_gui_width() - 20, 60,
 // Debugging
 draw_set_font(fnt_debug);
 draw_set_halign(fa_left);
-draw_text(100, 200,
-		  "Zone " + string(global.current_zone + 1));
+show_debug_message(string(global.current_zone))
+if (global.current_zone != ZONE.BOSS)
+{
+	draw_text(100, 200, "Zone " + string(global.current_zone + 1));
+
+}
+else
+{
+	draw_text(100, 200, "Boss Zone");
+}
 draw_text(100, 240,
-		  "Speed " + string(abs(global.ground_speed * global.speed_modifier)));
+		  "Speed " + string(abs(global.ground_speed * global.speed_modifier - 5)));
 draw_text(100, 280, 
 		  "Magical  flower " + string(obj_player.num_flower));

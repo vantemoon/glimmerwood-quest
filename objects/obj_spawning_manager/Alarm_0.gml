@@ -276,10 +276,11 @@ switch (global.current_zone)
 				instance_create_layer(_xpos1 + 650, _ypos - 30, "Instances", obj_magical_flower_blue);
 				instance_create_layer(_xpos2 + 650, _ypos - 30, "Instances", obj_magical_flower_pink);
 				instance_create_layer(_xpos3 + 650, _ypos - 30, "Instances", obj_magical_flower_purple);
-				instance_create_layer(_xpos2 + 1700, _ypos - 320, "Instances", obj_platform);
-				instance_create_layer(_xpos1 + 1700, _ypos - 380, "Instances", obj_magical_flower_blue);
-				instance_create_layer(_xpos2 + 1700, _ypos - 380, "Instances", obj_magical_flower_pink);
-				instance_create_layer(_xpos3 + 1700, _ypos - 380, "Instances", obj_magical_flower_purple);
+				instance_create_layer(_xpos2 + 1800, _ypos - 320, "Instances", obj_platform);
+				instance_create_layer(_xpos1 + 1800, _ypos - 380, "Instances", obj_magical_flower_blue);
+				instance_create_layer(_xpos2 + 1800, _ypos - 380, "Instances", obj_magical_flower_pink);
+				instance_create_layer(_xpos3 + 1800, _ypos - 380, "Instances", obj_magical_flower_purple);
+				instance_create_layer(_xpos2 + 1800, _ypos, "Instances", obj_spikes);
 				alarm[0] = irandom_range(global.game_fps * 2.4, global.game_fps * 3.2);
 				break;
 		}
