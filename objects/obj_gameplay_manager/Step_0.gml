@@ -11,6 +11,8 @@ if (obj_player.num_flower >= 30 and !global.zone_two_complete)
 	if (global.current_zone != ZONE.TWO)
 		obj_player.num_flower = 0;
 	global.current_zone = ZONE.TWO;
+	obj_background_manager.trans_start = true;
+	obj_tile_manager.trans_start = true;
 }
 if (obj_player.num_flower >= 50 and !global.zone_three_complete)
 {
@@ -18,6 +20,8 @@ if (obj_player.num_flower >= 50 and !global.zone_three_complete)
 	if (global.current_zone != ZONE.THREE)
 		obj_player.num_flower = 0;
 	global.current_zone = ZONE.THREE;
+	obj_background_manager.trans_start = true;
+	obj_tile_manager.trans_start = true;
 }
 if (obj_player.num_flower >= 70 and !global.zone_boss_complete)
 {
@@ -25,6 +29,8 @@ if (obj_player.num_flower >= 70 and !global.zone_boss_complete)
 	if (global.current_zone != ZONE.BOSS)
 		obj_player.num_flower = 0;
 	global.current_zone = ZONE.BOSS;
+	obj_background_manager.trans_start = true;
+	obj_tile_manager.trans_start = true;
 }
 
 // Update game speed

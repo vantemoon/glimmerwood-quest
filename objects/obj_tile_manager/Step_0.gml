@@ -28,7 +28,7 @@ switch (global.current_zone)
 		object_set_sprite(obj_platform, spr_platform_b);
 		object_set_sprite(obj_platform_left, spr_platform_left_b);
 		object_set_sprite(obj_platform_middle, spr_platform_middle_b);
-		object_set_sprite(obj_platform_right, spr_platform_right_b)
+		object_set_sprite(obj_platform_right, spr_platform_right_b);
 			
 		break;
 }
