@@ -1,18 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"obj_platform_large_right",
-  "eventList":[],
+  "%Name":"obj_background_manager",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"obj_platform_large_right",
+  "name":"obj_background_manager",
   "overriddenProperties":[],
   "parent":{
-    "name":"Tiles",
-    "path":"folders/Objects/Tiles.yy",
+    "name":"Managers",
+    "path":"folders/Objects/Managers.yy",
   },
-  "parentObjectId":{
-    "name":"obj_tile",
-    "path":"objects/obj_tile/obj_tile.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -30,10 +29,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_platform_large_right_1",
-    "path":"sprites/spr_platform_large_right_1/spr_platform_large_right_1.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }
