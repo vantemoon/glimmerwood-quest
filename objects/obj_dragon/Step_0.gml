@@ -2,15 +2,15 @@
 
 y += vsp;
 
-if (going_up)
+if (going_down)
 {
 	vsp = abs(vsp);
-	going_up = (y + vsp) < ymax;
+	going_down = (y + vsp) < ymax;
 }
 else
 {
 	vsp = -abs(vsp);
-	going_up = (y + vsp) <= ymin;
+	going_down = (y + vsp) <= ymin;
 }
 
 if (curr_state == MONSTER_STATE.DEAD)

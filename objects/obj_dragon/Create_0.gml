@@ -1,10 +1,10 @@
 /// @description Initialise variables
 
-ymin = y;
-ymax = y + 100;
+ymin = 300;
+ymax = 570;
 
 vsp = 1.5;
-going_up = true;
+going_down = true;
 
 max_hp = 30;
 curr_hp = max_hp;

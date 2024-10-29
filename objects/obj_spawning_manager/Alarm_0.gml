@@ -55,7 +55,7 @@ switch (global.current_zone)
 				break;
 			
 			case 6: // Generating slimes
-				instance_create_layer(_xpos1, _ypos - 30, "Instances", obj_slime);
+				instance_create_layer(_xpos1, _ypos, "Instances", obj_slime);
 				alarm[0] = irandom_range(global.game_fps, global.game_fps * 2);
 				break;
 		}
@@ -119,7 +119,7 @@ switch (global.current_zone)
 				instance_create_layer(_xpos1 + 390 * 3, _ypos - 100, "Instances", obj_magical_flower_blue);
 				instance_create_layer(_xpos2 + 390 * 3, _ypos - 100, "Instances", obj_magical_flower_purple);
 				instance_create_layer(_xpos3 + 390 * 3, _ypos - 100, "Instances", obj_magical_flower_pink);
-				instance_create_layer(_xpos2 + 390 * 4, _ypos -30, "Instances", obj_slime);
+				instance_create_layer(_xpos2 + 390 * 4, _ypos, "Instances", obj_slime);
 				alarm[0] = irandom_range(global.game_fps * 2.7, global.game_fps * 3.6);
 				break;
 		
@@ -129,7 +129,7 @@ switch (global.current_zone)
 				break;
 			
 			case 7: // Generating slimes
-				instance_create_layer(_xpos1, _ypos - 30, "Instances", obj_slime);
+				instance_create_layer(_xpos1, _ypos, "Instances", obj_slime);
 				alarm[0] = irandom_range(global.game_fps * 0.9, global.game_fps * 1.8);
 				break;
 			
@@ -224,7 +224,7 @@ switch (global.current_zone)
 				instance_create_layer(_xpos1 + 390 * 3, _ypos - 100, "Instances", obj_magical_flower_blue);
 				instance_create_layer(_xpos2 + 390 * 3, _ypos - 100, "Instances", obj_magical_flower_purple);
 				instance_create_layer(_xpos3 + 390 * 3, _ypos - 100, "Instances", obj_magical_flower_pink);
-				instance_create_layer(_xpos2 + 390 * 4, _ypos -30, "Instances", obj_slime);
+				instance_create_layer(_xpos2 + 390 * 4, _ypos, "Instances", obj_slime);
 				alarm[0] = irandom_range(global.game_fps * 2.4, global.game_fps * 3.2);
 				break;
 		
@@ -234,7 +234,7 @@ switch (global.current_zone)
 				break;
 			
 			case 7: // Generating slimes
-				instance_create_layer(_xpos1, _ypos - 30, "Instances", obj_slime);
+				instance_create_layer(_xpos1, _ypos, "Instances", obj_slime);
 				alarm[0] = irandom_range(global.game_fps * 0.8, global.game_fps * 1.6);
 				break;
 				
@@ -302,7 +302,7 @@ switch (global.current_zone)
 				instance_create_layer(_xpos1 + 650, _ypos - 60, "Instances", obj_magical_flower_blue);
 				instance_create_layer(_xpos2 + 650, _ypos - 60, "Instances", obj_magical_flower_purple);
 				instance_create_layer(_xpos3 + 650, _ypos - 60, "Instances", obj_magical_flower_pink);
-				instance_create_layer(_xpos2 + 1040, _ypos - 30, "Instances", obj_slime);
+				instance_create_layer(_xpos2 + 1040, _ypos, "Instances", obj_slime);
 				alarm[0] = irandom_range(global.game_fps * 2.4, global.game_fps * 3.2);
 				break;
 		}
@@ -311,7 +311,7 @@ switch (global.current_zone)
 	case ZONE.BOSS:
 		if (!dragon_exist)
 		{
-			instance_create_layer(1890, 400, "Instances", obj_dragon);
+			instance_create_layer(1780, 300, "Instances", obj_dragon);
 			dragon_exist = true;
 		}
 			
@@ -339,8 +339,8 @@ switch (global.current_zone)
 				instance_create_layer(_xpos1 + 390 * 4, _ypos - 65, "Instances", obj_magical_flower_blue);
 				instance_create_layer(_xpos2 + 390 * 4, _ypos - 65, "Instances", obj_magical_flower_purple);
 				instance_create_layer(_xpos3 + 390 * 4, _ypos - 65, "Instances", obj_magical_flower_pink);
-				instance_create_layer(_xpos2 + 390, 300, "Instances", obj_bat);
-				instance_create_layer(_xpos2 + 390 * 3, 300, "Instances", obj_bat);
+				instance_create_layer(_xpos2 + 390, 200, "Instances", obj_bat);
+				instance_create_layer(_xpos2 + 390 * 3, 200, "Instances", obj_bat);
 				instance_create_layer(_xpos2 + 390 * 5, _ypos - 350, "Instances", obj_witch);
 
 				boss_chunk_index ++;
@@ -357,7 +357,7 @@ switch (global.current_zone)
 				instance_create_layer(_xpos1 + 390 * 4, _ypos - 65, "Instances", obj_magical_flower_blue);
 				instance_create_layer(_xpos2 + 390 * 4, _ypos - 65, "Instances", obj_magical_flower_purple);
 				instance_create_layer(_xpos3 + 390 * 4, _ypos - 65, "Instances", obj_magical_flower_pink);
-				instance_create_layer(_xpos2 + 390 * 5, _ypos - 30, "Instances", obj_slime);
+				instance_create_layer(_xpos2 + 390 * 5, _ypos, "Instances", obj_slime);
 				instance_create_layer(_xpos1 + 390 * 6, _ypos - 380, "Instances", obj_magical_flower_blue);
 				instance_create_layer(_xpos2 + 390 * 6, _ypos - 380, "Instances", obj_magical_flower_purple);
 				instance_create_layer(_xpos3 + 390 * 6, _ypos - 380, "Instances", obj_magical_flower_pink);
@@ -379,31 +379,31 @@ switch (global.current_zone)
 					
 				if (_fh1 == 1)
 				{
-					instance_create_layer(_xpos1 + 390, _ypos - 200, "Instances", obj_fireball);
-					instance_create_layer(_xpos2 + 390, _ypos - 200, "Instances", obj_fireball);
-					instance_create_layer(_xpos3 + 390, _ypos - 200, "Instances", obj_fireball);
-					instance_create_layer(_xpos3 + 390 + _gap, _ypos - 200, "Instances", obj_fireball);
-					instance_create_layer(_xpos3 + 390 + _gap * 2, _ypos - 200, "Instances", obj_fireball);
+					instance_create_layer(_xpos1 + 390, _ypos - 100, "Instances", obj_dragon_flame);
+					instance_create_layer(_xpos2 + 390, _ypos - 100, "Instances", obj_dragon_flame);
+					instance_create_layer(_xpos3 + 390, _ypos - 100, "Instances", obj_dragon_flame);
+					instance_create_layer(_xpos3 + 390 + _gap, _ypos - 100, "Instances", obj_dragon_flame);
+					instance_create_layer(_xpos3 + 390 + _gap * 2, _ypos - 100, "Instances", obj_dragon_flame);
 						
-					instance_create_layer(_xpos1 + 390 * 5, _ypos - 530, "Instances", obj_fireball);
-					instance_create_layer(_xpos2 + 390 * 5, _ypos - 530, "Instances", obj_fireball);
-					instance_create_layer(_xpos3 + 390 * 5, _ypos - 530, "Instances", obj_fireball);
-					instance_create_layer(_xpos3 + 390 * 5 + _gap, _ypos - 530, "Instances", obj_fireball);
-					instance_create_layer(_xpos3 + 390 * 5 + _gap * 2, _ypos - 530, "Instances", obj_fireball);
+					instance_create_layer(_xpos1 + 390 * 5, _ypos - 430, "Instances", obj_dragon_flame);
+					instance_create_layer(_xpos2 + 390 * 5, _ypos - 430, "Instances", obj_dragon_flame);
+					instance_create_layer(_xpos3 + 390 * 5, _ypos - 430, "Instances", obj_dragon_flame);
+					instance_create_layer(_xpos3 + 390 * 5 + _gap, _ypos - 430, "Instances", obj_dragon_flame);
+					instance_create_layer(_xpos3 + 390 * 5 + _gap * 2, _ypos - 430, "Instances", obj_dragon_flame);
 				}
 				else
 				{
-					instance_create_layer(_xpos1 + 390, _ypos - 530, "Instances", obj_fireball);
-					instance_create_layer(_xpos2 + 390, _ypos - 530, "Instances", obj_fireball);
-					instance_create_layer(_xpos3 + 390, _ypos - 530, "Instances", obj_fireball);
-					instance_create_layer(_xpos3 + 390 + _gap, _ypos - 530, "Instances", obj_fireball);
-					instance_create_layer(_xpos3 + 390 + _gap * 2, _ypos - 530, "Instances", obj_fireball);
+					instance_create_layer(_xpos1 + 390, _ypos - 430, "Instances", obj_dragon_flame);
+					instance_create_layer(_xpos2 + 390, _ypos - 430, "Instances", obj_dragon_flame);
+					instance_create_layer(_xpos3 + 390, _ypos - 430, "Instances", obj_dragon_flame);
+					instance_create_layer(_xpos3 + 390 + _gap, _ypos - 430, "Instances", obj_dragon_flame);
+					instance_create_layer(_xpos3 + 390 + _gap * 2, _ypos - 430, "Instances", obj_dragon_flame);
 						
-					instance_create_layer(_xpos1 + 390 * 5, _ypos - 200, "Instances", obj_fireball);
-					instance_create_layer(_xpos2 + 390 * 5, _ypos - 200, "Instances", obj_fireball);
-					instance_create_layer(_xpos3 + 390 * 5, _ypos - 200, "Instances", obj_fireball);
-					instance_create_layer(_xpos3 + 390 * 5 + _gap, _ypos - 200, "Instances", obj_fireball);
-					instance_create_layer(_xpos3 + 390 * 5 + _gap * 2, _ypos - 200, "Instances", obj_fireball);
+					instance_create_layer(_xpos1 + 390 * 5, _ypos - 100, "Instances", obj_dragon_flame);
+					instance_create_layer(_xpos2 + 390 * 5, _ypos - 100, "Instances", obj_dragon_flame);
+					instance_create_layer(_xpos3 + 390 * 5, _ypos - 100, "Instances", obj_dragon_flame);
+					instance_create_layer(_xpos3 + 390 * 5 + _gap, _ypos - 100, "Instances", obj_dragon_flame);
+					instance_create_layer(_xpos3 + 390 * 5 + _gap * 2, _ypos - 100, "Instances", obj_dragon_flame);
 				}
 				
 				
@@ -421,31 +421,31 @@ switch (global.current_zone)
 				
 				if (_fh2 == 1)
 				{
-					instance_create_layer(_xpos1 + 390 * 2, _ypos - 200, "Instances", obj_fireball);
-					instance_create_layer(_xpos2 + 390 * 2, _ypos - 200, "Instances", obj_fireball);
-					instance_create_layer(_xpos3 + 390 * 2, _ypos - 200, "Instances", obj_fireball);
-					instance_create_layer(_xpos3 + 390 * 2 + _gap, _ypos - 200, "Instances", obj_fireball);
-					instance_create_layer(_xpos3 + 390 * 2+ _gap * 2, _ypos - 200, "Instances", obj_fireball);
+					instance_create_layer(_xpos1 + 390 * 2, _ypos - 100, "Instances", obj_dragon_flame);
+					instance_create_layer(_xpos2 + 390 * 2, _ypos - 100, "Instances", obj_dragon_flame);
+					instance_create_layer(_xpos3 + 390 * 2, _ypos - 100, "Instances", obj_dragon_flame);
+					instance_create_layer(_xpos3 + 390 * 2 + _gap, _ypos - 100, "Instances", obj_dragon_flame);
+					instance_create_layer(_xpos3 + 390 * 2+ _gap * 2, _ypos - 100, "Instances", obj_dragon_flame);
 						
-					instance_create_layer(_xpos1 + 390 * 6, _ypos - 530, "Instances", obj_fireball);
-					instance_create_layer(_xpos2 + 390 * 6, _ypos - 530, "Instances", obj_fireball);
-					instance_create_layer(_xpos3 + 390 * 6, _ypos - 530, "Instances", obj_fireball);
-					instance_create_layer(_xpos3 + 390 * 6 + _gap, _ypos - 530, "Instances", obj_fireball);
-					instance_create_layer(_xpos3 + 390 * 6 + _gap * 2, _ypos - 530, "Instances", obj_fireball);
+					instance_create_layer(_xpos1 + 390 * 6, _ypos - 430, "Instances", obj_dragon_flame);
+					instance_create_layer(_xpos2 + 390 * 6, _ypos - 430, "Instances", obj_dragon_flame);
+					instance_create_layer(_xpos3 + 390 * 6, _ypos - 430, "Instances", obj_dragon_flame);
+					instance_create_layer(_xpos3 + 390 * 6 + _gap, _ypos - 430, "Instances", obj_dragon_flame);
+					instance_create_layer(_xpos3 + 390 * 6 + _gap * 2, _ypos - 430, "Instances", obj_dragon_flame);
 				}
 				else
 				{
-					instance_create_layer(_xpos1 + 390 * 2, _ypos - 530, "Instances", obj_fireball);
-					instance_create_layer(_xpos2 + 390 * 2, _ypos - 530, "Instances", obj_fireball);
-					instance_create_layer(_xpos3 + 390 * 2, _ypos - 530, "Instances", obj_fireball);
-					instance_create_layer(_xpos3 + 390 * 2 + _gap, _ypos - 530, "Instances", obj_fireball);
-					instance_create_layer(_xpos3 + 390 * 2 + _gap * 2, _ypos - 530, "Instances", obj_fireball);
+					instance_create_layer(_xpos1 + 390 * 2, _ypos - 430, "Instances", obj_dragon_flame);
+					instance_create_layer(_xpos2 + 390 * 2, _ypos - 430, "Instances", obj_dragon_flame);
+					instance_create_layer(_xpos3 + 390 * 2, _ypos - 430, "Instances", obj_dragon_flame);
+					instance_create_layer(_xpos3 + 390 * 2 + _gap, _ypos - 430, "Instances", obj_dragon_flame);
+					instance_create_layer(_xpos3 + 390 * 2 + _gap * 2, _ypos - 430, "Instances", obj_dragon_flame);
 						
-					instance_create_layer(_xpos1 + 390 * 6, _ypos - 200, "Instances", obj_fireball);
-					instance_create_layer(_xpos2 + 390 * 6, _ypos - 200, "Instances", obj_fireball);
-					instance_create_layer(_xpos3 + 390 * 6, _ypos - 200, "Instances", obj_fireball);
-					instance_create_layer(_xpos3 + 390 * 6 + _gap, _ypos - 200, "Instances", obj_fireball);
-					instance_create_layer(_xpos3 + 390 * 6 + _gap * 2, _ypos - 200, "Instances", obj_fireball);
+					instance_create_layer(_xpos1 + 390 * 6, _ypos - 100, "Instances", obj_dragon_flame);
+					instance_create_layer(_xpos2 + 390 * 6, _ypos - 100, "Instances", obj_dragon_flame);
+					instance_create_layer(_xpos3 + 390 * 6, _ypos - 100, "Instances", obj_dragon_flame);
+					instance_create_layer(_xpos3 + 390 * 6 + _gap, _ypos - 100, "Instances", obj_dragon_flame);
+					instance_create_layer(_xpos3 + 390 * 6 + _gap * 2, _ypos - 100, "Instances", obj_dragon_flame);
 				}
 				
 				boss_chunk_index ++;
@@ -453,7 +453,7 @@ switch (global.current_zone)
 				break;
 				
 			case 4: // Normal chunk 3
-				instance_create_layer(_xpos2, _ypos - 350, "Instances", obj_slime);
+				instance_create_layer(_xpos2, _ypos - 320, "Instances", obj_slime);
 				instance_create_layer(_xpos2, _ypos - 320, "Instances", obj_platform);
 				instance_create_layer(_xpos2 + 390 * 2, 350, "Instances", obj_bat);
 				instance_create_layer(_xpos1 + 390 * 4, _ypos - 30, "Instances", obj_magical_flower_blue);
@@ -473,7 +473,7 @@ switch (global.current_zone)
 			
 			case 5: // Normal chunk 4
 				instance_create_layer(_xpos2, _ypos - 320, "Instances", obj_platform_large_left);
-				instance_create_layer(_xpos2 + 390, _ypos - 350, "Instances", obj_slime);
+				instance_create_layer(_xpos2 + 390, _ypos - 320, "Instances", obj_slime);
 				instance_create_layer(_xpos2 + 390, _ypos - 320, "Instances", obj_platform_large_right);
 				instance_create_layer(_xpos2 + 390, _ypos - 210, "Instances", obj_spikes_down);
 				instance_create_layer(_xpos1 + 390, _ypos - 30, "Instances", obj_magical_flower_blue);
