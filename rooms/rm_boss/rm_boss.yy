@@ -24,7 +24,6 @@
     {"name":"inst_14B9A9A6_1","path":"rooms/rm_boss/rm_boss.yy",},
     {"name":"inst_4236354E_1","path":"rooms/rm_boss/rm_boss.yy",},
     {"name":"inst_1A14F913","path":"rooms/rm_boss/rm_boss.yy",},
-    {"name":"inst_34B93CEE","path":"rooms/rm_boss/rm_boss.yy",},
     {"name":"inst_29C6B9D9","path":"rooms/rm_boss/rm_boss.yy",},
     {"name":"inst_3954C20A","path":"rooms/rm_boss/rm_boss.yy",},
   ],
@@ -40,7 +39,6 @@
     {"$GMRInstanceLayer":"","%Name":"Instances","depth":300,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v1","%Name":"inst_29C6B9D9","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_29C6B9D9","objectId":{"name":"obj_platform","path":"objects/obj_platform/obj_platform.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1026.0,"y":500.0,},
         {"$GMRInstance":"v1","%Name":"inst_1A14F913","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_1A14F913","objectId":{"name":"obj_bat","path":"objects/obj_bat/obj_bat.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1184.0,"y":350.0,},
-        {"$GMRInstance":"v1","%Name":"inst_34B93CEE","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_34B93CEE","objectId":{"name":"obj_fireball_dragon","path":"objects/obj_fireball_dragon/obj_fireball_dragon.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":968.0,"y":300.0,},
         {"$GMRInstance":"v1","%Name":"inst_3954C20A","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3954C20A","objectId":{"name":"obj_dragon","path":"objects/obj_dragon/obj_dragon.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1891.0,"y":483.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Ground","depth":400,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[

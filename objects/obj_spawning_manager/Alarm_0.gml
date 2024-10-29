@@ -371,50 +371,85 @@ switch (global.current_zone)
 				break;
 				
 			case 2: // Boss chunk 1
-				var _fireball_height = choose(1, 2);
+				var _fh1 = choose(1, 2);
 
 				instance_create_layer(_xpos2, _ypos - 320, "Instances", obj_platform);
 				instance_create_layer(_xpos2 + 390 * 4, _ypos - 320, "Instances", obj_platform_large_left);
 				instance_create_layer(_xpos2 + 390 * 5, _ypos - 320, "Instances", obj_platform_large_right);
 					
-				//if (_fireball_height == 1)
-				//{
-				//	instance_create_layer(_xpos1, _ypos - 100, "Instances", obj_fireball_dragon);
-				//	instance_create_layer(_xpos2, _ypos - 100, "Instances", obj_fireball_dragon);
-				//	instance_create_layer(_xpos3, _ypos - 100, "Instances", obj_fireball_dragon);
-				//	instance_create_layer(_xpos3 + _gap, _ypos - 100, "Instances", obj_fireball_dragon);
-				//	instance_create_layer(_xpos3 + _gap * 2, _ypos - 100, "Instances", obj_fireball_dragon);
+				if (_fh1 == 1)
+				{
+					instance_create_layer(_xpos1 + 390, _ypos - 200, "Instances", obj_fireball);
+					instance_create_layer(_xpos2 + 390, _ypos - 200, "Instances", obj_fireball);
+					instance_create_layer(_xpos3 + 390, _ypos - 200, "Instances", obj_fireball);
+					instance_create_layer(_xpos3 + 390 + _gap, _ypos - 200, "Instances", obj_fireball);
+					instance_create_layer(_xpos3 + 390 + _gap * 2, _ypos - 200, "Instances", obj_fireball);
 						
-				//	instance_create_layer(_xpos1 + 390 * 4, _ypos - 430, "Instances", obj_fireball_dragon);
-				//	instance_create_layer(_xpos2 + 390 * 4, _ypos - 430, "Instances", obj_fireball_dragon);
-				//	instance_create_layer(_xpos3 + 390 * 4, _ypos - 430, "Instances", obj_fireball_dragon);
-				//	instance_create_layer(_xpos3 + 390 * 4 + _gap, _ypos - 430, "Instances", obj_fireball_dragon);
-				//	instance_create_layer(_xpos3 + 390 * 4 + _gap * 2, _ypos - 430, "Instances", obj_fireball_dragon);
-				//}
-				//else
-				//{
-				//	instance_create_layer(_xpos1, _ypos - 430, "Instances", obj_fireball_dragon);
-				//	instance_create_layer(_xpos2, _ypos - 430, "Instances", obj_fireball_dragon);
-				//	instance_create_layer(_xpos3, _ypos - 430, "Instances", obj_fireball_dragon);
-				//	instance_create_layer(_xpos3 + _gap, _ypos - 430, "Instances", obj_fireball_dragon);
-				//	instance_create_layer(_xpos3 + _gap * 2, _ypos - 430, "Instances", obj_fireball_dragon);
+					instance_create_layer(_xpos1 + 390 * 5, _ypos - 530, "Instances", obj_fireball);
+					instance_create_layer(_xpos2 + 390 * 5, _ypos - 530, "Instances", obj_fireball);
+					instance_create_layer(_xpos3 + 390 * 5, _ypos - 530, "Instances", obj_fireball);
+					instance_create_layer(_xpos3 + 390 * 5 + _gap, _ypos - 530, "Instances", obj_fireball);
+					instance_create_layer(_xpos3 + 390 * 5 + _gap * 2, _ypos - 530, "Instances", obj_fireball);
+				}
+				else
+				{
+					instance_create_layer(_xpos1 + 390, _ypos - 530, "Instances", obj_fireball);
+					instance_create_layer(_xpos2 + 390, _ypos - 530, "Instances", obj_fireball);
+					instance_create_layer(_xpos3 + 390, _ypos - 530, "Instances", obj_fireball);
+					instance_create_layer(_xpos3 + 390 + _gap, _ypos - 530, "Instances", obj_fireball);
+					instance_create_layer(_xpos3 + 390 + _gap * 2, _ypos - 530, "Instances", obj_fireball);
 						
-				//	instance_create_layer(_xpos1 + 390 * 4, _ypos - 100, "Instances", obj_fireball_dragon);
-				//	instance_create_layer(_xpos2 + 390 * 4, _ypos - 100, "Instances", obj_fireball_dragon);
-				//	instance_create_layer(_xpos3 + 390 * 4, _ypos - 100, "Instances", obj_fireball_dragon);
-				//	instance_create_layer(_xpos3 + 390 * 4 + _gap, _ypos - 100, "Instances", obj_fireball_dragon);
-				//	instance_create_layer(_xpos3 + 390 * 4 + _gap * 2, _ypos - 100, "Instances", obj_fireball_dragon);
-				//}
+					instance_create_layer(_xpos1 + 390 * 5, _ypos - 200, "Instances", obj_fireball);
+					instance_create_layer(_xpos2 + 390 * 5, _ypos - 200, "Instances", obj_fireball);
+					instance_create_layer(_xpos3 + 390 * 5, _ypos - 200, "Instances", obj_fireball);
+					instance_create_layer(_xpos3 + 390 * 5 + _gap, _ypos - 200, "Instances", obj_fireball);
+					instance_create_layer(_xpos3 + 390 * 5 + _gap * 2, _ypos - 200, "Instances", obj_fireball);
+				}
 				
 				
 				boss_chunk_index ++;
 				alarm[0] = global.game_fps * 3;
 				break;
 			
-			case 3: // TODO: boss chunk 2
-				instance_create_layer(_xpos1, _ypos, "Instances", obj_spikes);
+			case 3: // Boss chunk 2
+				var _fh2 = choose(1, 2);
+
+				instance_create_layer(_xpos2, _ypos - 320, "Instances", obj_platform_large_left);
+				instance_create_layer(_xpos2 + 390, _ypos - 320, "Instances", obj_platform_large_right);
+				instance_create_layer(_xpos2 + 390 * 5, _ypos - 320, "Instances", obj_platform_large_left);
+				instance_create_layer(_xpos2 + 390 * 6, _ypos - 320, "Instances", obj_platform_large_right);
+				
+				if (_fh2 == 1)
+				{
+					instance_create_layer(_xpos1 + 390 * 2, _ypos - 200, "Instances", obj_fireball);
+					instance_create_layer(_xpos2 + 390 * 2, _ypos - 200, "Instances", obj_fireball);
+					instance_create_layer(_xpos3 + 390 * 2, _ypos - 200, "Instances", obj_fireball);
+					instance_create_layer(_xpos3 + 390 * 2 + _gap, _ypos - 200, "Instances", obj_fireball);
+					instance_create_layer(_xpos3 + 390 * 2+ _gap * 2, _ypos - 200, "Instances", obj_fireball);
+						
+					instance_create_layer(_xpos1 + 390 * 6, _ypos - 530, "Instances", obj_fireball);
+					instance_create_layer(_xpos2 + 390 * 6, _ypos - 530, "Instances", obj_fireball);
+					instance_create_layer(_xpos3 + 390 * 6, _ypos - 530, "Instances", obj_fireball);
+					instance_create_layer(_xpos3 + 390 * 6 + _gap, _ypos - 530, "Instances", obj_fireball);
+					instance_create_layer(_xpos3 + 390 * 6 + _gap * 2, _ypos - 530, "Instances", obj_fireball);
+				}
+				else
+				{
+					instance_create_layer(_xpos1 + 390 * 2, _ypos - 530, "Instances", obj_fireball);
+					instance_create_layer(_xpos2 + 390 * 2, _ypos - 530, "Instances", obj_fireball);
+					instance_create_layer(_xpos3 + 390 * 2, _ypos - 530, "Instances", obj_fireball);
+					instance_create_layer(_xpos3 + 390 * 2 + _gap, _ypos - 530, "Instances", obj_fireball);
+					instance_create_layer(_xpos3 + 390 * 2 + _gap * 2, _ypos - 530, "Instances", obj_fireball);
+						
+					instance_create_layer(_xpos1 + 390 * 6, _ypos - 200, "Instances", obj_fireball);
+					instance_create_layer(_xpos2 + 390 * 6, _ypos - 200, "Instances", obj_fireball);
+					instance_create_layer(_xpos3 + 390 * 6, _ypos - 200, "Instances", obj_fireball);
+					instance_create_layer(_xpos3 + 390 * 6 + _gap, _ypos - 200, "Instances", obj_fireball);
+					instance_create_layer(_xpos3 + 390 * 6 + _gap * 2, _ypos - 200, "Instances", obj_fireball);
+				}
+				
 				boss_chunk_index ++;
-				alarm[0] = global.game_fps * 3;
+				alarm[0] = global.game_fps * 3.5;
 				break;
 				
 			case 4: // Normal chunk 3
