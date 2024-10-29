@@ -21,6 +21,7 @@ global.zone_two_complete = false;
 global.zone_three_complete = false;
 global.zone_boss_complete = false;
 global.game_over = false;
+global.game_complete = false;
 
 global.current_score = 0;
 global.monster_worth = 2;

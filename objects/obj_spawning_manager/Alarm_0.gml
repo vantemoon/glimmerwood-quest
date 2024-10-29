@@ -44,7 +44,7 @@ switch (global.current_zone)
 				break;
 				
 			case 4: // One flower on a tall wall
-				instance_create_layer(_xpos1, _ypos, "Instances", obj_large_obstacle);
+				instance_create_layer(_xpos1, _ypos, "Instances", obj_stump);
 				instance_create_layer(_xpos1, _ypos - 380, "Instances", choose(obj_magical_flower_blue, obj_magical_flower_purple, obj_magical_flower_pink));
 				alarm[0] = global.game_fps * 2;
 				break;
@@ -95,7 +95,7 @@ switch (global.current_zone)
 				break;
 				
 			case 4: // One flower on a tall wall
-				instance_create_layer(_xpos1, _ypos, "Instances", obj_large_obstacle);
+				instance_create_layer(_xpos1, _ypos, "Instances", obj_stump);
 				instance_create_layer(_xpos1, _ypos - 380, "Instances", choose(obj_magical_flower_blue, obj_magical_flower_purple, obj_magical_flower_pink));
 				alarm[0] = global.game_fps * 1.8;
 				break;
@@ -134,7 +134,7 @@ switch (global.current_zone)
 				break;
 			
 			case 8: // A tall wall followed by spikes on a platform
-				instance_create_layer(_xpos1, _ypos, "Instances", obj_large_obstacle);
+				instance_create_layer(_xpos1, _ypos, "Instances", obj_stump);
 				instance_create_layer(_xpos2 + 400, _ypos - 320, "Instances", obj_platform);
 				instance_create_layer(_xpos2 + 400, _ypos - 320, "Instances", obj_spikes);
 				instance_create_layer(_xpos1 + 400, _ypos - 30, "Instances", obj_magical_flower_blue);
@@ -200,7 +200,7 @@ switch (global.current_zone)
 				break;
 				
 			case 4: // One flower on a tall wall
-				instance_create_layer(_xpos1, _ypos, "Instances", obj_large_obstacle);
+				instance_create_layer(_xpos1, _ypos, "Instances", obj_stump);
 				instance_create_layer(_xpos1, _ypos - 380, "Instances", choose(obj_magical_flower_blue, obj_magical_flower_purple, obj_magical_flower_pink));
 				alarm[0] = global.game_fps * 1.6;
 				break;
@@ -239,7 +239,7 @@ switch (global.current_zone)
 				break;
 				
 			case 8: // A tall wall followed by spikes on a platform
-				instance_create_layer(_xpos1, _ypos, "Instances", obj_large_obstacle);
+				instance_create_layer(_xpos1, _ypos, "Instances", obj_stump);
 				instance_create_layer(_xpos2 + 450, _ypos - 320, "Instances", obj_platform);
 				instance_create_layer(_xpos2 + 450, _ypos - 320, "Instances", obj_spikes);
 				instance_create_layer(_xpos1 + 450, _ypos - 30, "Instances", obj_magical_flower_blue);
@@ -295,7 +295,7 @@ switch (global.current_zone)
 				break;
 				
 			case 13: // A flower on a wall followed by slime under platform
-				instance_create_layer(_xpos1, _ypos, "Instances", obj_large_obstacle);
+				instance_create_layer(_xpos1, _ypos, "Instances", obj_stump);
 				instance_create_layer(_xpos1, _ypos - 380, "Instances", choose(obj_magical_flower_blue, obj_magical_flower_purple, obj_magical_flower_pink));
 				instance_create_layer(_xpos2 + 650, _ypos - 320, "Instances", obj_platform_left);
 				instance_create_layer(_xpos2 + 1040, _ypos - 320, "Instances", obj_platform_right);

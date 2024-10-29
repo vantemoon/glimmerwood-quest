@@ -2,7 +2,7 @@
   "$GMSprite":"",
   "%Name":"spr_dragon",
   "bboxMode":0,
-  "bbox_bottom":465,
+  "bbox_bottom":467,
   "bbox_left":164,
   "bbox_right":683,
   "bbox_top":40,
@@ -12,21 +12,23 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"f9bb05c3-527e-4764-9608-8ff205a6ede7","name":"f9bb05c3-527e-4764-9608-8ff205a6ede7","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"740e2e41-91cc-4369-8e71-4372d43f4a9b","name":"740e2e41-91cc-4369-8e71-4372d43f4a9b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"8394594e-056c-4058-ba2e-8ea51d1d6fb9","name":"8394594e-056c-4058-ba2e-8ea51d1d6fb9","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"b864adce-f929-4ed9-8476-49462b7434a3","name":"b864adce-f929-4ed9-8476-49462b7434a3","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":500,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"4cf5a3c2-71cc-471c-9ede-d015e364365c","blendMode":0,"displayName":"default","isLocked":false,"name":"4cf5a3c2-71cc-471c-9ede-d015e364365c","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"12104810-f790-459a-8ad9-b1380d1ed7ac","blendMode":0,"displayName":"default","isLocked":false,"name":"12104810-f790-459a-8ad9-b1380d1ed7ac","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_dragon",
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Monsters",
-    "path":"folders/Sprites/Monsters.yy",
+    "name":"Dragon",
+    "path":"folders/Sprites/Monsters/Dragon.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
@@ -49,7 +51,7 @@
     },
     "eventStubScript":null,
     "eventToFunction":{},
-    "length":1.0,
+    "length":3.0,
     "lockOrigin":false,
     "moments":{
       "$KeyframeStore<MomentsEventKeyframe>":"",
@@ -59,7 +61,7 @@
     },
     "name":"spr_dragon",
     "playback":1,
-    "playbackSpeed":30.0,
+    "playbackSpeed":5.0,
     "playbackSpeedType":0,
     "resourceType":"GMSequence",
     "resourceVersion":"2.0",
@@ -69,8 +71,14 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"f9bb05c3-527e-4764-9608-8ff205a6ede7","path":"sprites/spr_dragon/spr_dragon.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"ac9de4d9-b271-4664-8bdc-2602221c28db","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"740e2e41-91cc-4369-8e71-4372d43f4a9b","path":"sprites/spr_dragon/spr_dragon.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"4d33441f-0bfb-42d6-9a47-a1aec9e03a55","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"8394594e-056c-4058-ba2e-8ea51d1d6fb9","path":"sprites/spr_dragon/spr_dragon.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"389e86cf-cb08-40cd-8bbf-b9e14169c99d","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"b864adce-f929-4ed9-8476-49462b7434a3","path":"sprites/spr_dragon/spr_dragon.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"596177f9-0214-46e7-8552-8e8c2668fc99","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
