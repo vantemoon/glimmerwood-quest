@@ -101,21 +101,21 @@ switch (global.current_zone)
 				break;
 		
 			case 5: // One platform with alternating spikes and flowers
-				instance_create_layer(_xpos2, _ypos - 320, "Instances", obj_platform_large_left);
+				instance_create_layer(_xpos2, _ypos - 320, "Instances", obj_platform_left);
 				instance_create_layer(_xpos2, _ypos - 210, "Instances", obj_spikes_down);
 				instance_create_layer(_xpos1, _ypos - 30, "Instances", obj_magical_flower_blue);
 				instance_create_layer(_xpos2, _ypos - 30, "Instances", obj_magical_flower_purple);
 				instance_create_layer(_xpos3, _ypos - 30, "Instances", obj_magical_flower_pink);
-				instance_create_layer(_xpos2 + 390, _ypos - 320, "Instances", obj_platform_large_middle);
+				instance_create_layer(_xpos2 + 390, _ypos - 320, "Instances", obj_platform_middle);
 				instance_create_layer(_xpos1 + 390, _ypos - 100, "Instances", obj_magical_flower_blue);
 				instance_create_layer(_xpos2 + 390, _ypos - 100, "Instances", obj_magical_flower_purple);
 				instance_create_layer(_xpos3 + 390, _ypos - 100, "Instances", obj_magical_flower_pink);
-				instance_create_layer(_xpos2 + 390 * 2, _ypos - 320, "Instances", obj_platform_large_middle);
+				instance_create_layer(_xpos2 + 390 * 2, _ypos - 320, "Instances", obj_platform_middle);
 				instance_create_layer(_xpos2 + 390 * 2, _ypos - 210, "Instances", obj_spikes_down);
 				instance_create_layer(_xpos1 + 390 * 2, _ypos - 30, "Instances", obj_magical_flower_blue);
 				instance_create_layer(_xpos2 + 390 * 2, _ypos - 30, "Instances", obj_magical_flower_purple);
 				instance_create_layer(_xpos3 + 390 * 2, _ypos - 30, "Instances", obj_magical_flower_pink);
-				instance_create_layer(_xpos2 + 390 * 3, _ypos - 320, "Instances", obj_platform_large_right);
+				instance_create_layer(_xpos2 + 390 * 3, _ypos - 320, "Instances", obj_platform_right);
 				instance_create_layer(_xpos1 + 390 * 3, _ypos - 100, "Instances", obj_magical_flower_blue);
 				instance_create_layer(_xpos2 + 390 * 3, _ypos - 100, "Instances", obj_magical_flower_purple);
 				instance_create_layer(_xpos3 + 390 * 3, _ypos - 100, "Instances", obj_magical_flower_pink);
@@ -144,11 +144,11 @@ switch (global.current_zone)
 				break;
 				
 			case 9: // Two platforms with spikers and flowers
-				instance_create_layer(_xpos2, _ypos - 320, "Instances", obj_platform_large_left);
+				instance_create_layer(_xpos2, _ypos - 320, "Instances", obj_platform_left);
 				instance_create_layer(_xpos1, _ypos - 380, "Instances", obj_magical_flower_blue);
 				instance_create_layer(_xpos2, _ypos - 380, "Instances", obj_magical_flower_purple);
 				instance_create_layer(_xpos3, _ypos - 380, "Instances", obj_magical_flower_pink);
-				instance_create_layer(_xpos2 + 390, _ypos - 320, "Instances", obj_platform_large_right);
+				instance_create_layer(_xpos2 + 390, _ypos - 320, "Instances", obj_platform_right);
 				instance_create_layer(_xpos2 + 390, _ypos - 210, "Instances", obj_spikes_down);
 				instance_create_layer(_xpos1 + 390, _ypos - 30, "Instances", obj_magical_flower_blue);
 				instance_create_layer(_xpos2 + 390, _ypos - 30, "Instances", obj_magical_flower_purple);
@@ -206,21 +206,21 @@ switch (global.current_zone)
 				break;
 		
 			case 5: // One platform with alternating spikes and flowers
-				instance_create_layer(_xpos2, _ypos - 320, "Instances", obj_platform_large_left);
+				instance_create_layer(_xpos2, _ypos - 320, "Instances", obj_platform_left);
 				instance_create_layer(_xpos2, _ypos - 210, "Instances", obj_spikes_down);
 				instance_create_layer(_xpos1, _ypos - 30, "Instances", obj_magical_flower_blue);
 				instance_create_layer(_xpos2, _ypos - 30, "Instances", obj_magical_flower_purple);
 				instance_create_layer(_xpos3, _ypos - 30, "Instances", obj_magical_flower_pink);
-				instance_create_layer(_xpos2 + 390, _ypos - 320, "Instances", obj_platform_large_middle);
+				instance_create_layer(_xpos2 + 390, _ypos - 320, "Instances", obj_platform_middle);
 				instance_create_layer(_xpos1 + 390, _ypos - 100, "Instances", obj_magical_flower_blue);
 				instance_create_layer(_xpos2 + 390, _ypos - 100, "Instances", obj_magical_flower_purple);
 				instance_create_layer(_xpos3 + 390, _ypos - 100, "Instances", obj_magical_flower_pink);
-				instance_create_layer(_xpos2 + 390 * 2, _ypos - 320, "Instances", obj_platform_large_middle);
+				instance_create_layer(_xpos2 + 390 * 2, _ypos - 320, "Instances", obj_platform_middle);
 				instance_create_layer(_xpos2 + 390 * 2, _ypos - 210, "Instances", obj_spikes_down);
 				instance_create_layer(_xpos1 + 390 * 2, _ypos - 30, "Instances", obj_magical_flower_blue);
 				instance_create_layer(_xpos2 + 390 * 2, _ypos - 30, "Instances", obj_magical_flower_purple);
 				instance_create_layer(_xpos3 + 390 * 2, _ypos - 30, "Instances", obj_magical_flower_pink);
-				instance_create_layer(_xpos2 + 390 * 3, _ypos - 320, "Instances", obj_platform_large_right);
+				instance_create_layer(_xpos2 + 390 * 3, _ypos - 320, "Instances", obj_platform_right);
 				instance_create_layer(_xpos1 + 390 * 3, _ypos - 100, "Instances", obj_magical_flower_blue);
 				instance_create_layer(_xpos2 + 390 * 3, _ypos - 100, "Instances", obj_magical_flower_purple);
 				instance_create_layer(_xpos3 + 390 * 3, _ypos - 100, "Instances", obj_magical_flower_pink);
@@ -249,11 +249,11 @@ switch (global.current_zone)
 				break;
 				
 			case 9: // Two platforms with spikers and flowers
-				instance_create_layer(_xpos2, _ypos - 320, "Instances", obj_platform_large_left);
+				instance_create_layer(_xpos2, _ypos - 320, "Instances", obj_platform_left);
 				instance_create_layer(_xpos1, _ypos - 380, "Instances", obj_magical_flower_blue);
 				instance_create_layer(_xpos2, _ypos - 380, "Instances", obj_magical_flower_purple);
 				instance_create_layer(_xpos3, _ypos - 380, "Instances", obj_magical_flower_pink);
-				instance_create_layer(_xpos2 + 390, _ypos - 320, "Instances", obj_platform_large_right);
+				instance_create_layer(_xpos2 + 390, _ypos - 320, "Instances", obj_platform_right);
 				instance_create_layer(_xpos2 + 390, _ypos - 210, "Instances", obj_spikes_down);
 				instance_create_layer(_xpos1 + 390, _ypos - 30, "Instances", obj_magical_flower_blue);
 				instance_create_layer(_xpos2 + 390, _ypos - 30, "Instances", obj_magical_flower_purple);
@@ -297,8 +297,8 @@ switch (global.current_zone)
 			case 13: // A flower on a wall followed by slime under platform
 				instance_create_layer(_xpos1, _ypos, "Instances", obj_large_obstacle);
 				instance_create_layer(_xpos1, _ypos - 380, "Instances", choose(obj_magical_flower_blue, obj_magical_flower_purple, obj_magical_flower_pink));
-				instance_create_layer(_xpos2 + 650, _ypos - 320, "Instances", obj_platform_large_left);
-				instance_create_layer(_xpos2 + 1040, _ypos - 320, "Instances", obj_platform_large_right);
+				instance_create_layer(_xpos2 + 650, _ypos - 320, "Instances", obj_platform_left);
+				instance_create_layer(_xpos2 + 1040, _ypos - 320, "Instances", obj_platform_right);
 				instance_create_layer(_xpos1 + 650, _ypos - 60, "Instances", obj_magical_flower_blue);
 				instance_create_layer(_xpos2 + 650, _ypos - 60, "Instances", obj_magical_flower_purple);
 				instance_create_layer(_xpos3 + 650, _ypos - 60, "Instances", obj_magical_flower_pink);
@@ -318,12 +318,12 @@ switch (global.current_zone)
 		switch (boss_chunk_index)
 		{
 			case 0: // Normal chunk 1
-				instance_create_layer(_xpos2, _ypos - 320, "Instances", obj_platform_large_left);
-				instance_create_layer(_xpos2 + 390, _ypos - 320, "Instances", obj_platform_large_middle);
-				instance_create_layer(_xpos2 + 390 * 2, _ypos - 320, "Instances", obj_platform_large_middle);
-				instance_create_layer(_xpos2 + 390 * 3, _ypos - 320, "Instances", obj_platform_large_middle);
-				instance_create_layer(_xpos2 + 390 * 4, _ypos - 320, "Instances", obj_platform_large_middle);
-				instance_create_layer(_xpos2 + 390 * 5, _ypos - 320, "Instances", obj_platform_large_right);
+				instance_create_layer(_xpos2, _ypos - 320, "Instances", obj_platform_left);
+				instance_create_layer(_xpos2 + 390, _ypos - 320, "Instances", obj_platform_middle);
+				instance_create_layer(_xpos2 + 390 * 2, _ypos - 320, "Instances", obj_platform_middle);
+				instance_create_layer(_xpos2 + 390 * 3, _ypos - 320, "Instances", obj_platform_middle);
+				instance_create_layer(_xpos2 + 390 * 4, _ypos - 320, "Instances", obj_platform_middle);
+				instance_create_layer(_xpos2 + 390 * 5, _ypos - 320, "Instances", obj_platform_right);
 				instance_create_layer(_xpos1, _ypos - 65, "Instances", obj_magical_flower_blue);
 				instance_create_layer(_xpos2, _ypos - 65, "Instances", obj_magical_flower_purple);
 				instance_create_layer(_xpos3, _ypos - 65, "Instances", obj_magical_flower_pink);
@@ -350,10 +350,10 @@ switch (global.current_zone)
 			case 1: // Normal chunk 2
 				instance_create_layer(_xpos2, _ypos - 320, "Instances", obj_platform);
 				instance_create_layer(_xpos2, _ypos - 210, "Instances", obj_spikes_down);
-				instance_create_layer(_xpos2 + 390 * 4, _ypos - 320, "Instances", obj_platform_large_left);
-				instance_create_layer(_xpos2 + 390 * 5, _ypos - 320, "Instances", obj_platform_large_middle);
-				instance_create_layer(_xpos2 + 390 * 6, _ypos - 320, "Instances", obj_platform_large_middle);
-				instance_create_layer(_xpos2 + 390 * 7, _ypos - 320, "Instances", obj_platform_large_right);
+				instance_create_layer(_xpos2 + 390 * 4, _ypos - 320, "Instances", obj_platform_left);
+				instance_create_layer(_xpos2 + 390 * 5, _ypos - 320, "Instances", obj_platform_middle);
+				instance_create_layer(_xpos2 + 390 * 6, _ypos - 320, "Instances", obj_platform_middle);
+				instance_create_layer(_xpos2 + 390 * 7, _ypos - 320, "Instances", obj_platform_right);
 				instance_create_layer(_xpos1 + 390 * 4, _ypos - 65, "Instances", obj_magical_flower_blue);
 				instance_create_layer(_xpos2 + 390 * 4, _ypos - 65, "Instances", obj_magical_flower_purple);
 				instance_create_layer(_xpos3 + 390 * 4, _ypos - 65, "Instances", obj_magical_flower_pink);
@@ -374,8 +374,8 @@ switch (global.current_zone)
 				var _fh1 = choose(1, 2);
 
 				instance_create_layer(_xpos2, _ypos - 320, "Instances", obj_platform);
-				instance_create_layer(_xpos2 + 390 * 4, _ypos - 320, "Instances", obj_platform_large_left);
-				instance_create_layer(_xpos2 + 390 * 5, _ypos - 320, "Instances", obj_platform_large_right);
+				instance_create_layer(_xpos2 + 390 * 4, _ypos - 320, "Instances", obj_platform_left);
+				instance_create_layer(_xpos2 + 390 * 5, _ypos - 320, "Instances", obj_platform_right);
 					
 				if (_fh1 == 1)
 				{
@@ -414,10 +414,10 @@ switch (global.current_zone)
 			case 3: // Boss chunk 2
 				var _fh2 = choose(1, 2);
 
-				instance_create_layer(_xpos2, _ypos - 320, "Instances", obj_platform_large_left);
-				instance_create_layer(_xpos2 + 390, _ypos - 320, "Instances", obj_platform_large_right);
-				instance_create_layer(_xpos2 + 390 * 5, _ypos - 320, "Instances", obj_platform_large_left);
-				instance_create_layer(_xpos2 + 390 * 6, _ypos - 320, "Instances", obj_platform_large_right);
+				instance_create_layer(_xpos2, _ypos - 320, "Instances", obj_platform_left);
+				instance_create_layer(_xpos2 + 390, _ypos - 320, "Instances", obj_platform_right);
+				instance_create_layer(_xpos2 + 390 * 5, _ypos - 320, "Instances", obj_platform_left);
+				instance_create_layer(_xpos2 + 390 * 6, _ypos - 320, "Instances", obj_platform_right);
 				
 				if (_fh2 == 1)
 				{
@@ -462,9 +462,9 @@ switch (global.current_zone)
 				instance_create_layer(_xpos1 + 390 * 5, _ypos - 30, "Instances", obj_magical_flower_blue);
 				instance_create_layer(_xpos2 + 390 * 5, _ypos - 30, "Instances", obj_magical_flower_purple);
 				instance_create_layer(_xpos3 + 390 * 5, _ypos - 30, "Instances", obj_magical_flower_pink);
-				instance_create_layer(_xpos2 + 390 * 4, _ypos - 330, "Instances", obj_platform_large_left);
+				instance_create_layer(_xpos2 + 390 * 4, _ypos - 330, "Instances", obj_platform_left);
 				instance_create_layer(_xpos2 + 390 * 4, _ypos - 210, "Instances", obj_spikes_down);
-				instance_create_layer(_xpos2 + 390 * 5, _ypos - 330, "Instances", obj_platform_large_right);
+				instance_create_layer(_xpos2 + 390 * 5, _ypos - 330, "Instances", obj_platform_right);
 				instance_create_layer(_xpos2 + 390 * 5, _ypos - 350, "Instances", obj_witch);
 				
 				boss_chunk_index ++;
@@ -472,20 +472,20 @@ switch (global.current_zone)
 				break;
 			
 			case 5: // Normal chunk 4
-				instance_create_layer(_xpos2, _ypos - 320, "Instances", obj_platform_large_left);
+				instance_create_layer(_xpos2, _ypos - 320, "Instances", obj_platform_left);
 				instance_create_layer(_xpos2 + 390, _ypos - 320, "Instances", obj_slime);
-				instance_create_layer(_xpos2 + 390, _ypos - 320, "Instances", obj_platform_large_right);
+				instance_create_layer(_xpos2 + 390, _ypos - 320, "Instances", obj_platform_right);
 				instance_create_layer(_xpos2 + 390, _ypos - 210, "Instances", obj_spikes_down);
 				instance_create_layer(_xpos1 + 390, _ypos - 30, "Instances", obj_magical_flower_blue);
 				instance_create_layer(_xpos2 + 390, _ypos - 30, "Instances", obj_magical_flower_purple);
 				instance_create_layer(_xpos3 + 390, _ypos - 30, "Instances", obj_magical_flower_pink);
 				instance_create_layer(_xpos2 + 390 * 2, 350, "Instances", obj_bat);
-				instance_create_layer(_xpos2 + 390 * 5, _ypos - 320, "Instances", obj_platform_large_left);
+				instance_create_layer(_xpos2 + 390 * 5, _ypos - 320, "Instances", obj_platform_left);
 				instance_create_layer(_xpos2 + 390 * 5, _ypos - 210, "Instances", obj_spikes_down);
 				instance_create_layer(_xpos1 + 390 * 5, _ypos - 30, "Instances", obj_magical_flower_blue);
 				instance_create_layer(_xpos2 + 390 * 5, _ypos - 30, "Instances", obj_magical_flower_purple);
 				instance_create_layer(_xpos3 + 390 * 5, _ypos - 30, "Instances", obj_magical_flower_pink);
-				instance_create_layer(_xpos2 + 390 * 6, _ypos - 320, "Instances", obj_platform_large_right);
+				instance_create_layer(_xpos2 + 390 * 6, _ypos - 320, "Instances", obj_platform_right);
 				instance_create_layer(_xpos1 + 390 * 6, _ypos - 30, "Instances", obj_magical_flower_blue);
 				instance_create_layer(_xpos2 + 390 * 6, _ypos - 30, "Instances", obj_magical_flower_purple);
 				instance_create_layer(_xpos3 + 390 * 6, _ypos - 30, "Instances", obj_magical_flower_pink);

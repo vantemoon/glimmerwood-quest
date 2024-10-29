@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_platform_large_left",
+  "%Name":"obj_platform_middle",
   "eventList":[],
   "managed":true,
-  "name":"obj_platform_large_left",
+  "name":"obj_platform_middle",
   "overriddenProperties":[],
   "parent":{
     "name":"Tiles",
@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_platform_large_left_1",
-    "path":"sprites/spr_platform_large_left_1/spr_platform_large_left_1.yy",
+    "name":"spr_platform_middle_1",
+    "path":"sprites/spr_platform_middle_1/spr_platform_middle_1.yy",
   },
   "spriteMaskId":null,
   "visible":true,
