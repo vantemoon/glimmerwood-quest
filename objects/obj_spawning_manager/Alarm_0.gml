@@ -332,15 +332,17 @@ if (!global.game_over and !global.game_complete)
 			if (!transition_zone)
 			{
 				transition_zone = true;
-				obj_background_manager.trans_start = true;
-				obj_environment_manager.called_once = false;
+				 obj_background_manager.trans_start = true;
+				 obj_environment_manager.called_once = false;
+				// show_debug_message("called once = false");
+				// show_debug_message("called once: " + string(obj_environment_manager.called_once));
 				alarm[0] = 5 * global.game_fps;
 				break;
 			}
 		
 			if (!dragon_exist)
 			{
-				instance_create_layer(1780, 300, "Instances", obj_dragon);
+				instance_create_layer(1625, 300, "Instances", obj_dragon);
 				dragon_exist = true;
 			}
 			
@@ -525,9 +527,10 @@ if (!global.game_over and !global.game_complete)
 					break;
 			
 				case 6: // TODO: boss chunk 3
-					instance_create_layer(_xpos1, _ypos, "Instances", obj_spikes);
+					obj_dragon.curr_state = MONSTER_STATE.ATTACK;
+					
 					boss_chunk_index = 0;
-					alarm[0] = global.game_fps * 3;
+					alarm[0] = global.game_fps * 13;
 					break;
 			}
 	}

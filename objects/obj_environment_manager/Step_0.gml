@@ -10,9 +10,12 @@ if (global.current_zone == ZONE.ONE)
 	object_set_sprite(obj_stump, spr_stump_1);
 }
 
-else if (trans_start)
+else if (trans_start and !called_once)
 {
+	show_debug_message("started, called once = true");
+	show_debug_message("called once: " + string(obj_environment_manager.called_once));
 	trans_start = false;
+	called_once = true;
 	
 	switch (global.current_zone)
 	{

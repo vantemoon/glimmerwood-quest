@@ -1,6 +1,6 @@
 {
   "$GMSprite":"",
-  "%Name":"spr_dragon",
+  "%Name":"spr_dragon_flying",
   "bboxMode":0,
   "bbox_bottom":467,
   "bbox_left":164,
@@ -23,7 +23,7 @@
   "layers":[
     {"$GMImageLayer":"","%Name":"12104810-f790-459a-8ad9-b1380d1ed7ac","blendMode":0,"displayName":"default","isLocked":false,"name":"12104810-f790-459a-8ad9-b1380d1ed7ac","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"spr_dragon",
+  "name":"spr_dragon_flying",
   "nineSlice":null,
   "origin":4,
   "parent":{
@@ -35,7 +35,7 @@
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"",
-    "%Name":"spr_dragon",
+    "%Name":"spr_dragon_flying",
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -59,7 +59,7 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"spr_dragon",
+    "name":"spr_dragon_flying",
     "playback":1,
     "playbackSpeed":5.0,
     "playbackSpeedType":0,
@@ -71,13 +71,13 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"740e2e41-91cc-4369-8e71-4372d43f4a9b","path":"sprites/spr_dragon/spr_dragon.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"740e2e41-91cc-4369-8e71-4372d43f4a9b","path":"sprites/spr_dragon_flying/spr_dragon_flying.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"4d33441f-0bfb-42d6-9a47-a1aec9e03a55","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"8394594e-056c-4058-ba2e-8ea51d1d6fb9","path":"sprites/spr_dragon/spr_dragon.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"8394594e-056c-4058-ba2e-8ea51d1d6fb9","path":"sprites/spr_dragon_flying/spr_dragon_flying.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"389e86cf-cb08-40cd-8bbf-b9e14169c99d","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"b864adce-f929-4ed9-8476-49462b7434a3","path":"sprites/spr_dragon/spr_dragon.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"b864adce-f929-4ed9-8476-49462b7434a3","path":"sprites/spr_dragon_flying/spr_dragon_flying.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"596177f9-0214-46e7-8552-8e8c2668fc99","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],

@@ -93,7 +93,7 @@ if (global.game_complete)
 	global.ground_speed = 0;
 	global.background_speed = 0;
 	global.speed_modifier = 0;
-	obj_player.sprite_index = spr_player_running;
+	obj_player.curr_state = PLAYER_STATE.NORMAL
 	obj_player.has_control = false;
 	// TODO: add end game UI
 }
