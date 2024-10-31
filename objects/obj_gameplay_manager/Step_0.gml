@@ -9,28 +9,31 @@ if (obj_player.num_flower >= 30 and !global.zone_two_complete)
 {
 	global.zone_one_complete = true;
 	if (global.current_zone != ZONE.TWO)
+	{
 		obj_player.num_flower = 0;
+		obj_spawning_manager.transition_zone = false;
+	}
 	global.current_zone = ZONE.TWO;
-	obj_background_manager.trans_start = true;
-	obj_environment_manager.trans_start = true;
 }
 if (obj_player.num_flower >= 50 and !global.zone_three_complete)
 {
 	global.zone_two_complete = true;
 	if (global.current_zone != ZONE.THREE)
+	{
 		obj_player.num_flower = 0;
+		obj_spawning_manager.transition_zone = false;
+	}
 	global.current_zone = ZONE.THREE;
-	obj_background_manager.trans_start = true;
-	obj_environment_manager.trans_start = true;
 }
 if (obj_player.num_flower >= 70 and !global.zone_boss_complete)
 {
 	global.zone_three_complete = true;
 	if (global.current_zone != ZONE.BOSS)
+	{
 		obj_player.num_flower = 0;
+		obj_spawning_manager.transition_zone = false;
+	}
 	global.current_zone = ZONE.BOSS;
-	obj_background_manager.trans_start = true;
-	obj_environment_manager.trans_start = true;
 }
 
 // Update game speed
@@ -90,6 +93,7 @@ if (global.game_complete)
 	global.ground_speed = 0;
 	global.background_speed = 0;
 	global.speed_modifier = 0;
-	obj_player.sprite_index = spr_player;
+	obj_player.sprite_index = spr_player_running;
+	obj_player.has_control = false;
 	// TODO: add end game UI
 }

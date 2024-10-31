@@ -11,6 +11,6 @@ function player_state_normal()
 	}
 		
 	// Animation
-	sprite_index = spr_player_walking;
+	sprite_index = spr_player_running;
 	image_speed = 2;
 }

@@ -100,6 +100,12 @@ switch (global.current_zone)
 		if (layer_background_get_alpha(_bg1_id) > 0 and trans_done)
 		{
 			var _new_alpha = layer_background_get_alpha(_bg1_id) + 0.01;
+			
+			if ((_new_alpha == 0.1) and !obj_environment_manager.called_once)
+			{
+				obj_environment_manager.trans_start = true;
+				obj_environment_manager.called_once = true;
+			}
 				
 			layer_background_alpha(_bg1_id, _new_alpha);
 			layer_background_alpha(_bg2_id, _new_alpha);

@@ -3,7 +3,7 @@
 function position_check()
 {
 	var _xpos = 290;
-	var _ypos = 735;
+	var _ypos = 820;
 	
 	var _hsp = global.ground_speed * global.speed_modifier;
 	if (x <= _xpos and !place_meeting(x + abs(_hsp), y, obj_tile))
@@ -11,11 +11,11 @@ function position_check()
 	
 	if (x < -70)
 	{
-		curr_hp -= 1;
+		curr_hp -= 0;
 		immune_frame = 2 * global.game_fps;
 		
 		// Respawn at original position
-		x = 290;
-		y = 820;
+		x = _xpos;
+		y = _ypos;
 	}
 }
