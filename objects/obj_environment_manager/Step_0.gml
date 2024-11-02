@@ -8,6 +8,8 @@ if (global.current_zone == ZONE.ONE)
 	object_set_sprite(obj_platform_middle, spr_platform_middle_1);
 	object_set_sprite(obj_platform_right, spr_platform_right_1);
 	object_set_sprite(obj_stump, spr_stump_1);
+	object_set_sprite(obj_bark_large, spr_bark_large_1);
+	object_set_sprite(obj_bark_small, spr_bark_small_1);
 }
 
 else if (trans_start and !called_once)
@@ -26,6 +28,8 @@ else if (trans_start and !called_once)
 			object_set_sprite(obj_platform_middle, spr_platform_middle_1);
 			object_set_sprite(obj_platform_right, spr_platform_right_1);
 			object_set_sprite(obj_stump, spr_stump_1);
+			object_set_sprite(obj_bark_large, spr_bark_large_1);
+			object_set_sprite(obj_bark_small, spr_bark_small_1);
 		
 			break;
 		
@@ -48,6 +52,8 @@ else if (trans_start and !called_once)
 			object_set_sprite(obj_platform_middle, spr_platform_middle_b);
 			object_set_sprite(obj_platform_right, spr_platform_right_b);
 			object_set_sprite(obj_stump, spr_stump_b);
+			object_set_sprite(obj_bark_large, spr_bark_large_b);
+			object_set_sprite(obj_bark_small, spr_bark_small_b);
 			
 			break;
 	}

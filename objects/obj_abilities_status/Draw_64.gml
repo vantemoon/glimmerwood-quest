@@ -11,13 +11,13 @@ else if (!obj_ability_manager.shield_unlocked)
 	draw_sprite(spr_shield_icon, 0, 840, 216);
 
 // Magnet
-if (obj_ability_manager.magnet_ready)
-	draw_sprite(spr_magnet_icon, 2, 960, 216);
+//if (obj_ability_manager.magnet_ready)
+//	draw_sprite(spr_magnet_icon, 2, 960, 216);
 
-else if (obj_ability_manager.magnet_unlocked)
-	draw_sprite(spr_magnet_icon, 1, 960, 216);
+//else if (obj_ability_manager.magnet_unlocked)
+//	draw_sprite(spr_magnet_icon, 1, 960, 216);
 
-else if (!obj_ability_manager.magnet_unlocked)
+//else if (!obj_ability_manager.magnet_unlocked)
 	draw_sprite(spr_magnet_icon, 0, 960, 216);
 	
 // Missile

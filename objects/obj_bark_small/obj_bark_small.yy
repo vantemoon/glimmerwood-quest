@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_small_obstacle_down",
+  "%Name":"obj_bark_small",
   "eventList":[],
   "managed":true,
-  "name":"obj_small_obstacle_down",
+  "name":"obj_bark_small",
   "overriddenProperties":[],
   "parent":{
     "name":"Obstacles",
@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_wall_small_down",
-    "path":"sprites/spr_wall_small_down/spr_wall_small_down.yy",
+    "name":"spr_bark_small_1",
+    "path":"sprites/spr_bark_small_1/spr_bark_small_1.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -43,11 +43,11 @@ switch (curr_state)
 				
 					break;
 			
-				case 1: // 3 seconds
+				case 1: // 2 seconds
 					if (!timer_on)
 					{
 						timer_on = true;
-						alarm[1] = 3 * global.game_fps;
+						alarm[1] = 2 * global.game_fps;
 					}
 				
 					// TODO: charge up the tail swing
