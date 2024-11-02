@@ -1,10 +1,10 @@
-/// @description Activate slowdoen
+/// @description Activate magnet
 
-if (timeslow_ready and !timeslow_activated)
+if (magnet_ready and !magnet_activated)
 {
-	timeslow_activated = true;
+	magnet_activated = true;
 	
-	obj_player.num_flower -= 10;
+	// obj_player.num_flower -= 10;
 
-	instance_create_layer(x, y, "Abilities", obj_timeslow);
+	// TODO: create magnet object
 }

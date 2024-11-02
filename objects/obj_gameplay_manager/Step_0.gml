@@ -59,7 +59,7 @@ switch (global.current_zone)
 		if (global.speed_modifier >= 2.5)
 			global.speed_modifier = 2.5;
 		global.monster_worth = 6;
-		obj_ability_manager.timeslow_unlocked = true;
+		obj_ability_manager.magnet_unlocked = true;
 		break;
 		
 	case ZONE.BOSS:

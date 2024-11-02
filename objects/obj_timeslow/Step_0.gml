@@ -9,7 +9,7 @@ if (speed_up_start)
 		
 		// TODO: add visual effect
 		
-		obj_ability_manager.timeslow_activated = false;
+		obj_ability_manager.magnet_activated = false;
 		instance_destroy();
 	}
 }
