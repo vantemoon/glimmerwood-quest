@@ -8,7 +8,7 @@ if (global.current_zone != ZONE.BOSS)
 
 else
 {
-	draw_sprite(spr_flower_progress_bar_fill, 0, 89, 216);
+	draw_sprite(spr_flower_progress_bar_fill, 0, 82, 216);
 }
 
 // Draw the progress bar
@@ -26,6 +26,5 @@ if (global.current_zone != ZONE.BOSS)
 
 else
 {
-	draw_sprite(spr_flower_progress_bar_fill, 0, 89, 216);
+	draw_text(160, 192, string(curr_flower));
 }
-draw_text(160, 192, string(curr_flower));

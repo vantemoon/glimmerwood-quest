@@ -9,7 +9,7 @@ termsp = 23;
 has_control = true;
 
 max_hp = 3;
-curr_hp = max_hp;
+curr_hp = 2;
 died = false;
 
 immune_frame = 0;
