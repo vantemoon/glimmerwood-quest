@@ -192,7 +192,8 @@ if (!global.game_over and !global.game_complete)
 					instance_create_layer(_xpos2 + 390 * 9, _ypos - 320, "Instances", obj_platform_middle);
 					instance_create_layer(_xpos2 + 390 * 10, _ypos - 320, "Instances", obj_platform_middle);
 					instance_create_layer(_xpos2 + 390 * 11, _ypos - 320, "Instances", obj_platform_middle);
-					instance_create_layer(_xpos2 + 390 * 12, _ypos - 320, "Instances", obj_platform_right);
+					instance_create_layer(_xpos2 + 390 * 12, _ypos - 320, "Instances", obj_platform_middle);
+					instance_create_layer(_xpos2 + 390 * 13, _ypos - 320, "Instances", obj_platform_right);
 					
 					instance_create_layer(_xpos2 + 390 * 4, _ypos - 640, "Instances", obj_platform_left);
 					instance_create_layer(_xpos2 + 390 * 5, _ypos - 640, "Instances", obj_platform_middle);
@@ -209,36 +210,32 @@ if (!global.game_over and !global.game_complete)
 					instance_create_layer(_xpos2 + 390 * 10, _ypos - 65, "Instances", obj_magical_flower_blue);
 					instance_create_layer(_xpos3 + 390 * 10, _ypos - 65, "Instances", obj_magical_flower_blue);
 					
-					// instance_create_layer(_xpos1, _ypos - 380, "Instances", obj_magical_flower_purple);
 					instance_create_layer(_xpos1, _ypos - 380, "Instances", obj_magical_flower_purple_start);
 					instance_create_layer(_xpos2, _ypos - 380, "Instances", obj_magical_flower_pink);
 					instance_create_layer(_xpos3, _ypos - 380, "Instances", obj_magical_flower_pink);
-					instance_create_layer(_xpos1 + 390, _ypos - 700, "Instances", obj_magical_flower_pink);
 					instance_create_layer(_xpos2 + 390, _ypos - 700, "Instances", obj_magical_flower_pink);
-					instance_create_layer(_xpos3 + 390, _ypos - 700, "Instances", obj_magical_flower_pink);
 					instance_create_layer(_xpos1 + 390 * 4, _ypos - 420, "Instances", obj_magical_flower_pink);
 					instance_create_layer(_xpos2 + 390 * 4, _ypos - 420, "Instances", obj_magical_flower_pink);
 					instance_create_layer(_xpos3 + 390 * 4, _ypos - 420, "Instances", obj_magical_flower_pink);
 					instance_create_layer(_xpos1 + 390 * 6, _ypos - 420, "Instances", obj_magical_flower_pink);
 					instance_create_layer(_xpos2 + 390 * 6, _ypos - 420, "Instances", obj_magical_flower_pink);
 					instance_create_layer(_xpos3 + 390 * 6, _ypos - 420, "Instances", obj_magical_flower_pink);
-					instance_create_layer(_xpos2 + 390 * 9 - 64, _ypos - 700, "Instances", obj_magical_flower_pink);
-					instance_create_layer(_xpos2 + 390 * 9 + 64, _ypos - 700, "Instances", obj_magical_flower_pink);
-					instance_create_layer(_xpos1 + 390 * 12, _ypos - 420, "Instances", obj_magical_flower_pink);
-					instance_create_layer(_xpos2 + 390 * 12, _ypos - 420, "Instances", obj_magical_flower_pink);
-					// instance_create_layer(_xpos3 + 390 * 12, _ypos - 420, "Instances", obj_magical_flower_purple);
-					instance_create_layer(_xpos3 + 390 * 12, _ypos - 420, "Instances", obj_magical_flower_purple_end);
+					instance_create_layer(_xpos2 + 390 * 10 - 64, _ypos - 700, "Instances", obj_magical_flower_pink);
+					instance_create_layer(_xpos2 + 390 * 10 + 64, _ypos - 700, "Instances", obj_magical_flower_pink);
+					instance_create_layer(_xpos1 + 390 * 13, _ypos - 420, "Instances", obj_magical_flower_pink);
+					instance_create_layer(_xpos2 + 390 * 13, _ypos - 420, "Instances", obj_magical_flower_pink);
+					instance_create_layer(_xpos3 + 390 * 13, _ypos - 420, "Instances", obj_magical_flower_purple_end);
 					
 					instance_create_layer(_xpos2 + 390, _ypos - 320, "Instances", obj_spikes);
 					instance_create_layer(_xpos2 + 390 * 5, _ypos - 530, "Instances", obj_spikes_down);
 					instance_create_layer(_xpos2 + 390 * 7, _ypos - 530, "Instances", obj_spikes_down);
 					
-					instance_create_layer(_xpos2 + 390 * 9, _ypos - 320, "Instances", obj_stump);
-					instance_create_layer(_xpos2 + 390 * 4, _ypos - 320, "Instances", obj_slime);
-					instance_create_layer(_xpos2 + 390 * 10, _ypos - 650, "Instances", obj_bat);
+					instance_create_layer(_xpos2 + 390 * 10, _ypos - 320, "Instances", obj_stump);
+					instance_create_layer(_xpos2 + 390 * 8, _ypos - 320, "Instances", obj_slime);
+					instance_create_layer(_xpos2 + 390 * 11, _ypos - 650, "Instances", obj_bat);
 					
 					instance_create_layer(_xpos2 + 390 * 3, 0, "Instances", obj_small_obstacle_down);
-					instance_create_layer(_xpos2 + 390 * 11, 0, "Instances", obj_small_obstacle_down);
+					instance_create_layer(_xpos2 + 390 * 12, 0, "Instances", obj_small_obstacle_down);
 					
 					alarm[0] = irandom_range(global.game_fps * 6.3, global.game_fps * 7.2);
 					break;
@@ -373,7 +370,8 @@ if (!global.game_over and !global.game_complete)
 					instance_create_layer(_xpos2 + 390 * 9, _ypos - 320, "Instances", obj_platform_middle);
 					instance_create_layer(_xpos2 + 390 * 10, _ypos - 320, "Instances", obj_platform_middle);
 					instance_create_layer(_xpos2 + 390 * 11, _ypos - 320, "Instances", obj_platform_middle);
-					instance_create_layer(_xpos2 + 390 * 12, _ypos - 320, "Instances", obj_platform_right);
+					instance_create_layer(_xpos2 + 390 * 12, _ypos - 320, "Instances", obj_platform_middle);
+					instance_create_layer(_xpos2 + 390 * 13, _ypos - 320, "Instances", obj_platform_right);
 					
 					instance_create_layer(_xpos2 + 390 * 4, _ypos - 640, "Instances", obj_platform_left);
 					instance_create_layer(_xpos2 + 390 * 5, _ypos - 640, "Instances", obj_platform_middle);
@@ -390,36 +388,32 @@ if (!global.game_over and !global.game_complete)
 					instance_create_layer(_xpos2 + 390 * 10, _ypos - 65, "Instances", obj_magical_flower_blue);
 					instance_create_layer(_xpos3 + 390 * 10, _ypos - 65, "Instances", obj_magical_flower_blue);
 					
-					// instance_create_layer(_xpos1, _ypos - 380, "Instances", obj_magical_flower_purple);
 					instance_create_layer(_xpos1, _ypos - 380, "Instances", obj_magical_flower_purple_start);
 					instance_create_layer(_xpos2, _ypos - 380, "Instances", obj_magical_flower_pink);
 					instance_create_layer(_xpos3, _ypos - 380, "Instances", obj_magical_flower_pink);
-					instance_create_layer(_xpos1 + 390, _ypos - 700, "Instances", obj_magical_flower_pink);
 					instance_create_layer(_xpos2 + 390, _ypos - 700, "Instances", obj_magical_flower_pink);
-					instance_create_layer(_xpos3 + 390, _ypos - 700, "Instances", obj_magical_flower_pink);
 					instance_create_layer(_xpos1 + 390 * 4, _ypos - 420, "Instances", obj_magical_flower_pink);
 					instance_create_layer(_xpos2 + 390 * 4, _ypos - 420, "Instances", obj_magical_flower_pink);
 					instance_create_layer(_xpos3 + 390 * 4, _ypos - 420, "Instances", obj_magical_flower_pink);
 					instance_create_layer(_xpos1 + 390 * 6, _ypos - 420, "Instances", obj_magical_flower_pink);
 					instance_create_layer(_xpos2 + 390 * 6, _ypos - 420, "Instances", obj_magical_flower_pink);
 					instance_create_layer(_xpos3 + 390 * 6, _ypos - 420, "Instances", obj_magical_flower_pink);
-					instance_create_layer(_xpos2 + 390 * 9 - 64, _ypos - 700, "Instances", obj_magical_flower_pink);
-					instance_create_layer(_xpos2 + 390 * 9 + 64, _ypos - 700, "Instances", obj_magical_flower_pink);
-					instance_create_layer(_xpos1 + 390 * 12, _ypos - 420, "Instances", obj_magical_flower_pink);
-					instance_create_layer(_xpos2 + 390 * 12, _ypos - 420, "Instances", obj_magical_flower_pink);
-					// instance_create_layer(_xpos3 + 390 * 12, _ypos - 420, "Instances", obj_magical_flower_purple);
-					instance_create_layer(_xpos3 + 390 * 12, _ypos - 420, "Instances", obj_magical_flower_purple_end);
+					instance_create_layer(_xpos2 + 390 * 10 - 64, _ypos - 700, "Instances", obj_magical_flower_pink);
+					instance_create_layer(_xpos2 + 390 * 10 + 64, _ypos - 700, "Instances", obj_magical_flower_pink);
+					instance_create_layer(_xpos1 + 390 * 13, _ypos - 420, "Instances", obj_magical_flower_pink);
+					instance_create_layer(_xpos2 + 390 * 13, _ypos - 420, "Instances", obj_magical_flower_pink);
+					instance_create_layer(_xpos3 + 390 * 13, _ypos - 420, "Instances", obj_magical_flower_purple_end);
 					
 					instance_create_layer(_xpos2 + 390, _ypos - 320, "Instances", obj_spikes);
 					instance_create_layer(_xpos2 + 390 * 5, _ypos - 530, "Instances", obj_spikes_down);
 					instance_create_layer(_xpos2 + 390 * 7, _ypos - 530, "Instances", obj_spikes_down);
 					
-					instance_create_layer(_xpos2 + 390 * 9, _ypos - 320, "Instances", obj_stump);
-					instance_create_layer(_xpos2 + 390 * 4, _ypos - 320, "Instances", obj_slime);
-					instance_create_layer(_xpos2 + 390 * 10, _ypos - 650, "Instances", obj_bat);
+					instance_create_layer(_xpos2 + 390 * 10, _ypos - 320, "Instances", obj_stump);
+					instance_create_layer(_xpos2 + 390 * 8, _ypos - 320, "Instances", obj_slime);
+					instance_create_layer(_xpos2 + 390 * 11, _ypos - 650, "Instances", obj_bat);
 					
 					instance_create_layer(_xpos2 + 390 * 3, 0, "Instances", obj_small_obstacle_down);
-					instance_create_layer(_xpos2 + 390 * 11, 0, "Instances", obj_small_obstacle_down);
+					instance_create_layer(_xpos2 + 390 * 12, 0, "Instances", obj_small_obstacle_down);
 					
 					alarm[0] = irandom_range(global.game_fps * 5.6, global.game_fps * 6.4);
 					break;
@@ -531,7 +525,8 @@ if (!global.game_over and !global.game_complete)
 					instance_create_layer(_xpos2 + 390 * 9, _ypos - 320, "Instances", obj_platform_middle);
 					instance_create_layer(_xpos2 + 390 * 10, _ypos - 320, "Instances", obj_platform_middle);
 					instance_create_layer(_xpos2 + 390 * 11, _ypos - 320, "Instances", obj_platform_middle);
-					instance_create_layer(_xpos2 + 390 * 12, _ypos - 320, "Instances", obj_platform_right);
+					instance_create_layer(_xpos2 + 390 * 12, _ypos - 320, "Instances", obj_platform_middle);
+					instance_create_layer(_xpos2 + 390 * 13, _ypos - 320, "Instances", obj_platform_right);
 					
 					instance_create_layer(_xpos2 + 390 * 4, _ypos - 640, "Instances", obj_platform_left);
 					instance_create_layer(_xpos2 + 390 * 5, _ypos - 640, "Instances", obj_platform_middle);
@@ -548,36 +543,32 @@ if (!global.game_over and !global.game_complete)
 					instance_create_layer(_xpos2 + 390 * 10, _ypos - 65, "Instances", obj_magical_flower_blue);
 					instance_create_layer(_xpos3 + 390 * 10, _ypos - 65, "Instances", obj_magical_flower_blue);
 					
-					// instance_create_layer(_xpos1, _ypos - 380, "Instances", obj_magical_flower_purple);
 					instance_create_layer(_xpos1, _ypos - 380, "Instances", obj_magical_flower_purple_start);
 					instance_create_layer(_xpos2, _ypos - 380, "Instances", obj_magical_flower_pink);
 					instance_create_layer(_xpos3, _ypos - 380, "Instances", obj_magical_flower_pink);
-					instance_create_layer(_xpos1 + 390, _ypos - 700, "Instances", obj_magical_flower_pink);
 					instance_create_layer(_xpos2 + 390, _ypos - 700, "Instances", obj_magical_flower_pink);
-					instance_create_layer(_xpos3 + 390, _ypos - 700, "Instances", obj_magical_flower_pink);
 					instance_create_layer(_xpos1 + 390 * 4, _ypos - 420, "Instances", obj_magical_flower_pink);
 					instance_create_layer(_xpos2 + 390 * 4, _ypos - 420, "Instances", obj_magical_flower_pink);
 					instance_create_layer(_xpos3 + 390 * 4, _ypos - 420, "Instances", obj_magical_flower_pink);
 					instance_create_layer(_xpos1 + 390 * 6, _ypos - 420, "Instances", obj_magical_flower_pink);
 					instance_create_layer(_xpos2 + 390 * 6, _ypos - 420, "Instances", obj_magical_flower_pink);
 					instance_create_layer(_xpos3 + 390 * 6, _ypos - 420, "Instances", obj_magical_flower_pink);
-					instance_create_layer(_xpos2 + 390 * 9 - 64, _ypos - 700, "Instances", obj_magical_flower_pink);
-					instance_create_layer(_xpos2 + 390 * 9 + 64, _ypos - 700, "Instances", obj_magical_flower_pink);
-					instance_create_layer(_xpos1 + 390 * 12, _ypos - 420, "Instances", obj_magical_flower_pink);
-					instance_create_layer(_xpos2 + 390 * 12, _ypos - 420, "Instances", obj_magical_flower_pink);
-					// instance_create_layer(_xpos3 + 390 * 12, _ypos - 420, "Instances", obj_magical_flower_purple);
-					instance_create_layer(_xpos3 + 390 * 12, _ypos - 420, "Instances", obj_magical_flower_purple_end);
+					instance_create_layer(_xpos2 + 390 * 10 - 64, _ypos - 700, "Instances", obj_magical_flower_pink);
+					instance_create_layer(_xpos2 + 390 * 10 + 64, _ypos - 700, "Instances", obj_magical_flower_pink);
+					instance_create_layer(_xpos1 + 390 * 13, _ypos - 420, "Instances", obj_magical_flower_pink);
+					instance_create_layer(_xpos2 + 390 * 13, _ypos - 420, "Instances", obj_magical_flower_pink);
+					instance_create_layer(_xpos3 + 390 * 13, _ypos - 420, "Instances", obj_magical_flower_purple_end);
 					
 					instance_create_layer(_xpos2 + 390, _ypos - 320, "Instances", obj_spikes);
 					instance_create_layer(_xpos2 + 390 * 5, _ypos - 530, "Instances", obj_spikes_down);
 					instance_create_layer(_xpos2 + 390 * 7, _ypos - 530, "Instances", obj_spikes_down);
 					
-					instance_create_layer(_xpos2 + 390 * 9, _ypos - 320, "Instances", obj_stump);
-					instance_create_layer(_xpos2 + 390 * 4, _ypos - 320, "Instances", obj_slime);
-					instance_create_layer(_xpos2 + 390 * 10, _ypos - 650, "Instances", obj_bat);
+					instance_create_layer(_xpos2 + 390 * 10, _ypos - 320, "Instances", obj_stump);
+					instance_create_layer(_xpos2 + 390 * 8, _ypos - 320, "Instances", obj_slime);
+					instance_create_layer(_xpos2 + 390 * 11, _ypos - 650, "Instances", obj_bat);
 					
 					instance_create_layer(_xpos2 + 390 * 3, 0, "Instances", obj_small_obstacle_down);
-					instance_create_layer(_xpos2 + 390 * 11, 0, "Instances", obj_small_obstacle_down);
+					instance_create_layer(_xpos2 + 390 * 12, 0, "Instances", obj_small_obstacle_down);
 					
 					boss_chunk_index ++;
 					alarm[0] = global.game_fps * 6.5;
@@ -701,7 +692,8 @@ if (!global.game_over and !global.game_complete)
 					instance_create_layer(_xpos2 + 390 * 9, _ypos - 320, "Instances", obj_platform_middle);
 					instance_create_layer(_xpos2 + 390 * 10, _ypos - 320, "Instances", obj_platform_middle);
 					instance_create_layer(_xpos2 + 390 * 11, _ypos - 320, "Instances", obj_platform_middle);
-					instance_create_layer(_xpos2 + 390 * 12, _ypos - 320, "Instances", obj_platform_right);
+					instance_create_layer(_xpos2 + 390 * 12, _ypos - 320, "Instances", obj_platform_middle);
+					instance_create_layer(_xpos2 + 390 * 13, _ypos - 320, "Instances", obj_platform_right);
 					
 					instance_create_layer(_xpos2 + 390 * 4, _ypos - 640, "Instances", obj_platform_left);
 					instance_create_layer(_xpos2 + 390 * 5, _ypos - 640, "Instances", obj_platform_middle);
@@ -718,36 +710,32 @@ if (!global.game_over and !global.game_complete)
 					instance_create_layer(_xpos2 + 390 * 10, _ypos - 65, "Instances", obj_magical_flower_blue);
 					instance_create_layer(_xpos3 + 390 * 10, _ypos - 65, "Instances", obj_magical_flower_blue);
 					
-					// instance_create_layer(_xpos1, _ypos - 380, "Instances", obj_magical_flower_purple);
 					instance_create_layer(_xpos1, _ypos - 380, "Instances", obj_magical_flower_purple_start);
 					instance_create_layer(_xpos2, _ypos - 380, "Instances", obj_magical_flower_pink);
 					instance_create_layer(_xpos3, _ypos - 380, "Instances", obj_magical_flower_pink);
-					instance_create_layer(_xpos1 + 390, _ypos - 700, "Instances", obj_magical_flower_pink);
 					instance_create_layer(_xpos2 + 390, _ypos - 700, "Instances", obj_magical_flower_pink);
-					instance_create_layer(_xpos3 + 390, _ypos - 700, "Instances", obj_magical_flower_pink);
 					instance_create_layer(_xpos1 + 390 * 4, _ypos - 420, "Instances", obj_magical_flower_pink);
 					instance_create_layer(_xpos2 + 390 * 4, _ypos - 420, "Instances", obj_magical_flower_pink);
 					instance_create_layer(_xpos3 + 390 * 4, _ypos - 420, "Instances", obj_magical_flower_pink);
 					instance_create_layer(_xpos1 + 390 * 6, _ypos - 420, "Instances", obj_magical_flower_pink);
 					instance_create_layer(_xpos2 + 390 * 6, _ypos - 420, "Instances", obj_magical_flower_pink);
 					instance_create_layer(_xpos3 + 390 * 6, _ypos - 420, "Instances", obj_magical_flower_pink);
-					instance_create_layer(_xpos2 + 390 * 9 - 64, _ypos - 700, "Instances", obj_magical_flower_pink);
-					instance_create_layer(_xpos2 + 390 * 9 + 64, _ypos - 700, "Instances", obj_magical_flower_pink);
-					instance_create_layer(_xpos1 + 390 * 12, _ypos - 420, "Instances", obj_magical_flower_pink);
-					instance_create_layer(_xpos2 + 390 * 12, _ypos - 420, "Instances", obj_magical_flower_pink);
-					// instance_create_layer(_xpos3 + 390 * 12, _ypos - 420, "Instances", obj_magical_flower_purple);
-					instance_create_layer(_xpos3 + 390 * 12, _ypos - 420, "Instances", obj_magical_flower_purple_end);
+					instance_create_layer(_xpos2 + 390 * 10 - 64, _ypos - 700, "Instances", obj_magical_flower_pink);
+					instance_create_layer(_xpos2 + 390 * 10 + 64, _ypos - 700, "Instances", obj_magical_flower_pink);
+					instance_create_layer(_xpos1 + 390 * 13, _ypos - 420, "Instances", obj_magical_flower_pink);
+					instance_create_layer(_xpos2 + 390 * 13, _ypos - 420, "Instances", obj_magical_flower_pink);
+					instance_create_layer(_xpos3 + 390 * 13, _ypos - 420, "Instances", obj_magical_flower_purple_end);
 					
 					instance_create_layer(_xpos2 + 390, _ypos - 320, "Instances", obj_spikes);
 					instance_create_layer(_xpos2 + 390 * 5, _ypos - 530, "Instances", obj_spikes_down);
 					instance_create_layer(_xpos2 + 390 * 7, _ypos - 530, "Instances", obj_spikes_down);
 					
-					instance_create_layer(_xpos2 + 390 * 9, _ypos - 320, "Instances", obj_stump);
-					instance_create_layer(_xpos2 + 390 * 4, _ypos - 320, "Instances", obj_slime);
-					instance_create_layer(_xpos2 + 390 * 10, _ypos - 650, "Instances", obj_bat);
+					instance_create_layer(_xpos2 + 390 * 10, _ypos - 320, "Instances", obj_stump);
+					instance_create_layer(_xpos2 + 390 * 8, _ypos - 320, "Instances", obj_slime);
+					instance_create_layer(_xpos2 + 390 * 11, _ypos - 650, "Instances", obj_bat);
 					
 					instance_create_layer(_xpos2 + 390 * 3, 0, "Instances", obj_small_obstacle_down);
-					instance_create_layer(_xpos2 + 390 * 11, 0, "Instances", obj_small_obstacle_down);
+					instance_create_layer(_xpos2 + 390 * 12, 0, "Instances", obj_small_obstacle_down);
 					
 					boss_chunk_index ++;
 					alarm[0] = global.game_fps * 6.5;

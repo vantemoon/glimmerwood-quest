@@ -3,5 +3,5 @@
 entered = false;
 exited = false;
 
-num_required = 15;
+num_required = 13;
 num_collected = 0;
