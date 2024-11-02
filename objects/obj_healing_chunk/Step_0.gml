@@ -5,7 +5,7 @@ if (entered)
 
 if (exited)
 {
-	if (num_collected == num_required)
+	if ((num_collected == num_required) and (obj_player.curr_hp < obj_player.max_hp))
 	{
 		obj_player.curr_hp += 1;
 	}
