@@ -1,6 +1,9 @@
 /// @description Initialise the alarm
 
 transition_zone = false;
+zone_2_transition_done = false;
+zone_3_transition_done = false;
+zone_b_transition_done = false;
 
 dragon_exist = false;
 boss_chunk_index = 0;

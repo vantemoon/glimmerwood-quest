@@ -72,6 +72,11 @@ if (!global.game_over and !global.game_complete)
 				alarm[0] = 5 * global.game_fps;
 				break;
 			}
+			
+			else
+			{
+				zone_2_transition_done = true;
+			}
 		
 			switch (11)
 			// switch (choose(0, 1, 2, 3, 4, 5, 5, 6, 7, 8, 8, 8, 9, 9, 9, 10, 10, 11)) 
@@ -230,7 +235,7 @@ if (!global.game_over and !global.game_complete)
 					
 					instance_create_layer(_xpos2 + 390 * 9, _ypos - 320, "Instances", obj_stump);
 					instance_create_layer(_xpos2 + 390 * 4, _ypos - 320, "Instances", obj_slime);
-					instance_create_layer(_xpos2 + 390 * 10, _ypos - 700, "Instances", obj_bat);
+					instance_create_layer(_xpos2 + 390 * 10, _ypos - 650, "Instances", obj_bat);
 					
 					instance_create_layer(_xpos2 + 390 * 3, 0, "Instances", obj_small_obstacle_down);
 					instance_create_layer(_xpos2 + 390 * 11, 0, "Instances", obj_small_obstacle_down);
@@ -248,6 +253,11 @@ if (!global.game_over and !global.game_complete)
 				 obj_environment_manager.called_once = false;
 				alarm[0] = 5 * global.game_fps;
 				break;
+			}
+			
+			else
+			{
+				zone_3_transition_done = true;
 			}
 		
 			switch (choose(0, 1, 2, 3, 4, 5, 6, 7, 8, 8, 9, 9, 10, 10, 11, 12, 12, 13, 13, 14, 14))  
@@ -406,7 +416,7 @@ if (!global.game_over and !global.game_complete)
 					
 					instance_create_layer(_xpos2 + 390 * 9, _ypos - 320, "Instances", obj_stump);
 					instance_create_layer(_xpos2 + 390 * 4, _ypos - 320, "Instances", obj_slime);
-					instance_create_layer(_xpos2 + 390 * 10, _ypos - 700, "Instances", obj_bat);
+					instance_create_layer(_xpos2 + 390 * 10, _ypos - 650, "Instances", obj_bat);
 					
 					instance_create_layer(_xpos2 + 390 * 3, 0, "Instances", obj_small_obstacle_down);
 					instance_create_layer(_xpos2 + 390 * 11, 0, "Instances", obj_small_obstacle_down);
@@ -463,6 +473,11 @@ if (!global.game_over and !global.game_complete)
 				 obj_environment_manager.called_once = false;
 				alarm[0] = 5 * global.game_fps;
 				break;
+			}
+			
+			else
+			{
+				zone_b_transition_done = true;
 			}
 		
 			if (!dragon_exist)
@@ -559,7 +574,7 @@ if (!global.game_over and !global.game_complete)
 					
 					instance_create_layer(_xpos2 + 390 * 9, _ypos - 320, "Instances", obj_stump);
 					instance_create_layer(_xpos2 + 390 * 4, _ypos - 320, "Instances", obj_slime);
-					instance_create_layer(_xpos2 + 390 * 10, _ypos - 700, "Instances", obj_bat);
+					instance_create_layer(_xpos2 + 390 * 10, _ypos - 650, "Instances", obj_bat);
 					
 					instance_create_layer(_xpos2 + 390 * 3, 0, "Instances", obj_small_obstacle_down);
 					instance_create_layer(_xpos2 + 390 * 11, 0, "Instances", obj_small_obstacle_down);
@@ -729,7 +744,7 @@ if (!global.game_over and !global.game_complete)
 					
 					instance_create_layer(_xpos2 + 390 * 9, _ypos - 320, "Instances", obj_stump);
 					instance_create_layer(_xpos2 + 390 * 4, _ypos - 320, "Instances", obj_slime);
-					instance_create_layer(_xpos2 + 390 * 10, _ypos - 700, "Instances", obj_bat);
+					instance_create_layer(_xpos2 + 390 * 10, _ypos - 650, "Instances", obj_bat);
 					
 					instance_create_layer(_xpos2 + 390 * 3, 0, "Instances", obj_small_obstacle_down);
 					instance_create_layer(_xpos2 + 390 * 11, 0, "Instances", obj_small_obstacle_down);
