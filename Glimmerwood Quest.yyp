@@ -112,6 +112,7 @@
     {"id":{"name":"obj_stump","path":"objects/obj_stump/obj_stump.yy",},},
     {"id":{"name":"obj_tile","path":"objects/obj_tile/obj_tile.yy",},},
     {"id":{"name":"obj_timeslow","path":"objects/obj_timeslow/obj_timeslow.yy",},},
+    {"id":{"name":"obj_transition_zones","path":"objects/obj_transition_zones/obj_transition_zones.yy",},},
     {"id":{"name":"obj_transition","path":"objects/obj_transition/obj_transition.yy",},},
     {"id":{"name":"obj_witch","path":"objects/obj_witch/obj_witch.yy",},},
     {"id":{"name":"rm_game","path":"rooms/rm_game/rm_game.yy",},},
