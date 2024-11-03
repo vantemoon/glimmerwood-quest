@@ -7,22 +7,66 @@ if (message_1 != "")
 	draw_text(960, 580, message_2);
 }
 
-if (obj_spawning_manager.transition_zone)
+switch (global.current_zone)
 {
-	switch (global.current_zone)
-	{
-		case ZONE.ONE:
-			// No transition zone
-			break;
+	case ZONE.ONE:
+		// No transition zone
+		break;
 	
-		case ZONE.TWO:
+	case ZONE.TWO:
+		if (obj_spawning_manager.zone_2_transition_done)
+		{
+			message_1 = "";
+			message_2 = "";
+		}
+		
+		else if (obj_spawning_manager.transition_zone)
+		{
 			message_1 = "Zone 2";
 			message_2 = "New ability unlocked: shield";
-	}
-}
-
-else
-{
-	message_1 = "";
-	message_2 = "";
+		}
+		
+		else
+		{
+			message_1 = "";
+			message_2 = "";
+		}
+		
+	case ZONE.THREE:
+		if (obj_spawning_manager.zone_3_transition_done)
+		{
+			message_1 = "";
+			message_2 = "";
+		}
+		
+		else if (obj_spawning_manager.transition_zone)
+		{
+			message_1 = "Zone 3";
+			message_2 = "New ability unlocked: magnet";
+		}
+		
+		else
+		{
+			message_1 = "";
+			message_2 = "";
+		}
+		
+	case ZONE.BOSS:
+		if (obj_spawning_manager.zone_b_transition_done)
+		{
+			message_1 = "";
+			message_2 = "";
+		}
+		
+		else if (obj_spawning_manager.transition_zone)
+		{
+			message_1 = "Boss Zone";
+			message_2 = "New ability unlocked: missile";
+		}
+		
+		else
+		{
+			message_1 = "";
+			message_2 = "";
+		}
 }
