@@ -1,6 +1,6 @@
 /// @description Draw the game progress bar on screen
 
-var _hspeed = 0.225;
+var _hspeed = 0.45;
 
 switch (global.current_zone)
 {
@@ -63,7 +63,7 @@ switch (global.current_zone)
 			time_lapsed = 0;
 		}
 		
-		else if (obj_spawning_manager.zone_3_transition_done)
+		else if (obj_spawning_manager.zone_b_transition_done)
 		{
 			draw_sprite_part(spr_game_progress_bar_fill, 0, 0, 0, 540 * (7 / 8), 21, 690, 80);
 			
@@ -108,8 +108,6 @@ switch (global.current_zone)
 		else if (obj_spawning_manager.transition_zone)
 		{
 			draw_sprite(spr_zone_indicator, 0, 690 + 540 * (1 / 8) + time_lapsed * _hspeed, 90);
-			
-			time_lapsed += 1;
 		}
 		
 		else
@@ -130,8 +128,6 @@ switch (global.current_zone)
 		else if (obj_spawning_manager.transition_zone)
 		{
 			draw_sprite(spr_zone_indicator, 0, 690 + 540 * (3 / 8) + time_lapsed * _hspeed, 90);
-			
-			time_lapsed += 1;
 		}
 		
 		else
@@ -159,8 +155,6 @@ switch (global.current_zone)
 		else if (obj_spawning_manager.transition_zone)
 		{
 			draw_sprite(spr_zone_indicator, 0, 690 + 540 * (5 / 8) + time_lapsed * _hspeed, 90);
-			
-			time_lapsed += 1;
 		}
 		
 		else

@@ -11,6 +11,9 @@ switch (global.current_zone)
 {
 	case ZONE.ONE:
 		// No transition zone
+		message_1 = "";
+		message_2 = "";
+		
 		break;
 	
 	case ZONE.TWO:
@@ -32,6 +35,8 @@ switch (global.current_zone)
 			message_2 = "";
 		}
 		
+		break;
+		
 	case ZONE.THREE:
 		if (obj_spawning_manager.zone_3_transition_done)
 		{
@@ -51,6 +56,8 @@ switch (global.current_zone)
 			message_2 = "";
 		}
 		
+		break;
+		
 	case ZONE.BOSS:
 		if (obj_spawning_manager.zone_b_transition_done)
 		{
@@ -69,4 +76,6 @@ switch (global.current_zone)
 			message_1 = "";
 			message_2 = "";
 		}
+		
+		break;
 }
