@@ -8,6 +8,9 @@ if (exited)
 	if ((num_collected == num_required) and (obj_player.curr_hp < obj_player.max_hp))
 	{
 		obj_player.curr_hp += 1;
+		
+		obj_hearts.timer = 60;
+		obj_hearts.update_message = "+1";
 	}
 	
 	num_collected = 0;

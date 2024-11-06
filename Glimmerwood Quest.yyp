@@ -66,7 +66,8 @@
   "name":"Glimmerwood Quest",
   "resources":[
     {"id":{"name":"fnt_debug","path":"fonts/fnt_debug/fnt_debug.yy",},},
-    {"id":{"name":"fnt_flower_progress_bar","path":"fonts/fnt_flower_progress_bar/fnt_flower_progress_bar.yy",},},
+    {"id":{"name":"fnt_gentium_bold_24","path":"fonts/fnt_gentium_bold_24/fnt_gentium_bold_24.yy",},},
+    {"id":{"name":"fnt_gentium_bold_28","path":"fonts/fnt_gentium_bold_28/fnt_gentium_bold_28.yy",},},
     {"id":{"name":"fnt_menu","path":"fonts/fnt_menu/fnt_menu.yy",},},
     {"id":{"name":"fnt_title","path":"fonts/fnt_title/fnt_title.yy",},},
     {"id":{"name":"obj_abilities_status","path":"objects/obj_abilities_status/obj_abilities_status.yy",},},
@@ -120,6 +121,7 @@
     {"id":{"name":"rm_test","path":"rooms/rm_test/rm_test.yy",},},
     {"id":{"name":"scr_character_flash","path":"scripts/scr_character_flash/scr_character_flash.yy",},},
     {"id":{"name":"scr_detect_key","path":"scripts/scr_detect_key/scr_detect_key.yy",},},
+    {"id":{"name":"scr_flower_popup","path":"scripts/scr_flower_popup/scr_flower_popup.yy",},},
     {"id":{"name":"scr_health_check","path":"scripts/scr_health_check/scr_health_check.yy",},},
     {"id":{"name":"scr_immune_check","path":"scripts/scr_immune_check/scr_immune_check.yy",},},
     {"id":{"name":"scr_monster_hit","path":"scripts/scr_monster_hit/scr_monster_hit.yy",},},

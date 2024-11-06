@@ -1,4 +1,4 @@
-/// @description Draw the flash
+/// @description Draw the flash and flower changes
 
 if (immune_frame > 0)
 {

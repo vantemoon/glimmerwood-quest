@@ -16,7 +16,7 @@ draw_sprite(spr_flower_progress_bar, 0, 100, 216);
 
 // Write the number
 draw_set_color(c_white);
-draw_set_font(fnt_flower_progress_bar);
+draw_set_font(fnt_gentium_bold_24);
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
 if (global.current_zone != ZONE.BOSS)
@@ -27,4 +27,16 @@ if (global.current_zone != ZONE.BOSS)
 else
 {
 	draw_text(160, 192, string(curr_flower));
+}
+
+// Update message
+if (timer > 0)
+{
+	draw_set_font(fnt_gentium_bold_28);
+	draw_text(x + 410, y, update_message);
+	timer --;
+}
+else
+{
+	draw_text(x, y - 250, "");
 }

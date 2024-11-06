@@ -10,8 +10,8 @@
   "name":"obj_pause_menu",
   "overriddenProperties":[],
   "parent":{
-    "name":"HUD",
-    "path":"folders/Objects/UI/HUD.yy",
+    "name":"UI",
+    "path":"folders/Objects/UI.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -1,6 +1,6 @@
 {
   "$GMFont":"",
-  "%Name":"fnt_flower_progress_bar",
+  "%Name":"fnt_gentium_bold_28",
   "AntiAlias":1,
   "applyKerning":0,
   "ascender":35,
@@ -117,7 +117,7 @@
   "last":0,
   "lineHeight":47,
   "maintainGms1Font":false,
-  "name":"fnt_flower_progress_bar",
+  "name":"fnt_gentium_bold_28",
   "parent":{
     "name":"Fonts",
     "path":"folders/Fonts.yy",

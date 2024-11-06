@@ -25,10 +25,10 @@ enum PLAYER_STATE
 	SLASH
 }
 
-// sliding = false;
 slashing = false;
 
 shield_activated = false;
+magnet_activated = false;
 
 curr_state = PLAYER_STATE.NORMAL;
 prev_state = PLAYER_STATE.NORMAL;
