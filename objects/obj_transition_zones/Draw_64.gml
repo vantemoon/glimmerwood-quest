@@ -1,81 +1,59 @@
 /// @description Draw the transition UI
 
-if (message_1 != "")
+if (in_transition)
 {
-	draw_set_halign(fa_center)
-	draw_text(960, 540, message_1);
-	draw_text(960, 580, message_2);
-}
-
-switch (global.current_zone)
-{
-	case ZONE.ONE:
-		// No transition zone
-		message_1 = "";
-		message_2 = "";
-		
-		break;
+	// Draw the background
+	draw_set_alpha(0.3);
+	draw_set_color(c_black);
+	draw_rectangle(0, 0, display_get_gui_width(), display_get_gui_height(), false);
 	
-	case ZONE.TWO:
-		if (obj_spawning_manager.zone_2_transition_done)
-		{
-			message_1 = "";
-			message_2 = "";
-		}
+	// Reset draw settings
+	draw_set_alpha(1);
+	draw_set_color(c_white);
+	
+	switch (global.current_zone)
+	{
+		case ZONE.ONE:
+			// Should not reach here
+			break;
 		
-		else if (obj_spawning_manager.transition_zone)
-		{
-			message_1 = "Zone 2";
-			message_2 = "New ability unlocked: shield";
-		}
-		
-		else
-		{
-			message_1 = "";
-			message_2 = "";
-		}
-		
-		break;
-		
-	case ZONE.THREE:
-		if (obj_spawning_manager.zone_3_transition_done)
-		{
-			message_1 = "";
-			message_2 = "";
-		}
-		
-		else if (obj_spawning_manager.transition_zone)
-		{
-			message_1 = "Zone 3";
-			message_2 = "New ability unlocked: magnet";
-		}
-		
-		else
-		{
-			message_1 = "";
-			message_2 = "";
-		}
-		
-		break;
-		
-	case ZONE.BOSS:
-		if (obj_spawning_manager.zone_b_transition_done)
-		{
-			message_1 = "";
-			message_2 = "";
-		}
-		
-		else if (obj_spawning_manager.transition_zone)
-		{
-			message_1 = "Boss Zone";
-			message_2 = "New ability unlocked: missile";
-		}
-		
-		else
-		{
-			message_1 = "";
-			message_2 = "";
-		}
-		
-		break;
+		case ZONE.TWO:
+			// Draw the filled flower progress bar
+			draw_sprite(spr_flower_progress_bar_fill, 0, 731, 500);
+			draw_sprite(spr_flower_progress_bar, 0, 748, 500);
+			draw_set_font(fnt_gentium_bold_24);
+			draw_text(808, 476, "30/30");
+			
+			// New Ability
+			draw_sprite(spr_shield_unlocked, 0, 960, 600);
+			draw_sprite(spr_shield_description, 0, 960, 650);
+			
+			break;
+			
+		case ZONE.THREE:
+			// Draw the filled flower progress bar
+			draw_sprite(spr_flower_progress_bar_fill, 0, 731, 500);
+			draw_sprite(spr_flower_progress_bar, 0, 748, 500);
+			draw_set_font(fnt_gentium_bold_24);
+			draw_text(808, 476, "50/50");
+			
+			// New Ability
+			draw_sprite(spr_magnet_unlocked, 0, 960, 600);
+			draw_sprite(spr_magnet_description, 0, 960, 650);
+			
+			break;
+			
+		case ZONE.BOSS:
+			// Draw the filled flower progress bar
+			draw_sprite(spr_flower_progress_bar_fill, 0, 731, 500);
+			draw_sprite(spr_flower_progress_bar, 0, 748, 500);
+			draw_set_font(fnt_gentium_bold_24);
+			draw_text(808, 476, "70/70");
+			
+			// New Ability
+			draw_sprite(spr_missile_unlocked, 0, 960, 600);
+			draw_sprite(spr_missile_description, 0, 960, 650);
+			
+			break;
+	}
 }

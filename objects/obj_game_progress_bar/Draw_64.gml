@@ -74,7 +74,7 @@ switch (global.current_zone)
 			time_lapsed = 0;
 		}
 		
-		else if (obj_spawning_manager.transition_zone)
+		else if (obj_transition_zones.in_transition)
 		{
 			draw_sprite_part(spr_game_progress_bar_fill, 0, 0, 0, 540 * (5 / 8) + time_lapsed * _hspeed, 21, 690, 80);
 			
@@ -152,7 +152,7 @@ switch (global.current_zone)
 			time_lapsed = 0;
 		}
 		
-		else if (obj_spawning_manager.zone_3_transition_done)
+		else if (obj_spawning_manager.zone_b_transition_done)
 		{
 			draw_sprite(spr_zone_indicator, 0, 690 + 540 * (7 / 8), 90);
 			

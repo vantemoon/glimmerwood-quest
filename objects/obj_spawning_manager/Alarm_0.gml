@@ -67,6 +67,7 @@ if (!global.game_over and !global.game_complete)
 			if (!transition_zone)
 			{
 				transition_zone = true;
+				obj_transition_zones.in_transition = true;
 				obj_background_manager.trans_start = true;
 				obj_environment_manager.called_once = false;
 				alarm[0] = 5 * global.game_fps;
@@ -76,6 +77,7 @@ if (!global.game_over and !global.game_complete)
 			else
 			{
 				zone_2_transition_done = true;
+				obj_transition_zones.in_transition = false;
 			}
 		
 			// switch (11)
@@ -246,8 +248,9 @@ if (!global.game_over and !global.game_complete)
 			if (!transition_zone)
 			{
 				transition_zone = true;
-				 obj_background_manager.trans_start = true;
-				 obj_environment_manager.called_once = false;
+				obj_transition_zones.in_transition = true;
+				obj_background_manager.trans_start = true;
+				obj_environment_manager.called_once = false;
 				alarm[0] = 5 * global.game_fps;
 				break;
 			}
@@ -255,6 +258,7 @@ if (!global.game_over and !global.game_complete)
 			else
 			{
 				zone_3_transition_done = true;
+				obj_transition_zones.in_transition = false;
 			}
 		
 			switch (choose(0, 1, 2, 3, 4, 5, 6, 7, 8, 8, 9, 9, 10, 10, 11, 12, 12, 13, 13, 14, 14))  
@@ -463,8 +467,9 @@ if (!global.game_over and !global.game_complete)
 			if (!transition_zone)
 			{
 				transition_zone = true;
-				 obj_background_manager.trans_start = true;
-				 obj_environment_manager.called_once = false;
+				obj_transition_zones.in_transition = true;
+				obj_background_manager.trans_start = true;
+				obj_environment_manager.called_once = false;
 				alarm[0] = 5 * global.game_fps;
 				break;
 			}
@@ -472,6 +477,7 @@ if (!global.game_over and !global.game_complete)
 			else
 			{
 				zone_b_transition_done = true;
+				obj_transition_zones.in_transition = false;
 			}
 		
 			if (!dragon_exist)

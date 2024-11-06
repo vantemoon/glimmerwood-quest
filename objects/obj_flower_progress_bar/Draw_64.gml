@@ -1,5 +1,7 @@
 /// @description Draw the flower progress bar
 
+if (!obj_transition_zones.in_transition)
+{
 // Draw the progress bar fill
 if (global.current_zone != ZONE.BOSS)
 {
@@ -39,4 +41,5 @@ if (timer > 0)
 else
 {
 	draw_text(x, y - 250, "");
+}
 }

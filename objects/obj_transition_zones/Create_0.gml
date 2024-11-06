@@ -1,4 +1,3 @@
 /// @description Intialise the messages
 
-message_1 = "";
-message_2 = "";
+in_transition = false;

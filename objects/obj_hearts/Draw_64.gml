@@ -16,10 +16,10 @@ for (var _heart = 0; _heart < curr_hp; _heart ++)
 if (timer > 0)
 {
 	draw_set_font(fnt_gentium_bold_28);
-	draw_text(x + 310, y, update_message);
+	draw_text(x + 310, y - 50, update_message);
 	timer --;
 }
 else
 {
-	draw_text(x, y - 250, "");
+	draw_text(x + 310, y - 50, "");
 }

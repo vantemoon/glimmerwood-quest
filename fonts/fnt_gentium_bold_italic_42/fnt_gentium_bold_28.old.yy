@@ -1,6 +1,6 @@
 {
   "$GMFont":"",
-  "%Name":"fnt_gentium_bold_24",
+  "%Name":"fnt_gentium_bold_28",
   "AntiAlias":1,
   "applyKerning":0,
   "ascender":35,
@@ -117,10 +117,10 @@
   "last":0,
   "lineHeight":47,
   "maintainGms1Font":false,
-  "name":"fnt_gentium_bold_24",
+  "name":"fnt_gentium_bold_28",
   "parent":{
-    "name":"Gentium",
-    "path":"folders/Fonts/Gentium.yy",
+    "name":"Fonts",
+    "path":"folders/Fonts.yy",
   },
   "pointRounding":0,
   "ranges":[
