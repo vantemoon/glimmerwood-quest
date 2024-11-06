@@ -161,6 +161,7 @@
     {"id":{"name":"spr_flower_progress_bar_fill","path":"sprites/spr_flower_progress_bar_fill/spr_flower_progress_bar_fill.yy",},},
     {"id":{"name":"spr_flower_progress_bar","path":"sprites/spr_flower_progress_bar/spr_flower_progress_bar.yy",},},
     {"id":{"name":"spr_game_progress_bar_fill","path":"sprites/spr_game_progress_bar_fill/spr_game_progress_bar_fill.yy",},},
+    {"id":{"name":"spr_game_progress_bar_lines","path":"sprites/spr_game_progress_bar_lines/spr_game_progress_bar_lines.yy",},},
     {"id":{"name":"spr_game_progress_bar","path":"sprites/spr_game_progress_bar/spr_game_progress_bar.yy",},},
     {"id":{"name":"spr_ground_tile_1","path":"sprites/spr_ground_tile_1/spr_ground_tile_1.yy",},},
     {"id":{"name":"spr_ground_tile_b","path":"sprites/spr_ground_tile_b/spr_ground_tile_b.yy",},},

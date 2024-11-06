@@ -1,10 +1,10 @@
 {
   "$GMSprite":"",
-  "%Name":"spr_game_progress_bar_fill",
+  "%Name":"spr_game_progress_bar_lines",
   "bboxMode":0,
   "bbox_bottom":20,
-  "bbox_left":0,
-  "bbox_right":539,
+  "bbox_left":128,
+  "bbox_right":413,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -12,16 +12,16 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"c3e5c67e-2d5a-4ec1-9cbc-56d9e1f20070","name":"c3e5c67e-2d5a-4ec1-9cbc-56d9e1f20070","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"2bc26ac6-84df-4600-abd1-39a879aa2cb6","name":"2bc26ac6-84df-4600-abd1-39a879aa2cb6","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":21,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"1241d65c-e61d-46ea-a2ad-21a70db8b9e4","blendMode":0,"displayName":"default","isLocked":false,"name":"1241d65c-e61d-46ea-a2ad-21a70db8b9e4","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"5c4f7c65-4c7d-489d-a4d7-4e9ed4a3b994","blendMode":0,"displayName":"default","isLocked":false,"name":"5c4f7c65-4c7d-489d-a4d7-4e9ed4a3b994","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"spr_game_progress_bar_fill",
+  "name":"spr_game_progress_bar_lines",
   "nineSlice":null,
   "origin":3,
   "parent":{
@@ -33,7 +33,7 @@
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"",
-    "%Name":"spr_game_progress_bar_fill",
+    "%Name":"spr_game_progress_bar_lines",
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -57,7 +57,7 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"spr_game_progress_bar_fill",
+    "name":"spr_game_progress_bar_lines",
     "playback":1,
     "playbackSpeed":30.0,
     "playbackSpeedType":0,
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"c3e5c67e-2d5a-4ec1-9cbc-56d9e1f20070","path":"sprites/spr_game_progress_bar_fill/spr_game_progress_bar_fill.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"ab9759b2-5680-48bb-b745-b73e56fbae87","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"2bc26ac6-84df-4600-abd1-39a879aa2cb6","path":"sprites/spr_game_progress_bar_lines/spr_game_progress_bar_lines.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"8996ba82-d328-456c-b6db-7d74e8f28c3a","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
@@ -86,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":540,
+  "width":541,
 }

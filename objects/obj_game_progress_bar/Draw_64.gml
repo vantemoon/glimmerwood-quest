@@ -2,6 +2,10 @@
 
 var _hspeed = 0.45;
 
+// Draw the background
+draw_sprite(spr_game_progress_bar, 0, 690, 90);
+
+// Draw the fill
 switch (global.current_zone)
 {
 	case ZONE.ONE:
@@ -85,11 +89,14 @@ switch (global.current_zone)
 		break;
 }
 
-draw_sprite(spr_game_progress_bar, 0, 690, 90);
+// Draw the vertical lines
+draw_sprite(spr_game_progress_bar_lines, 0, 690, 90);
 
+// Draw the boss zone indicator (dragon)
 if (!global.game_complete)
 	draw_sprite(spr_boss_zone_indicator, 0, 1228, 90);
 
+// Draw the current zone indicator (star)
 switch (global.current_zone)
 {
 	case ZONE.ONE:
