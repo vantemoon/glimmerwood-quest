@@ -10,8 +10,8 @@
   "name":"obj_pause_menu",
   "overriddenProperties":[],
   "parent":{
-    "name":"UI",
-    "path":"folders/Objects/UI.yy",
+    "name":"Pause Menu",
+    "path":"folders/Objects/UI/Pause Menu.yy",
   },
   "parentObjectId":null,
   "persistent":false,

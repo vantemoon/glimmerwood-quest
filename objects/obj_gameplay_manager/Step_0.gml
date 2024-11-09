@@ -37,7 +37,8 @@ if (obj_player.num_flower >= 70 and !global.zone_boss_complete)
 }
 
 // Update game speed
-global.speed_modifier += 0.0002;
+if (!obj_transition_zones.in_transition)
+	global.speed_modifier += 0.0002;
 
 // Cap game speed for each zone
 switch (global.current_zone)

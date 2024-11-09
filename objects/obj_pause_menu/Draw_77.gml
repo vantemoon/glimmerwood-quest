@@ -1,8 +1,5 @@
 /// @description Draw the pause menu
 
-// Disable alpha blending
-//gpu_set_blendenable(false);
-
 // Draw the pause menu if game is paused
 if (paused)
 {
@@ -10,12 +7,236 @@ if (paused)
 	if (surface_exists(paused_surf))
 	{
 		draw_surface(paused_surf, 0, 0);
-	    draw_set_alpha(0.5);
+	    draw_set_alpha(0.3);
 	    draw_rectangle_colour(0, 0, room_width, room_height, c_black, c_black, c_black, c_black, false);
 	    draw_set_alpha(1);
-	    draw_set_halign(fa_center);
-	    draw_text_transformed_colour(room_width / 2, room_height / 2, "PAUSED", 2, 2, 0, c_white, c_white, c_white, c_white, 1);
-	    draw_set_halign(fa_left);
+	    draw_sprite(spr_pause_menu_bg, 0, display_get_gui_width() / 2, display_get_gui_height() / 2);
+		
+		var _mousex = device_mouse_x_to_gui(0);
+		var _mousey = device_mouse_y_to_gui(0);
+		
+		switch (curr_state)
+		{
+			case PAUSE_MENU_STATE.PAUSED:
+				
+				var _xpos = display_get_gui_width() / 2;
+				var _ypos = display_get_gui_height() / 2;
+				
+				draw_sprite(spr_paused_text, 0, _xpos, _ypos - 220);
+
+				var _button_width = sprite_get_width(spr_resume_button);
+				var _button_height = sprite_get_height(spr_resume_button);
+				
+				// Resume button
+				if (point_in_rectangle(_mousex, _mousey, _xpos - _button_width / 2,
+														 _ypos - 100 - _button_height / 2,
+														 _xpos + _button_width / 2,
+														 _ypos - 100 + _button_height / 2))
+				{
+					if (device_mouse_check_button(0, mb_left))
+					{
+						draw_sprite(spr_resume_button, 2, _xpos, _ypos - 100);
+						if (mouse_check_button_pressed(mb_left))
+							resumed = true;
+						break;
+					}
+					else 
+					{
+						draw_sprite(spr_resume_button, 1, _xpos, _ypos - 100);
+					}
+				}
+				else
+				{
+					draw_sprite(spr_resume_button, 0, _xpos, _ypos - 100);
+				}
+				
+				// Sound button
+				if (point_in_rectangle(_mousex, _mousey, _xpos - _button_width / 2,
+														 _ypos - _button_height / 2,
+														 _xpos + _button_width / 2,
+														 _ypos + _button_height / 2))
+				{
+					if (device_mouse_check_button(0, mb_left))
+					{
+						draw_sprite(spr_sound_button, 2, _xpos, _ypos);
+						if (mouse_check_button_pressed(mb_left))
+							curr_state = PAUSE_MENU_STATE.SOUND;
+						break;
+					}
+					else 
+					{
+						draw_sprite(spr_sound_button, 1, _xpos, _ypos);
+					}
+				}
+				else
+				{
+					draw_sprite(spr_sound_button, 0, _xpos, _ypos);
+				}
+				
+				// Help button
+				if (point_in_rectangle(_mousex, _mousey, _xpos - _button_width / 2,
+														 _ypos + 100 - _button_height / 2,
+														 _xpos + _button_width / 2,
+														 _ypos + 100 + _button_height / 2))
+				{
+					if (device_mouse_check_button(0, mb_left))
+					{
+						draw_sprite(spr_help_button, 2, _xpos, _ypos + 100);
+						if (mouse_check_button_pressed(mb_left))
+							curr_state = PAUSE_MENU_STATE.HELP;
+						break;
+					}
+					else 
+					{
+						draw_sprite(spr_help_button, 1, _xpos, _ypos + 100);
+					}
+				}
+				else
+				{
+					draw_sprite(spr_help_button, 0, _xpos, _ypos + 100);
+				}
+				
+				// Return to home button
+				if (point_in_rectangle(_mousex, _mousey, _xpos - _button_width / 2,
+														 _ypos + 200 - _button_height / 2,
+														 _xpos + _button_width / 2,
+														 _ypos + 200 + _button_height / 2))
+				{
+					if (device_mouse_check_button(0, mb_left))
+					{
+						draw_sprite(spr_return_home_button, 2, _xpos, _ypos + 200);
+						instance_activate_object(obj_transition);
+						if (mouse_check_button_pressed(mb_left))
+							slide_transition(TRANS_MODE.RESTART);
+						break;
+					}
+					else 
+					{
+						draw_sprite(spr_return_home_button, 1, _xpos, _ypos + 200);
+					}
+				}
+				else
+				{
+					draw_sprite(spr_return_home_button, 0, _xpos, _ypos + 200);
+				}
+					
+				break;
+				
+			case PAUSE_MENU_STATE.SOUND:
+				_xpos = display_get_gui_width() / 2;
+				_ypos = display_get_gui_height() / 2;
+				
+				draw_sprite(spr_sound_text, 0, _xpos, _ypos - 220);
+				
+				_button_width = sprite_get_width(spr_resume_button);
+				_button_height = sprite_get_height(spr_resume_button);
+				
+				var _slider_width = sprite_get_width(spr_slider_bar);
+				var _slider_button_rad = 36;
+				
+				draw_sprite(spr_sound_effect_icon, 0, _xpos - 300, _ypos - 50);
+				draw_sprite(spr_bgm_icon, 0, _xpos - 300, _ypos + 50);
+				
+				if (!mouse_check_button(mb_left))
+				{
+					bgm_selected = false;
+					sound_effect_selected = false;
+				}
+				
+				// BGM slider
+				draw_sprite(spr_slider_bar, 0, _xpos - 250, _ypos - 50);
+				var _bgm_percentage = obj_sound_manager.bgm_volume;
+				
+				if (!bgm_selected)
+				{
+					draw_sprite_ext(spr_slider_bar, 1, _xpos - 250, _ypos - 50, _bgm_percentage, 1, 0, c_white, 1);
+					draw_sprite(spr_slider_button, 0, _xpos - 250 + _slider_width * _bgm_percentage, _ypos - 50);
+				}
+				
+				if (mouse_check_button_pressed(mb_left))
+				{
+					var _buttonx = _xpos - 250 + _slider_width * _bgm_percentage;
+					var _buttony = _ypos - 50;
+					if (point_in_circle(_mousex, _mousey, _buttonx, _buttony, _slider_button_rad))
+						bgm_selected = true;
+				}
+				
+				if (bgm_selected)
+				{
+					bgm_value = clamp((_mousex - (_xpos - 250)) / _slider_width, 
+									  slider_min_value, 
+									  slider_max_value);
+					_bgm_percentage = bgm_value / slider_max_value;
+					
+					draw_sprite_ext(spr_slider_bar, 1, _xpos - 250, _ypos - 50, _bgm_percentage, 1, 0, c_white, 1);
+					draw_sprite(spr_slider_button, 0, _xpos - 250 + _slider_width * _bgm_percentage, _ypos - 50);
+					
+					obj_sound_manager.bgm_volume = bgm_value;
+					
+				}
+				
+				// Sound effect slider
+				draw_sprite(spr_slider_bar, 0, _xpos - 250, _ypos + 50);
+				var _sound_effect_percentage = obj_sound_manager.sound_effect_volume;
+				
+				if (!sound_effect_selected)
+				{
+					draw_sprite_ext(spr_slider_bar, 1, _xpos - 250, _ypos + 50, _sound_effect_percentage, 1, 0, c_white, 1);
+					draw_sprite(spr_slider_button, 0, _xpos - 250 + _slider_width * _sound_effect_percentage, _ypos + 50);
+				}
+				
+				if (mouse_check_button_pressed(mb_left))
+				{
+					var _buttonx = _xpos - 250 + _slider_width * _sound_effect_percentage;
+					var _buttony = _ypos + 50;
+					if (point_in_circle(_mousex, _mousey, _buttonx, _buttony, _slider_button_rad))
+						sound_effect_selected = true;
+				}
+				
+				if (sound_effect_selected)
+				{
+					sound_effect_value = clamp((_mousex - (_xpos - 250)) / _slider_width, 
+											   slider_min_value, 
+									           slider_max_value);
+					_sound_effect_percentage = sound_effect_value / slider_max_value;
+					
+					draw_sprite_ext(spr_slider_bar, 1, _xpos - 250, _ypos + 50, _sound_effect_percentage, 1, 0, c_white, 1);
+					draw_sprite(spr_slider_button, 0, _xpos - 250 + _slider_width * _sound_effect_percentage, _ypos + 50);
+					
+					obj_sound_manager.sound_effect_volume = sound_effect_value;
+					
+				}
+				
+				// Return to menu button
+				if (point_in_rectangle(_mousex, _mousey, _xpos - _button_width / 2,
+														 _ypos + 200 - _button_height / 2,
+														 _xpos + _button_width / 2,
+														 _ypos + 200 + _button_height / 2))
+				{
+					if (device_mouse_check_button(0, mb_left))
+					{
+						draw_sprite(spr_return_menu_button, 2, _xpos, _ypos + 200);
+						if (mouse_check_button_pressed(mb_left))
+							curr_state = PAUSE_MENU_STATE.PAUSED;
+						break;
+					}
+					else 
+					{
+						draw_sprite(spr_return_menu_button, 1, _xpos, _ypos + 200);
+					}
+				}
+				else
+				{
+					draw_sprite(spr_return_menu_button, 0, _xpos, _ypos + 200);
+				}
+				
+				break;
+				
+			case PAUSE_MENU_STATE.HELP:
+				break;
+		}
+		
+		draw_set_halign(fa_left);
     }
 	else
 	{
@@ -25,11 +246,14 @@ if (paused)
 	surface_reset_target();
 }
 
-if (keyboard_check_pressed(ord("P")))
+if (keyboard_check_pressed(ord("P")) or resumed)
 {
 	if (!paused)
 	{
 		paused = true;
+		resumed = false;
+		
+		curr_state = PAUSE_MENU_STATE.PAUSED;
 		
 		layer_hspeed(layer1_id, 0);
 		layer_hspeed(layer2_id, 0);
@@ -39,32 +263,13 @@ if (keyboard_check_pressed(ord("P")))
 		layer_hspeed(layer6_id, 0);
 		layer_hspeed(layer7_id, 0);
 		
-		//gpu_set_blendenable(true);
-		
-		//paused_gui_surf = surface_create(res_width, res_height);
-		//surface_set_target(paused_gui_surf);
-		//with (all) {
-		//    event_perform(ev_draw,ev_gui_begin);
-		//    event_perform(ev_draw,ev_gui);
-		//    event_perform(ev_draw,ev_gui_end);
-		//}
-		//surface_reset_target();
-		
-		//if (buffer_exists(paused_gui_surf_buffer))
-		//	buffer_delete(paused_gui_surf_buffer);
-		//paused_gui_surf_buffer = buffer_create(res_width * res_height * 4, buffer_fixed, 1);
-		//buffer_get_surface(paused_gui_surf_buffer, paused_gui_surf, 0);
-		
 		instance_deactivate_all(true);
+		instance_activate_object(obj_sound_manager);
 		
 		paused_surf = surface_create(res_width, res_height);
 		surface_set_target(paused_surf);
 		gpu_set_blendenable(false);
-		//draw_set_alpha(0.5);
 		draw_surface(application_surface, 0, 0);
-		//gpu_set_blendenable(true);
-		//draw_surface(paused_gui_surf, 0, 0);
-		//draw_set_alpha(1);
 		surface_reset_target();
 		gpu_set_blendenable(true);
 		
@@ -77,6 +282,7 @@ if (keyboard_check_pressed(ord("P")))
 	else
 	{
 		paused = false;
+		resumed = false;
 		
 		layer_hspeed(layer1_id, bg_1_hsp);
 		layer_hspeed(layer2_id, bg_2_hsp);
@@ -93,6 +299,3 @@ if (keyboard_check_pressed(ord("P")))
 			buffer_delete(paused_surf_buffer);
 	}
 }
-
-// Enable alpha blending
-//gpu_set_blendenable(true);

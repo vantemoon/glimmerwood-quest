@@ -40,6 +40,7 @@ function player_state_slash()
 	// End of attack
 	if (image_index > image_number - 1)
 	{
+		slashing = false;
 		if (prev_state == PLAYER_STATE.SLIDE)
 		{
 			if (slide_key)
