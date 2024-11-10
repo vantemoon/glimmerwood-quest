@@ -353,56 +353,53 @@ if (paused)
 	surface_reset_target();
 }
 
-if (keyboard_check_pressed(ord("P")) or resumed)
+if (keyboard_check_pressed(ord("P")) and !paused)
 {
-	if (!paused)
-	{
-		paused = true;
-		resumed = false;
+	paused = true;
+	resumed = false;
 		
-		curr_state = PAUSE_MENU_STATE.PAUSED;
+	curr_state = PAUSE_MENU_STATE.PAUSED;
 		
-		layer_hspeed(layer1_id, 0);
-		layer_hspeed(layer2_id, 0);
-		layer_hspeed(layer3_id, 0);
-		layer_hspeed(layer4_id, 0);
-		layer_hspeed(layer5_id, 0);
-		layer_hspeed(layer6_id, 0);
-		layer_hspeed(layer7_id, 0);
+	layer_hspeed(layer1_id, 0);
+	layer_hspeed(layer2_id, 0);
+	layer_hspeed(layer3_id, 0);
+	layer_hspeed(layer4_id, 0);
+	layer_hspeed(layer5_id, 0);
+	layer_hspeed(layer6_id, 0);
+	layer_hspeed(layer7_id, 0);
 		
-		instance_deactivate_all(true);
-		instance_activate_object(obj_sound_manager);
+	instance_deactivate_all(true);
+	instance_activate_object(obj_sound_manager);
 		
-		paused_surf = surface_create(res_width, res_height);
-		surface_set_target(paused_surf);
-		gpu_set_blendenable(false);
-		draw_surface(application_surface, 0, 0);
-		surface_reset_target();
-		gpu_set_blendenable(true);
+	paused_surf = surface_create(res_width, res_height);
+	surface_set_target(paused_surf);
+	gpu_set_blendenable(false);
+	draw_surface(application_surface, 0, 0);
+	surface_reset_target();
+	gpu_set_blendenable(true);
 		
-		if (buffer_exists(paused_surf_buffer))
-			buffer_delete(paused_surf_buffer);
-		paused_surf_buffer = buffer_create(res_width * res_height * 4, buffer_fixed, 1);
-		buffer_get_surface(paused_surf_buffer, paused_surf, 0);
-	}
-	
-	else
-	{
-		paused = false;
-		resumed = false;
+	if (buffer_exists(paused_surf_buffer))
+		buffer_delete(paused_surf_buffer);
+	paused_surf_buffer = buffer_create(res_width * res_height * 4, buffer_fixed, 1);
+	buffer_get_surface(paused_surf_buffer, paused_surf, 0);
+}
+
+if (resumed and paused)
+{
+	paused = false;
+	resumed = false;
 		
-		layer_hspeed(layer1_id, bg_1_hsp);
-		layer_hspeed(layer2_id, bg_2_hsp);
-		layer_hspeed(layer3_id, bg_3_hsp);
-		layer_hspeed(layer4_id, bg_4_hsp);
-		layer_hspeed(layer5_id, bg_5_hsp);
-		layer_hspeed(layer6_id, bg_6_hsp);
-		layer_hspeed(layer7_id, bg_7_hsp);
+	layer_hspeed(layer1_id, bg_1_hsp);
+	layer_hspeed(layer2_id, bg_2_hsp);
+	layer_hspeed(layer3_id, bg_3_hsp);
+	layer_hspeed(layer4_id, bg_4_hsp);
+	layer_hspeed(layer5_id, bg_5_hsp);
+	layer_hspeed(layer6_id, bg_6_hsp);
+	layer_hspeed(layer7_id, bg_7_hsp);
 		
-		instance_activate_all();
-		if (surface_exists(paused_surf))
-			surface_free(paused_surf);
-		if (buffer_exists(paused_surf_buffer))
-			buffer_delete(paused_surf_buffer);
-	}
+	instance_activate_all();
+	if (surface_exists(paused_surf))
+		surface_free(paused_surf);
+	if (buffer_exists(paused_surf_buffer))
+		buffer_delete(paused_surf_buffer);
 }
