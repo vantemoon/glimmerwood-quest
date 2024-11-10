@@ -233,6 +233,113 @@ if (paused)
 				break;
 				
 			case PAUSE_MENU_STATE.HELP:
+				_xpos = display_get_gui_width() / 2 - 250;
+				_ypos = display_get_gui_height() / 2 + 75;
+				
+				_button_width = sprite_get_width(spr_resume_button);
+				_button_height = sprite_get_height(spr_resume_button);
+				
+				// Key mappings
+				switch (curr_state_2)
+				{
+					case HELP_MENU_STATE.IDLE:
+						draw_sprite(spr_help_instruction, 0, _xpos + 580, _ypos - 280);
+					
+						draw_sprite(spr_up_key, 0, _xpos, _ypos - 125);
+						draw_sprite(spr_down_key, 0, _xpos, _ypos);
+						draw_sprite(spr_left_key, 0, _xpos - 200, _ypos);
+						draw_sprite(spr_right_key, 0, _xpos + 200, _ypos);
+						
+						if (keyboard_check_pressed(vk_up))
+							curr_state_2 = HELP_MENU_STATE.JUMP;
+						else if (keyboard_check_pressed(vk_down))
+							curr_state_2 = HELP_MENU_STATE.SLIDE;
+						else if (keyboard_check_pressed(vk_right))
+							curr_state_2 = HELP_MENU_STATE.ATTACK;
+						
+						break;
+						
+					case HELP_MENU_STATE.JUMP:
+						draw_sprite(spr_jump_instruction, 0, _xpos + 580, _ypos - 280);
+					
+						draw_sprite(spr_up_key, 1, _xpos, _ypos - 125);
+						draw_sprite(spr_down_key, 0, _xpos, _ypos);
+						draw_sprite(spr_left_key, 0, _xpos - 200, _ypos);
+						draw_sprite(spr_right_key, 0, _xpos + 200, _ypos);
+						
+						draw_sprite(spr_jump_graphic, 0, _xpos + 580, _ypos + 110);
+						
+						if (keyboard_check_pressed(vk_up))
+							curr_state_2 = HELP_MENU_STATE.IDLE;
+						else if (keyboard_check_pressed(vk_down))
+							curr_state_2 = HELP_MENU_STATE.SLIDE;
+						else if (keyboard_check_pressed(vk_right))
+							curr_state_2 = HELP_MENU_STATE.ATTACK;
+					
+						break;
+						
+					case HELP_MENU_STATE.SLIDE:
+						draw_sprite(spr_slide_instruction, 0, _xpos + 580, _ypos - 280);
+					
+						draw_sprite(spr_up_key, 0, _xpos, _ypos - 125);
+						draw_sprite(spr_down_key, 1, _xpos, _ypos);
+						draw_sprite(spr_left_key, 0, _xpos - 200, _ypos);
+						draw_sprite(spr_right_key, 0, _xpos + 200, _ypos);
+						
+						draw_sprite(spr_slide_graphic, 0, _xpos + 580, _ypos + 110);
+						
+						if (keyboard_check_pressed(vk_up))
+							curr_state_2 = HELP_MENU_STATE.JUMP;
+						else if (keyboard_check_pressed(vk_down))
+							curr_state_2 = HELP_MENU_STATE.IDLE;
+						else if (keyboard_check_pressed(vk_right))
+							curr_state_2 = HELP_MENU_STATE.ATTACK;
+					
+						break;
+						
+					case HELP_MENU_STATE.ATTACK:
+						draw_sprite(spr_attack_instruction, 0, _xpos + 580, _ypos - 280);
+					
+						draw_sprite(spr_up_key, 0, _xpos, _ypos - 125);
+						draw_sprite(spr_down_key, 0, _xpos, _ypos);
+						draw_sprite(spr_left_key, 0, _xpos - 200, _ypos);
+						draw_sprite(spr_right_key, 1, _xpos + 200, _ypos);
+						
+						draw_sprite(spr_attack_graphic, 0, _xpos + 580, _ypos + 110);
+						
+						if (keyboard_check_pressed(vk_up))
+							curr_state_2 = HELP_MENU_STATE.JUMP;
+						else if (keyboard_check_pressed(vk_down))
+							curr_state_2 = HELP_MENU_STATE.SLIDE;
+						else if (keyboard_check_pressed(vk_right))
+							curr_state_2 = HELP_MENU_STATE.IDLE;
+						
+						break;
+				}
+				
+				// Return to menu button
+				if (point_in_rectangle(_mousex, _mousey, _xpos + 580 - _button_width / 2,
+														 _ypos + 180 - _button_height / 2,
+														 _xpos + 580 + _button_width / 2,
+														 _ypos + 180 + _button_height / 2))
+				{
+					if (device_mouse_check_button(0, mb_left))
+					{
+						draw_sprite(spr_return_menu_button, 2, _xpos + 580, _ypos + 180);
+						if (mouse_check_button_pressed(mb_left))
+							curr_state = PAUSE_MENU_STATE.PAUSED;
+						break;
+					}
+					else 
+					{
+						draw_sprite(spr_return_menu_button, 1, _xpos + 580, _ypos + 180);
+					}
+				}
+				else
+				{
+					draw_sprite(spr_return_menu_button, 0, _xpos + 580, _ypos + 180);
+				}
+				
 				break;
 		}
 		

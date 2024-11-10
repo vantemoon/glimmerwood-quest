@@ -45,3 +45,12 @@ slider_min_value = 0;
 
 bgm_selected = false;
 sound_effect_selected = false;
+
+enum HELP_MENU_STATE
+{
+	IDLE,
+	JUMP,
+	SLIDE,
+	ATTACK
+}
+curr_state_2 = HELP_MENU_STATE.IDLE;
