@@ -13,6 +13,18 @@ if (!global.game_over and !global.game_complete)
 	switch (global.current_zone)
 	{
 		case ZONE.ONE:
+			if (!tutorial_done)
+			{
+				tutorial_done = true;
+				
+				instance_create_layer(display_get_gui_width() / 2, display_get_gui_height() / 2, "UI", obj_tutorial);
+				
+				alarm[1] = 10 * global.game_fps;
+				alarm[0] = 10 * global.game_fps;
+				
+				break;
+			} 
+			
 			switch (choose(0, 1, 2, 3, 4, 5, 6)) 
 			{
 	
