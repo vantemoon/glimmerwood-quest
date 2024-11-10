@@ -1,7 +1,5 @@
 /// @description Move and destroy
 
-hit_once = false;
-
 switch (curr_state)
 {
 	case MONSTER_STATE.NORMAL:
@@ -76,21 +74,10 @@ switch (curr_state)
 					mask_index = spr_dragon_tail_swing;
 					var _curr_hit_list = ds_list_create();
 					var _hits = instance_place_list(x, y, obj_player, _curr_hit_list, true);
-					if (_hits > 0)
+					if ((_hits > 0) and !hit_once)
 					{
-						for (var _hit = 0; _hit < _hits; _hit ++)
-						{
-							// If this instance has not yet been hit by the current slash
-							var _hitid = ds_list_find_value(_curr_hit_list, _hit);
-							if (ds_list_find_index(hit_list, _hitid) == -1)
-							{
-								ds_list_add(hit_list, _hitid);
-								with (_hitid)
-								{
-									obj_player.curr_hp -= 1;
-								}
-							}
-						}
+						obj_player.curr_hp -= 1;
+						hit_once = true;
 					}
 					ds_list_destroy(_curr_hit_list);
 					mask_index = _prev_mask;
@@ -98,6 +85,7 @@ switch (curr_state)
 					break;
 			
 				case 3: // 1 second
+					hit_once = false;
 					if (!timer_on)
 					{
 						timer_on = true;

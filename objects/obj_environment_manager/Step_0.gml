@@ -14,8 +14,6 @@ if (global.current_zone == ZONE.ONE)
 
 else if (trans_start and !called_once)
 {
-	show_debug_message("started, called once = true");
-	show_debug_message("called once: " + string(obj_environment_manager.called_once));
 	trans_start = false;
 	called_once = true;
 	
