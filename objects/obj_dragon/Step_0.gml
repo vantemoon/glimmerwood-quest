@@ -76,8 +76,11 @@ switch (curr_state)
 					var _hits = instance_place_list(x, y, obj_player, _curr_hit_list, true);
 					if ((_hits > 0) and !hit_once)
 					{
-						obj_player.curr_hp -= 1;
-						hit_once = true;
+						if ((obj_player.immune_frame <= 0) and !obj_player.shield_activated)
+						{
+							obj_player.curr_hp -= 1;
+							hit_once = true;
+						}
 					}
 					ds_list_destroy(_curr_hit_list);
 					mask_index = _prev_mask;

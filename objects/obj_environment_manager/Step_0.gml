@@ -42,16 +42,22 @@ else if (trans_start and !called_once)
 			break;
 	
 		case ZONE.BOSS:
-			// TODO: add transition
 		
-			obj_ground_tile.sprite_index = spr_ground_tile_b;
-			object_set_sprite(obj_platform, spr_platform_b);
-			object_set_sprite(obj_platform_left, spr_platform_left_b);
-			object_set_sprite(obj_platform_middle, spr_platform_middle_b);
-			object_set_sprite(obj_platform_right, spr_platform_right_b);
-			object_set_sprite(obj_stump, spr_stump_b);
-			object_set_sprite(obj_bark_large, spr_bark_large_b);
-			object_set_sprite(obj_bark_small, spr_bark_small_b);
+			if (!global.game_complete)
+			{
+				obj_ground_tile.sprite_index = spr_ground_tile_b;
+				object_set_sprite(obj_platform, spr_platform_b);
+				object_set_sprite(obj_platform_left, spr_platform_left_b);
+				object_set_sprite(obj_platform_middle, spr_platform_middle_b);
+				object_set_sprite(obj_platform_right, spr_platform_right_b);
+				object_set_sprite(obj_stump, spr_stump_b);
+				object_set_sprite(obj_bark_large, spr_bark_large_b);
+				object_set_sprite(obj_bark_small, spr_bark_small_b);
+			}
+			else
+			{
+				// TODO
+			}
 			
 			break;
 	}
