@@ -2,7 +2,5 @@
 
 interact = function() 
 {
-	// Default button interaction
+	slide_transition(TRANS_MODE.NEXT);
 }
-
-visible = true;

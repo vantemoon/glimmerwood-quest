@@ -92,8 +92,7 @@ if (!global.game_over and !global.game_complete)
 				obj_transition_zones.in_transition = false;
 			}
 		
-			switch (11)
-			// switch (choose(0, 1, 2, 3, 4, 5, 5, 6, 7, 8, 8, 8, 9, 9, 9, 10, 10, 11)) 
+			switch (choose(0, 1, 2, 3, 4, 5, 5, 6, 7, 8, 8, 8, 9, 9, 9, 10, 10, 11)) 
 			{
 	
 				case 0: // Three flowers on the ground

@@ -1,18 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"obj_sound_manager",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_title",
+  "eventList":[],
   "managed":true,
-  "name":"obj_sound_manager",
+  "name":"obj_title",
   "overriddenProperties":[],
   "parent":{
-    "name":"Managers",
-    "path":"folders/Objects/Managers.yy",
+    "name":"Main Menu",
+    "path":"folders/Objects/UI/Main Menu.yy",
   },
   "parentObjectId":null,
-  "persistent":true,
+  "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
   "physicsFriction":0.2,
@@ -29,7 +27,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_title",
+    "path":"sprites/spr_title/spr_title.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

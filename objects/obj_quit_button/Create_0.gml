@@ -2,7 +2,5 @@
 
 interact = function() 
 {
-	// Default button interaction
+	game_end();
 }
-
-visible = true;
