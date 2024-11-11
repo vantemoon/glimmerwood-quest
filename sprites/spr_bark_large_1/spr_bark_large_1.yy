@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":1,
   "parent":{
-    "name":"Bark",
-    "path":"folders/Sprites/Obstacles/Bark.yy",
+    "name":"Large",
+    "path":"folders/Sprites/Obstacles/Bark/Large.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

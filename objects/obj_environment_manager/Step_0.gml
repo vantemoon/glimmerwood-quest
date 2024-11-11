@@ -32,13 +32,25 @@ else if (trans_start and !called_once)
 			break;
 		
 		case ZONE.TWO:
-			// TODO: add transition
-			// TODO: change tiles to zone 2
+			obj_ground_tile.sprite_index = spr_ground_tile_2;
+			object_set_sprite(obj_platform, spr_platform_2);
+			object_set_sprite(obj_platform_left, spr_platform_left_2);
+			object_set_sprite(obj_platform_middle, spr_platform_middle_2);
+			object_set_sprite(obj_platform_right, spr_platform_right_2);
+			object_set_sprite(obj_stump, spr_stump_2);
+			object_set_sprite(obj_bark_large, spr_bark_large_2);
+			object_set_sprite(obj_bark_small, spr_bark_small_2);
 			break;
 	
 		case ZONE.THREE:
-			// TODO: add transition
-			// TODO: change tiles to zone 3
+			obj_ground_tile.sprite_index = spr_ground_tile_3;
+			object_set_sprite(obj_platform, spr_platform_3);
+			object_set_sprite(obj_platform_left, spr_platform_left_3);
+			object_set_sprite(obj_platform_middle, spr_platform_middle_3);
+			object_set_sprite(obj_platform_right, spr_platform_right_3);
+			object_set_sprite(obj_stump, spr_stump_3);
+			object_set_sprite(obj_bark_large, spr_bark_large_3);
+			object_set_sprite(obj_bark_small, spr_bark_small_3);
 			break;
 	
 		case ZONE.BOSS:
@@ -56,7 +68,7 @@ else if (trans_start and !called_once)
 			}
 			else
 			{
-				// TODO
+				obj_ground_tile.sprite_index = spr_ground_tile_pb;
 			}
 			
 			break;

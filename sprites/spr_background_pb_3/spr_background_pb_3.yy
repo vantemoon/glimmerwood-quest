@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Post-boss",
-    "path":"folders/Sprites/Background/Post-boss.yy",
+    "name":"Post Boss",
+    "path":"folders/Sprites/Background/Post Boss.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Zone boss",
-    "path":"folders/Sprites/Tiles/Zone boss.yy",
+    "name":"Zone Boss",
+    "path":"folders/Sprites/Tiles/Zone Boss.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
