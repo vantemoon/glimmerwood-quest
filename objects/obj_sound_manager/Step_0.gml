@@ -41,13 +41,13 @@ if (room = rm_game)
 			break;
 			
 		case ZONE.BOSS:
-			if (!global.game_complete)
+			if (!global.game_complete and global.zone_b_transition_done)
 			{
 				if (bgm_playing != snd_boss_bgm)
 					change_track = true;
 				bgm = snd_boss_bgm;
 			}
-			else
+			else if (global.game_complete)
 			{
 				if (bgm_playing != snd_ending_bgm)
 					change_track = true;

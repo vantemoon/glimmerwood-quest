@@ -69,7 +69,7 @@ if (obj_spawning_manager.ui_enabled)
 				time_lapsed = 0;
 			}
 		
-			else if (obj_spawning_manager.zone_b_transition_done)
+			else if (global.zone_b_transition_done)
 			{
 				draw_sprite_part(spr_game_progress_bar_fill, 0, 0, 0, 540 * (7 / 8), 21, 690, 80);
 			
@@ -154,7 +154,7 @@ if (obj_spawning_manager.ui_enabled)
 				time_lapsed = 0;
 			}
 		
-			else if (obj_spawning_manager.zone_b_transition_done)
+			else if (global.zone_b_transition_done)
 			{
 				draw_sprite(spr_zone_indicator, 0, 690 + 540 * (7 / 8), 90);
 			

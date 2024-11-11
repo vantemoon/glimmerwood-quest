@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_dragon_death",
+  "audioGroupId":{
+    "name":"audiogroup_sfx",
+    "path":"audiogroups/audiogroup_sfx",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":2.44254,
+  "name":"snd_dragon_death",
+  "parent":{
+    "name":"Dragon",
+    "path":"folders/Sounds/SFX/Dragon.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_dragon_death.wav",
+  "type":0,
+  "volume":1.0,
+}

@@ -37,7 +37,10 @@ if (paused)
 					{
 						draw_sprite(spr_resume_button, 2, _xpos, _ypos - 100);
 						if (mouse_check_button_pressed(mb_left))
+						{
+							audio_play_sound(snd_button_click, 1000, false);
 							resumed = true;
+						}
 						break;
 					}
 					else 
@@ -60,7 +63,10 @@ if (paused)
 					{
 						draw_sprite(spr_sound_button, 2, _xpos, _ypos);
 						if (mouse_check_button_pressed(mb_left))
+						{
+							audio_play_sound(snd_button_click, 1000, false);
 							curr_state = PAUSE_MENU_STATE.SOUND;
+						}
 						break;
 					}
 					else 
@@ -83,7 +89,10 @@ if (paused)
 					{
 						draw_sprite(spr_help_button, 2, _xpos, _ypos + 100);
 						if (mouse_check_button_pressed(mb_left))
+						{
 							curr_state = PAUSE_MENU_STATE.HELP;
+							audio_play_sound(snd_button_click, 1000, false);
+						}
 						break;
 					}
 					else 
@@ -107,7 +116,10 @@ if (paused)
 						draw_sprite(spr_return_home_button, 2, _xpos, _ypos + 200);
 						instance_activate_object(obj_transition);
 						if (mouse_check_button_pressed(mb_left))
+						{
 							slide_transition(TRANS_MODE.RESTART);
+							audio_play_sound(snd_button_click, 1000, false);
+						}
 						break;
 					}
 					else 
@@ -158,7 +170,9 @@ if (paused)
 					var _buttonx = _xpos - 250 + _slider_width * _bgm_percentage;
 					var _buttony = _ypos - 50;
 					if (point_in_circle(_mousex, _mousey, _buttonx, _buttony, _slider_button_rad))
+					{
 						bgm_selected = true;
+					}
 				}
 				
 				if (bgm_selected)
@@ -190,7 +204,9 @@ if (paused)
 					var _buttonx = _xpos - 250 + _slider_width * _sound_effect_percentage;
 					var _buttony = _ypos + 50;
 					if (point_in_circle(_mousex, _mousey, _buttonx, _buttony, _slider_button_rad))
+					{
 						sound_effect_selected = true;
+					}
 				}
 				
 				if (sound_effect_selected)
@@ -217,7 +233,10 @@ if (paused)
 					{
 						draw_sprite(spr_return_menu_button, 2, _xpos, _ypos + 200);
 						if (mouse_check_button_pressed(mb_left))
+						{
 							curr_state = PAUSE_MENU_STATE.PAUSED;
+							audio_play_sound(snd_button_click, 1000, false);
+						}
 						break;
 					}
 					else 
@@ -327,7 +346,10 @@ if (paused)
 					{
 						draw_sprite(spr_return_menu_button, 2, _xpos + 580, _ypos + 180);
 						if (mouse_check_button_pressed(mb_left))
+						{
+							audio_play_sound(snd_button_click, 1000, false);
 							curr_state = PAUSE_MENU_STATE.PAUSED;
+						}
 						break;
 					}
 					else 

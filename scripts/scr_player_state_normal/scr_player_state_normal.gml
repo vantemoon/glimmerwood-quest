@@ -9,6 +9,9 @@ function player_state_normal()
 		prev_state = PLAYER_STATE.NORMAL;
 		curr_state = PLAYER_STATE.SLASH;
 	}
+	
+	if (vsp >= 0)
+		curr_state = PLAYER_STATE.FALL;
 		
 	// Animation
 	sprite_index = spr_player_running;

@@ -1,5 +1,11 @@
 /// @description Move and destroy
 
+if (!sound_playing)
+{
+	audio_play_sound(snd_dragon_flapping_wings, 200, true);
+	sound_playing = true;
+}
+
 switch (curr_state)
 {
 	case MONSTER_STATE.NORMAL:
@@ -76,11 +82,11 @@ switch (curr_state)
 					var _hits = instance_place_list(x, y, obj_player, _curr_hit_list, true);
 					if ((_hits > 0) and !hit_once)
 					{
-						if ((obj_player.immune_frame <= 0) and !obj_player.shield_activated)
-						{
-							obj_player.curr_hp -= 1;
-							hit_once = true;
-						}
+						if (obj_player.immune_frame <= 0 and !obj_player.shield_activated and obj_player.curr_hp > 0)
+					 	{
+					 		obj_player.curr_hp -= 1;
+					 		hit_once = true;
+					 	}
 					}
 					ds_list_destroy(_curr_hit_list);
 					mask_index = _prev_mask;
@@ -117,13 +123,13 @@ switch (curr_state)
 		break;
 		
 	case MONSTER_STATE.HIT:
-		// TODO: add visual feedback
+		audio_play_sound(snd_dragon_taking_damage, 200, false);
 		curr_state = prev_state;
 		break;
 	
 	case MONSTER_STATE.DEAD:
 		global.game_complete = true;
-		// TODO: add death animation (if any)
+		audio_play_sound(snd_dragon_death, 200, false);
 		instance_destroy();
 		break;
 }

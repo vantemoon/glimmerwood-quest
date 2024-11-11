@@ -3,6 +3,7 @@
 function player_state_fall()
 {
 	slashing = false;
+	var _landed = false;
 	
 	if (slide_key)
 	{
@@ -23,6 +24,12 @@ function player_state_fall()
 		curr_state = PLAYER_STATE.SLASH;
 	}
 	
+	//if (place_meeting(x, y + 10, obj_tile) and !_landed)
+	//{
+	//	audio_play_sound(snd_player_landing, 300, false);
+	//	_landed = true;
+	//}
+		
 	if (place_meeting(x, y + 1, obj_tile))
 		curr_state = PLAYER_STATE.NORMAL;
 }

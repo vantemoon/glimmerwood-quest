@@ -9,7 +9,7 @@ function monster_hit(_damage)
 	if (curr_hp > 0)
 	{
 		curr_state = MONSTER_STATE.HIT;
-		hit_now = true; // TODO: ??
+		hit_now = true;
 	}
 	else 
 	{

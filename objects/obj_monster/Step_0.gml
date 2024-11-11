@@ -7,6 +7,8 @@ if (x <= -300)
 
 if (curr_state == MONSTER_STATE.DEAD)
 {
+	audio_play_sound(snd_monster_damage, 300, false);
+	
 	obj_player.num_flower += global.monster_worth;
 	
 	obj_flower_progress_bar.timer = 60;

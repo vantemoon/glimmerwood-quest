@@ -18,3 +18,5 @@ attack_stage_index = 0;
 hit_list = ds_list_create();
 
 timer_on = false;
+
+sound_playing = false;

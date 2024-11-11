@@ -6,6 +6,8 @@ function player_state_slash()
 	slashing = true;
 	if (sprite_index != spr_player_slashing)
 	{
+		audio_play_sound(snd_player_attacking, 400, false);
+		
 		// Animation
 		sprite_index = spr_player_slashing;
 		image_speed = 2;

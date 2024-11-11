@@ -491,13 +491,14 @@ if (!global.game_over and !global.game_complete)
 			
 			else
 			{
-				zone_b_transition_done = true;
+				global.zone_b_transition_done = true;
 				obj_transition_zones.in_transition = false;
 			}
 		
 			if (!dragon_exist)
 			{
 				instance_create_layer(1625, 300, "Instances", obj_dragon);
+				audio_play_sound(snd_dragon_roar, 200, false);
 				dragon_exist = true;
 			}
 			
@@ -625,6 +626,8 @@ if (!global.game_over and !global.game_complete)
 					instance_create_layer(_xpos2 + 390 * 4, _ypos - 300, "Instances", obj_platform_left);
 					instance_create_layer(_xpos2 + 390 * 5, _ypos - 300, "Instances", obj_platform_right);
 					
+					audio_play_sound(snd_dragon_breath, 200, false);
+					
 					if (_fh1 == 1)
 					{
 						instance_create_layer(_xpos1 + 390, _ypos - 100, "Instances", obj_dragon_flame);
@@ -666,6 +669,8 @@ if (!global.game_over and !global.game_complete)
 					instance_create_layer(_xpos2 + 390, _ypos - 300, "Instances", obj_platform_right);
 					instance_create_layer(_xpos2 + 390 * 5, _ypos - 300, "Instances", obj_platform_left);
 					instance_create_layer(_xpos2 + 390 * 6, _ypos - 300, "Instances", obj_platform_right);
+					
+					audio_play_sound(snd_dragon_breath, 200, false);
 				
 					if (_fh2 == 1)
 					{

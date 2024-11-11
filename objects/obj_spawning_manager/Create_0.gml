@@ -3,7 +3,7 @@
 transition_zone = false;
 zone_2_transition_done = false;
 zone_3_transition_done = false;
-zone_b_transition_done = false;
+global.zone_b_transition_done = false;
 
 tutorial_done = false;
 ui_enabled = false;

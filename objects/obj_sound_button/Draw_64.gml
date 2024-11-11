@@ -45,7 +45,9 @@ if (draw_sound_menu)
 		var _buttonx = _xpos - 250 + _slider_width * _bgm_percentage;
 		var _buttony = _ypos - 50;
 		if (point_in_circle(_mousex, _mousey, _buttonx, _buttony, _slider_button_rad))
+		{
 			bgm_selected = true;
+		}
 	}
 				
 	if (bgm_selected)
@@ -76,7 +78,9 @@ if (draw_sound_menu)
 		var _buttonx = _xpos - 250 + _slider_width * _sound_effect_percentage;
 		var _buttony = _ypos + 50;
 		if (point_in_circle(_mousex, _mousey, _buttonx, _buttony, _slider_button_rad))
+		{
 			sound_effect_selected = true;
+		}
 	}
 				
 	if (sound_effect_selected)
@@ -102,8 +106,11 @@ if (draw_sound_menu)
 		if (device_mouse_check_button(0, mb_left))
 		{
 			draw_sprite(spr_return_menu_button, 2, _xpos, _ypos + 200);
+
 			if (mouse_check_button_pressed(mb_left))
 			{
+				audio_play_sound(snd_button_click, 1000, false);
+				
 				obj_play_button.visible = true;
 				obj_quit_button.visible = true;
 				obj_title.visible = true;

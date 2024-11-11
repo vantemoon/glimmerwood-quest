@@ -1,5 +1,11 @@
 /// @description Movement control
 
+if (!sound_playing)
+{
+	audio_play_sound(snd_player_running, 300, true);
+	sound_playing = true;
+}
+
 if (has_control)
 	detect_key();
 	

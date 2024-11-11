@@ -49,7 +49,10 @@ function player_movement()
 	}
 
 	if (slash_key)
+	{
+		prev_state = curr_state;
 		curr_state = PLAYER_STATE.SLASH;
+	}
 		
 	// Vertical collision
 	if (place_meeting(x, y + vsp, obj_tile))
