@@ -21,8 +21,8 @@ if (draw_sound_menu)
 	var _slider_width = sprite_get_width(spr_slider_bar);
 	var _slider_button_rad = 36;
 				
-	draw_sprite(spr_sound_effect_icon, 0, _xpos - 300, _ypos - 50);
-	draw_sprite(spr_bgm_icon, 0, _xpos - 300, _ypos + 50);
+	draw_sprite(spr_bgm_icon, 0, _xpos - 300, _ypos - 50);
+	draw_sprite(spr_sound_effect_icon, 0, _xpos - 300, _ypos + 50);
 				
 	if (!mouse_check_button(mb_left))
 	{
@@ -58,8 +58,7 @@ if (draw_sound_menu)
 		draw_sprite_ext(spr_slider_bar, 1, _xpos - 250, _ypos - 50, _bgm_percentage, 1, 0, c_white, 1);
 		draw_sprite(spr_slider_button, 0, _xpos - 250 + _slider_width * _bgm_percentage, _ypos - 50);
 					
-		obj_sound_manager.bgm_volume = bgm_value;
-					
+		obj_sound_manager.bgm_volume = bgm_value;				
 	}
 				
 	// Sound effect slider

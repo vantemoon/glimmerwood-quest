@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_main_menu_bgm",
+  "audioGroupId":{
+    "name":"audiogroup_bgm",
+    "path":"audiogroups/audiogroup_bgm",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":145.45674,
+  "name":"snd_main_menu_bgm",
+  "parent":{
+    "name":"BGM",
+    "path":"folders/Sounds/BGM.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_main_menu_bgm.wav",
+  "type":0,
+  "volume":0.3,
+}

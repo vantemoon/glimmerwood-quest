@@ -134,8 +134,8 @@ if (paused)
 				var _slider_width = sprite_get_width(spr_slider_bar);
 				var _slider_button_rad = 36;
 				
-				draw_sprite(spr_sound_effect_icon, 0, _xpos - 300, _ypos - 50);
-				draw_sprite(spr_bgm_icon, 0, _xpos - 300, _ypos + 50);
+				draw_sprite(spr_bgm_icon, 0, _xpos - 300, _ypos - 50);
+				draw_sprite(spr_sound_effect_icon, 0, _xpos - 300, _ypos + 50);
 				
 				if (!mouse_check_button(mb_left))
 				{
