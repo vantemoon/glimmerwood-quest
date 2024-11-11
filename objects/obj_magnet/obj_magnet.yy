@@ -1,13 +1,14 @@
 {
   "$GMObject":"",
-  "%Name":"obj_timeslow",
+  "%Name":"obj_magnet",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"obj_magical_flower","path":"objects/obj_magical_flower/obj_magical_flower.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_timeslow",
+  "name":"obj_magnet",
   "overriddenProperties":[],
   "parent":{
     "name":"Abilities",
@@ -31,7 +32,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_magnet",
+    "path":"sprites/spr_magnet/spr_magnet.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
