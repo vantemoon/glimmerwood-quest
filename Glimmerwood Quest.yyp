@@ -182,6 +182,7 @@
     {"id":{"name":"snd_dragon_death","path":"sounds/snd_dragon_death/snd_dragon_death.yy",},},
     {"id":{"name":"snd_dragon_flapping_wings","path":"sounds/snd_dragon_flapping_wings/snd_dragon_flapping_wings.yy",},},
     {"id":{"name":"snd_dragon_roar","path":"sounds/snd_dragon_roar/snd_dragon_roar.yy",},},
+    {"id":{"name":"snd_dragon_tail_swing","path":"sounds/snd_dragon_tail_swing/snd_dragon_tail_swing.yy",},},
     {"id":{"name":"snd_dragon_taking_damage","path":"sounds/snd_dragon_taking_damage/snd_dragon_taking_damage.yy",},},
     {"id":{"name":"snd_ending_bgm","path":"sounds/snd_ending_bgm/snd_ending_bgm.yy",},},
     {"id":{"name":"snd_game_bgm","path":"sounds/snd_game_bgm/snd_game_bgm.yy",},},

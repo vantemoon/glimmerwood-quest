@@ -40,7 +40,7 @@ function player_movement()
 	if (can_jump > 0)
 	{
 		// Player wants to jump
-		if (jump_key and !slide_key)
+		if ((jump_key or jump_key_alt) and !slide_key)
 		{
 			if (vsp < termsp)
 				vsp = -jumpsp;

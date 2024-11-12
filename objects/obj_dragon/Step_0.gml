@@ -59,6 +59,8 @@ switch (curr_state)
 					break;
 			
 				case 2: // 0.5 seconds
+					audio_play_sound(snd_dragon_tail_swing, 1000, false);
+					
 					if (!timer_on)
 					{
 						timer_on = true;
