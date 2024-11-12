@@ -246,6 +246,7 @@
     {"id":{"name":"spr_down_key","path":"sprites/spr_down_key/spr_down_key.yy",},},
     {"id":{"name":"spr_dragon_flame","path":"sprites/spr_dragon_flame/spr_dragon_flame.yy",},},
     {"id":{"name":"spr_dragon_flying","path":"sprites/spr_dragon_flying/spr_dragon_flying.yy",},},
+    {"id":{"name":"spr_dragon_tail_swing_hb","path":"sprites/spr_dragon_tail_swing_hb/spr_dragon_tail_swing_hb.yy",},},
     {"id":{"name":"spr_dragon_tail_swing","path":"sprites/spr_dragon_tail_swing/spr_dragon_tail_swing.yy",},},
     {"id":{"name":"spr_fireball","path":"sprites/spr_fireball/spr_fireball.yy",},},
     {"id":{"name":"spr_flower_progress_bar_fill","path":"sprites/spr_flower_progress_bar_fill/spr_flower_progress_bar_fill.yy",},},

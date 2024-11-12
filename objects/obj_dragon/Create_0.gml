@@ -20,3 +20,4 @@ hit_list = ds_list_create();
 timer_on = false;
 
 sound_playing = false;
+tail_swing = false;

@@ -10,6 +10,10 @@ switch (curr_state)
 {
 	case MONSTER_STATE.NORMAL:
 		prev_state = MONSTER_STATE.NORMAL;
+		
+		sprite_index = spr_dragon_flying;
+		image_speed = 1;
+		
 		y += vsp;
 
 		if (going_down)
@@ -27,7 +31,7 @@ switch (curr_state)
 	
 	case MONSTER_STATE.ATTACK:
 		prev_state = MONSTER_STATE.ATTACK;
-		if ((y + 2) < ymax)
+		if ((y + 2) < ymax - 45)
 		{
 			y += 2;
 		}
@@ -35,36 +39,31 @@ switch (curr_state)
 		else {
 			switch (attack_stage_index)
 			{
-				case 0: // 2 seconds
-					if (!timer_on)
-					{
-						timer_on = true;
-						alarm[0] = 2 * global.game_fps;
-					}
-				
-					// Move toward the player
-					x += -8.625;
-				
-					break;
-			
-				case 1: // 2 seconds
-					if (!timer_on)
-					{
-						timer_on = true;
-						alarm[1] = 2 * global.game_fps;
-					}
-				
-					// TODO: charge up the tail swing
-				
-					break;
-			
-				case 2: // 0.5 seconds
-					audio_play_sound(snd_dragon_tail_swing, 1000, false);
+				case 0: // 1.25 seconds
+					tail_swing = false;
 					
 					if (!timer_on)
 					{
 						timer_on = true;
-						alarm[2] = 0.5 * global.game_fps;
+						alarm[0] = 1.25 * global.game_fps;
+					}
+				
+					// Move toward the player
+					x += -8.5;
+				
+					break;
+			
+				case 1: // 2.5 seconds
+					if (!tail_swing)
+					{
+						audio_play_sound(snd_dragon_tail_swing, 1000, false);
+						tail_swing = true;
+					}
+					
+					if (!timer_on)
+					{
+						timer_on = true;
+						alarm[1] = 2.5 * global.game_fps;
 					}
 				
 					// Attack the player
@@ -72,14 +71,15 @@ switch (curr_state)
 					{
 						// Animation
 						sprite_index = spr_dragon_tail_swing;
-						image_speed = 2;
+						image_index = 1;
+						image_speed = 1;
 		
 						ds_list_clear(hit_list);
 					}
 
 					// Use attack hitbox and check for hits
 					var _prev_mask = mask_index;
-					mask_index = spr_dragon_tail_swing;
+					mask_index = spr_dragon_tail_swing_hb;
 					var _curr_hit_list = ds_list_create();
 					var _hits = instance_place_list(x, y, obj_player, _curr_hit_list, true);
 					if ((_hits > 0) and !hit_once)
@@ -95,28 +95,15 @@ switch (curr_state)
 				
 					break;
 			
-				case 3: // 1 second
-					hit_once = false;
+				case 2: // 1.25 second
 					if (!timer_on)
 					{
 						timer_on = true;
-						alarm[3] = 1 * global.game_fps;
-					}
-				
-					sprite_index = spr_dragon_flying;
-					image_speed = 1;
-		
-					break;
-			
-				case 4: // 2 seconds
-					if (!timer_on)
-					{
-						timer_on = true;
-						alarm[4] = 2 * global.game_fps;
+						alarm[2] = 1.25 * global.game_fps;
 					}
 				
 					// Move back to the original position
-					x += 8.625;
+					x += 8.5;
 				
 					break;
 			}

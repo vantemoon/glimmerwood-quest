@@ -1,4 +1,5 @@
-/// @description Change to attack stage 4
+/// @description Change to normal state and reset attack stage
 
 timer_on = false;
-attack_stage_index = 3;
+curr_state = MONSTER_STATE.NORMAL;
+attack_stage_index = 0;

@@ -814,7 +814,7 @@ if (!global.game_over and !global.game_complete)
 					obj_dragon.curr_state = MONSTER_STATE.ATTACK;
 					
 					boss_chunk_index = 0;
-					alarm[0] = global.game_fps * 12;
+					alarm[0] = global.game_fps * 8;
 					break;
 			}
 	}
