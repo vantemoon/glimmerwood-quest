@@ -6,3 +6,5 @@ surface = surface_create(width, height);
 
 overlay_on = false;
 overlay_done = false;
+
+moving = true;

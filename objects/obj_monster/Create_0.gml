@@ -8,6 +8,7 @@ enum MONSTER_STATE
 {
 	NORMAL,
 	ATTACK,
+	FIREBALL,
 	HIT,
 	DEAD
 }

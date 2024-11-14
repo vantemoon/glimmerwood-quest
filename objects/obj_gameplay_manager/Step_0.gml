@@ -37,7 +37,7 @@ if (obj_player.num_flower >= 70 and !global.zone_boss_complete)
 }
 
 // Update game speed
-if (!obj_transition_zones.in_transition)
+if (!obj_transition_zones.in_transition and !global.game_over and !global.game_complete)
 	global.speed_modifier += 0.0002;
 
 // Cap game speed for each zone
@@ -76,24 +76,17 @@ var _prev_game_over = global.game_over;
 global.game_over = obj_player.died;
 
 if (global.game_over and !_prev_game_over) {
-	if (global.current_score > global.high_score) {
-		global.high_score = global.current_score;
-		ini_open("save.txt");
-		ini_write_real("save", "high_score", global.high_score);
-		ini_close();		
-	}
-	global.ground_speed = 0;
-	global.background_speed = 0;
-	global.speed_modifier = 0;
-	slide_transition(TRANS_MODE.RESTART);
-	// TODO: add end game UI
+	obj_player.curr_state = PLAYER_STATE.NORMAL;
+	obj_player.sprite_index = spr_player_running;
+	obj_player.has_control = false;
+	
+	instance_deactivate_all(true);
+	instance_create_layer(x, y, "UI", obj_game_over);
+	instance_deactivate_object(obj_gameplay_manager);
 }
 
 if (global.game_complete)
 {
-	//global.ground_speed = 0;
-	//global.background_speed = 0;
-	//global.speed_modifier = 0;
 	obj_player.curr_state = PLAYER_STATE.NORMAL;
 	obj_player.sprite_index = spr_player_running;
 	obj_player.has_control = false;
