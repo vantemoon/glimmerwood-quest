@@ -91,7 +91,7 @@ if (global.game_complete)
 	obj_player.sprite_index = spr_player_running;
 	obj_player.has_control = false;
 	
-	// TODO: add end game UI
 	obj_background_manager.trans_start = true;
 	obj_environment_manager.called_once = false;
+	obj_spawning_manager.ui_enabled = false;
 }

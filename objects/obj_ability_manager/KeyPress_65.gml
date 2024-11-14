@@ -1,6 +1,6 @@
 /// @description Activate shield
 
-if (shield_ready and !shield_activated)
+if (shield_ready and !shield_activated and obj_player.has_control)
 {
 	shield_activated = true;
 	

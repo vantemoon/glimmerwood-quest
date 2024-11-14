@@ -1,6 +1,6 @@
 /// @description Activate magnet
 
-if (magnet_ready and !magnet_activated)
+if (magnet_ready and !magnet_activated and obj_player.has_control)
 {
 	magnet_activated = true;
 	

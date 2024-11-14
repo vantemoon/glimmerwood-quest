@@ -24,3 +24,5 @@ tail_swing = false;
 
 health_bar_exist = false;
 health_bar = noone;
+
+death_alarm_set = false;

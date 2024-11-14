@@ -34,3 +34,8 @@ if (curr_state == MONSTER_STATE.DEAD)
 	// TODO: add death animation (if any)
 	instance_destroy();
 }
+
+if (global.game_complete)
+{
+	if image_alpha > 0 image_alpha -= 0.02;
+}

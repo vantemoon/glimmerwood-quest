@@ -124,8 +124,23 @@ switch (curr_state)
 	
 	case MONSTER_STATE.DEAD:
 		global.game_complete = true;
-		audio_play_sound(snd_dragon_death, 200, false);
+		// audio_play_sound(snd_dragon_death, 200, false);
 		instance_destroy(health_bar);
-		instance_destroy();
+		
+		// Death animation
+		y = global.ground_level - 363;
+		if (sprite_index != spr_dragon_death)
+			sprite_index = spr_dragon_death;
+		if (image_index > image_number - 1)
+		{
+			image_index = image_number - 1;
+			if image_alpha > 0 image_alpha -= 0.01;
+			
+			if (!death_alarm_set)
+			{
+				alarm[3] = 1.5 * global.game_fps;
+				death_alarm_set = true;
+			}
+		}
 		break;
 }

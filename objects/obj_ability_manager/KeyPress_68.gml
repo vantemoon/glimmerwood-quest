@@ -1,6 +1,6 @@
 /// @description Activate missile
 
-if (missile_ready)
+if (missile_ready and obj_player.has_control)
 {
 	obj_player.num_flower -= 15;
 	
