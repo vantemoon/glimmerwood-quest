@@ -15,6 +15,7 @@ draw_sound_button = true;
 interact = function() 
 {
 	obj_play_button.visible = false;
+	obj_creadits_button.draw_credits_button = false;
 	obj_quit_button.visible = false;
 	obj_title.visible = false;
 

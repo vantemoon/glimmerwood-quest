@@ -9,8 +9,9 @@ if (exited)
 	{
 		obj_player.curr_hp += 1;
 		
-		obj_hearts.timer = 60;
-		obj_hearts.update_message = "+1";
+		var _indicator = instance_create_layer(obj_player.x, obj_player.y, "UI", obj_heart_indicator);
+		_indicator.owner = obj_player;
+		_indicator.heart_change = HEART_CHANGE.PLUS_1;
 	}
 	
 	num_collected = 0;

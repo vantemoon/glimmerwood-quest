@@ -12,7 +12,13 @@ function position_check()
 	if (x < -70)
 	{
 		if (!obj_player.shield_activated)
+		{
 			curr_hp -= 1;
+			
+			var _indicator = instance_create_layer(obj_player.x, obj_player.y, "UI", obj_heart_indicator);
+			_indicator.owner = obj_player;
+			_indicator.heart_change = HEART_CHANGE.MINUS_1;
+		}
 		immune_frame = 2 * global.game_fps;
 		
 		// Respawn at original position

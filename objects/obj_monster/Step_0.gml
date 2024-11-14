@@ -11,8 +11,26 @@ if (curr_state == MONSTER_STATE.DEAD)
 	
 	obj_player.num_flower += global.monster_worth;
 	
-	obj_flower_progress_bar.timer = 60;
-	obj_flower_progress_bar.update_message = "+" + string(global.monster_worth);
+	var _indicator = instance_create_layer(obj_player.x, obj_player.y, "UI", obj_flower_indicator);
+	_indicator.owner = obj_player;
+	switch (global.monster_worth)
+	{
+		case 2:
+			_indicator.flower_change = FLOWER_CHANGE.PLUS_2;
+			break;
+		
+		case 4:
+			_indicator.flower_change = FLOWER_CHANGE.PLUS_4;
+			break;
+		
+		case 6:
+			_indicator.flower_change = FLOWER_CHANGE.PLUS_6;
+			break;
+			
+		case 8:
+			_indicator.flower_change = FLOWER_CHANGE.PLUS_8;
+			break;
+	}
 	// TODO: add death animation (if any)
 	instance_destroy();
 }

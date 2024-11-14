@@ -112,6 +112,7 @@ if (draw_sound_menu)
 				audio_play_sound(snd_button_click, 1000, false);
 				
 				obj_play_button.visible = true;
+				obj_creadits_button.draw_credits_button = true;
 				obj_quit_button.visible = true;
 				obj_title.visible = true;
 

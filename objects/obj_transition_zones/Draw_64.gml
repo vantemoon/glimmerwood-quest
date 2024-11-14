@@ -11,6 +11,9 @@ if (in_transition)
 	draw_set_alpha(1);
 	draw_set_color(c_white);
 	
+	var _xpos = display_get_gui_width() / 2;
+	var _ypos = display_get_gui_height() / 2 + 80;
+	
 	switch (global.current_zone)
 	{
 		case ZONE.ONE:
@@ -18,41 +21,17 @@ if (in_transition)
 			break;
 		
 		case ZONE.TWO:
-			// Draw the filled flower progress bar
-			draw_sprite(spr_flower_progress_bar_fill, 0, 731, 500);
-			draw_sprite(spr_flower_progress_bar, 0, 748, 500);
-			draw_set_font(fnt_gentium_bold_24);
-			draw_text(808, 476, "30/30");
-			
-			// New Ability
-			draw_sprite(spr_shield_unlocked, 0, 960, 600);
-			draw_sprite(spr_shield_description, 0, 960, 650);
+			draw_sprite(spr_zone_transition_2, 0, _xpos, _ypos);
 			
 			break;
 			
 		case ZONE.THREE:
-			// Draw the filled flower progress bar
-			draw_sprite(spr_flower_progress_bar_fill, 0, 731, 500);
-			draw_sprite(spr_flower_progress_bar, 0, 748, 500);
-			draw_set_font(fnt_gentium_bold_24);
-			draw_text(808, 476, "50/50");
-			
-			// New Ability
-			draw_sprite(spr_magnet_unlocked, 0, 960, 600);
-			draw_sprite(spr_magnet_description, 0, 960, 650);
+			draw_sprite(spr_zone_transition_3, 0, _xpos, _ypos);
 			
 			break;
 			
 		case ZONE.BOSS:
-			// Draw the filled flower progress bar
-			draw_sprite(spr_flower_progress_bar_fill, 0, 731, 500);
-			draw_sprite(spr_flower_progress_bar, 0, 748, 500);
-			draw_set_font(fnt_gentium_bold_24);
-			draw_text(808, 476, "70/70");
-			
-			// New Ability
-			draw_sprite(spr_missile_unlocked, 0, 960, 600);
-			draw_sprite(spr_missile_description, 0, 960, 650);
+			draw_sprite(spr_zone_transition_b, 0, _xpos, _ypos);
 			
 			break;
 	}

@@ -32,17 +32,5 @@ if (obj_spawning_manager.ui_enabled)
 		{
 			draw_text(160, 192, string(curr_flower));
 		}
-
-		// Update message
-		if (timer > 0)
-		{
-			draw_set_font(fnt_gentium_bold_28);
-			draw_text(x + 410, y, update_message);
-			timer --;
-		}
-		else
-		{
-			draw_text(x, y - 250, "");
-		}
 	}
 }

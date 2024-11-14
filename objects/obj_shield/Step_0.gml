@@ -1,4 +1,4 @@
-/// @description Update the position and destroy on collision
+/// @description Update the position
 
 x = owner.x;
 y = owner.y;

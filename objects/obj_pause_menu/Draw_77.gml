@@ -27,7 +27,7 @@ if (paused)
 				var _button_width = sprite_get_width(spr_resume_button);
 				var _button_height = sprite_get_height(spr_resume_button);
 				
-				// Resume button
+				// Restart button
 				if (point_in_rectangle(_mousex, _mousey, _xpos - _button_width / 2,
 														 _ypos - 100 - _button_height / 2,
 														 _xpos + _button_width / 2,
@@ -36,10 +36,11 @@ if (paused)
 					if (device_mouse_check_button(0, mb_left))
 					{
 						draw_sprite(spr_resume_button, 2, _xpos, _ypos - 100);
+						instance_activate_object(obj_transition);
 						if (mouse_check_button_pressed(mb_left))
 						{
 							audio_play_sound(snd_button_click, 1000, false);
-							resumed = true;
+							slide_transition(TRANS_MODE.GOTO, rm_restart);
 						}
 						break;
 					}
@@ -55,13 +56,13 @@ if (paused)
 				
 				// Sound button
 				if (point_in_rectangle(_mousex, _mousey, _xpos - _button_width / 2,
-														 _ypos - _button_height / 2,
+														 _ypos - 5 - _button_height / 2,
 														 _xpos + _button_width / 2,
-														 _ypos + _button_height / 2))
+														 _ypos - 5 + _button_height / 2))
 				{
 					if (device_mouse_check_button(0, mb_left))
 					{
-						draw_sprite(spr_sound_button, 2, _xpos, _ypos);
+						draw_sprite(spr_sound_button, 2, _xpos, _ypos - 5);
 						if (mouse_check_button_pressed(mb_left))
 						{
 							audio_play_sound(snd_button_click, 1000, false);
@@ -71,23 +72,23 @@ if (paused)
 					}
 					else 
 					{
-						draw_sprite(spr_sound_button, 1, _xpos, _ypos);
+						draw_sprite(spr_sound_button, 1, _xpos, _ypos - 5);
 					}
 				}
 				else
 				{
-					draw_sprite(spr_sound_button, 0, _xpos, _ypos);
+					draw_sprite(spr_sound_button, 0, _xpos, _ypos - 5);
 				}
 				
 				// Help button
 				if (point_in_rectangle(_mousex, _mousey, _xpos - _button_width / 2,
-														 _ypos + 100 - _button_height / 2,
+														 _ypos + 90 - _button_height / 2,
 														 _xpos + _button_width / 2,
-														 _ypos + 100 + _button_height / 2))
+														 _ypos + 90 + _button_height / 2))
 				{
 					if (device_mouse_check_button(0, mb_left))
 					{
-						draw_sprite(spr_help_button, 2, _xpos, _ypos + 100);
+						draw_sprite(spr_help_button, 2, _xpos, _ypos + 90);
 						if (mouse_check_button_pressed(mb_left))
 						{
 							curr_state = PAUSE_MENU_STATE.HELP;
@@ -97,23 +98,23 @@ if (paused)
 					}
 					else 
 					{
-						draw_sprite(spr_help_button, 1, _xpos, _ypos + 100);
+						draw_sprite(spr_help_button, 1, _xpos, _ypos + 90);
 					}
 				}
 				else
 				{
-					draw_sprite(spr_help_button, 0, _xpos, _ypos + 100);
+					draw_sprite(spr_help_button, 0, _xpos, _ypos + 90);
 				}
 				
 				// Return to home button
 				if (point_in_rectangle(_mousex, _mousey, _xpos - _button_width / 2,
-														 _ypos + 200 - _button_height / 2,
+														 _ypos + 185 - _button_height / 2,
 														 _xpos + _button_width / 2,
-														 _ypos + 200 + _button_height / 2))
+														 _ypos + 185 + _button_height / 2))
 				{
 					if (device_mouse_check_button(0, mb_left))
 					{
-						draw_sprite(spr_return_home_button, 2, _xpos, _ypos + 200);
+						draw_sprite(spr_return_home_button, 2, _xpos, _ypos + 185);
 						instance_activate_object(obj_transition);
 						if (mouse_check_button_pressed(mb_left))
 						{
@@ -124,13 +125,15 @@ if (paused)
 					}
 					else 
 					{
-						draw_sprite(spr_return_home_button, 1, _xpos, _ypos + 200);
+						draw_sprite(spr_return_home_button, 1, _xpos, _ypos + 185);
 					}
 				}
 				else
 				{
-					draw_sprite(spr_return_home_button, 0, _xpos, _ypos + 200);
+					draw_sprite(spr_return_home_button, 0, _xpos, _ypos + 185);
 				}
+				
+				draw_sprite(spr_esc_instruction, 0, _xpos, _ypos + 280);
 					
 				break;
 				
@@ -375,53 +378,55 @@ if (paused)
 	surface_reset_target();
 }
 
-if (keyboard_check_pressed(ord("P")) and !paused)
+if (keyboard_check_pressed(vk_escape))
 {
-	paused = true;
-	resumed = false;
+	if (!paused)
+	{
+		paused = true;
+		resumed = false;
 		
-	curr_state = PAUSE_MENU_STATE.PAUSED;
+		curr_state = PAUSE_MENU_STATE.PAUSED;
 		
-	layer_hspeed(layer1_id, 0);
-	layer_hspeed(layer2_id, 0);
-	layer_hspeed(layer3_id, 0);
-	layer_hspeed(layer4_id, 0);
-	layer_hspeed(layer5_id, 0);
-	layer_hspeed(layer6_id, 0);
-	layer_hspeed(layer7_id, 0);
+		layer_hspeed(layer1_id, 0);
+		layer_hspeed(layer2_id, 0);
+		layer_hspeed(layer3_id, 0);
+		layer_hspeed(layer4_id, 0);
+		layer_hspeed(layer5_id, 0);
+		layer_hspeed(layer6_id, 0);
+		layer_hspeed(layer7_id, 0);
 		
-	instance_deactivate_all(true);
-	instance_activate_object(obj_sound_manager);
+		instance_deactivate_all(true);
+		instance_activate_object(obj_sound_manager);
 		
-	paused_surf = surface_create(res_width, res_height);
-	surface_set_target(paused_surf);
-	gpu_set_blendenable(false);
-	draw_surface(application_surface, 0, 0);
-	surface_reset_target();
-	gpu_set_blendenable(true);
+		paused_surf = surface_create(res_width, res_height);
+		surface_set_target(paused_surf);
+		gpu_set_blendenable(false);
+		draw_surface(application_surface, 0, 0);
+		surface_reset_target();
+		gpu_set_blendenable(true);
 		
-	if (buffer_exists(paused_surf_buffer))
-		buffer_delete(paused_surf_buffer);
-	paused_surf_buffer = buffer_create(res_width * res_height * 4, buffer_fixed, 1);
-	buffer_get_surface(paused_surf_buffer, paused_surf, 0);
-}
-
-if (resumed and paused)
-{
-	paused = false;
-	resumed = false;
+		if (buffer_exists(paused_surf_buffer))
+			buffer_delete(paused_surf_buffer);
+		paused_surf_buffer = buffer_create(res_width * res_height * 4, buffer_fixed, 1);
+		buffer_get_surface(paused_surf_buffer, paused_surf, 0);
+	}
+	else
+	{
+		paused = false;
+		resumed = false;
 		
-	layer_hspeed(layer1_id, bg_1_hsp);
-	layer_hspeed(layer2_id, bg_2_hsp);
-	layer_hspeed(layer3_id, bg_3_hsp);
-	layer_hspeed(layer4_id, bg_4_hsp);
-	layer_hspeed(layer5_id, bg_5_hsp);
-	layer_hspeed(layer6_id, bg_6_hsp);
-	layer_hspeed(layer7_id, bg_7_hsp);
+		layer_hspeed(layer1_id, bg_1_hsp);
+		layer_hspeed(layer2_id, bg_2_hsp);
+		layer_hspeed(layer3_id, bg_3_hsp);
+		layer_hspeed(layer4_id, bg_4_hsp);
+		layer_hspeed(layer5_id, bg_5_hsp);
+		layer_hspeed(layer6_id, bg_6_hsp);
+		layer_hspeed(layer7_id, bg_7_hsp);
 		
-	instance_activate_all();
-	if (surface_exists(paused_surf))
-		surface_free(paused_surf);
-	if (buffer_exists(paused_surf_buffer))
-		buffer_delete(paused_surf_buffer);
+		instance_activate_all();
+		if (surface_exists(paused_surf))
+			surface_free(paused_surf);
+		if (buffer_exists(paused_surf_buffer))
+			buffer_delete(paused_surf_buffer);
+	}
 }

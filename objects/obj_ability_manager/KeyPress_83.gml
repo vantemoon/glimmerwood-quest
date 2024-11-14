@@ -9,8 +9,9 @@ if (magnet_ready and !magnet_activated)
 	obj_player.num_flower -= 5;
 	obj_player.magnet_activated = true;
 	
-	obj_flower_progress_bar.timer = 60;
-	obj_flower_progress_bar.update_message = "-5";
+	var _indicator = instance_create_layer(obj_player.x, obj_player.y, "UI", obj_flower_indicator);
+	_indicator.owner = obj_player;
+	_indicator.flower_change = FLOWER_CHANGE.MINUS_5;
 
 	var _magnet = instance_create_layer(x, y, "Abilities_Bottom", obj_magnet);
 	_magnet.owner = obj_player;
