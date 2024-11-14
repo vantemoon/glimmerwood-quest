@@ -10,7 +10,7 @@ if (!other.hit_once and
 		audio_play_sound(snd_player_damage, 400, false);
 		
 		flash_alpha = 1;
-		curr_hp -= 1;
+		curr_hp -= 0;
 		other.hit_once = true;
 		
 		var _indicator = instance_create_layer(obj_player.x, obj_player.y, "UI", obj_heart_indicator);

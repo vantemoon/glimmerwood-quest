@@ -116,6 +116,16 @@ switch (curr_state)
 		}
 		
 		break;
+	
+	case MONSTER_STATE.FIREBALL:
+		if (sprite_index == spr_dragon_flying)
+		{
+			sprite_index = spr_dragon_shooting;
+			image_index = 1;
+		}
+		if (image_index > image_number - 1)
+			curr_state = MONSTER_STATE.NORMAL;
+		break;
 		
 	case MONSTER_STATE.HIT:
 		audio_play_sound(snd_dragon_taking_damage, 200, false);

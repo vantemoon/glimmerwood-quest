@@ -592,6 +592,7 @@ if (!global.game_over and !global.game_complete)
 					instance_create_layer(_xpos2 + 390 * 3, 0, "Instances", obj_bark_small);
 					instance_create_layer(_xpos2 + 390 * 12, 0, "Instances", obj_bark_small);
 					
+					
 					boss_chunk_index ++;
 					alarm[0] = global.game_fps * 6.5;
 					break;
@@ -627,6 +628,7 @@ if (!global.game_over and !global.game_complete)
 					instance_create_layer(_xpos2 + 390 * 5, _ypos - 300, "Instances", obj_platform_right);
 					
 					audio_play_sound(snd_dragon_breath, 200, false);
+					obj_dragon.curr_state = MONSTER_STATE.FIREBALL;
 					
 					if (_fh1 == 1)
 					{
@@ -671,6 +673,7 @@ if (!global.game_over and !global.game_complete)
 					instance_create_layer(_xpos2 + 390 * 6, _ypos - 300, "Instances", obj_platform_right);
 					
 					audio_play_sound(snd_dragon_breath, 200, false);
+					obj_dragon.curr_state = MONSTER_STATE.FIREBALL;
 				
 					if (_fh2 == 1)
 					{

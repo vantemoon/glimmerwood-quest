@@ -80,6 +80,8 @@ if (global.game_over and !_prev_game_over) {
 	obj_player.sprite_index = spr_player_running;
 	obj_player.has_control = false;
 	
+	audio_group_stop_all(audiogroup_sfx);
+	
 	instance_deactivate_all(true);
 	instance_create_layer(x, y, "UI", obj_game_over);
 	instance_deactivate_object(obj_gameplay_manager);
@@ -94,4 +96,6 @@ if (global.game_complete)
 	obj_background_manager.trans_start = true;
 	obj_environment_manager.called_once = false;
 	obj_spawning_manager.ui_enabled = false;
+	
+	audio_group_stop_all(audiogroup_sfx);
 }

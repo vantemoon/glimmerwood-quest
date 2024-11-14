@@ -264,6 +264,7 @@
     {"id":{"name":"spr_dragon_flying","path":"sprites/spr_dragon_flying/spr_dragon_flying.yy",},},
     {"id":{"name":"spr_dragon_health_bar_fill","path":"sprites/spr_dragon_health_bar_fill/spr_dragon_health_bar_fill.yy",},},
     {"id":{"name":"spr_dragon_health_bar","path":"sprites/spr_dragon_health_bar/spr_dragon_health_bar.yy",},},
+    {"id":{"name":"spr_dragon_shooting","path":"sprites/spr_dragon_shooting/spr_dragon_shooting.yy",},},
     {"id":{"name":"spr_dragon_tail_swing_hb","path":"sprites/spr_dragon_tail_swing_hb/spr_dragon_tail_swing_hb.yy",},},
     {"id":{"name":"spr_dragon_tail_swing","path":"sprites/spr_dragon_tail_swing/spr_dragon_tail_swing.yy",},},
     {"id":{"name":"spr_esc_instruction","path":"sprites/spr_esc_instruction/spr_esc_instruction.yy",},},
