@@ -19,12 +19,13 @@ switch (curr_state)
 		draw_sprite(spr_help_instruction, 0, _xpos + 540, _ypos - 240);
 		draw_sprite(spr_skip_instruction, 0, _xpos + 20, _ypos + 150);
 					
-		draw_sprite(spr_up_key, 0, _xpos + 20, _ypos - 125);
-		draw_sprite(spr_down_key, 0, _xpos + 20, _ypos);
-		draw_sprite(spr_left_key, 0, _xpos - 180, _ypos);
-		draw_sprite(spr_right_key, 0, _xpos + 220, _ypos);
+		draw_sprite(spr_up_key, 0, _xpos + 20, _ypos - 165);
+		draw_sprite(spr_down_key, 0, _xpos + 20, _ypos - 40);
+		draw_sprite(spr_left_key, 0, _xpos - 180, _ypos - 40);
+		draw_sprite(spr_right_key, 0, _xpos + 220, _ypos - 40);
+		draw_sprite(spr_space_bar, 0, _xpos + 20, _ypos + 95);
 						
-		if (keyboard_check_pressed(vk_up))
+		if (keyboard_check_pressed(vk_up) or keyboard_check_pressed(vk_space))
 			curr_state = HELP_MENU_STATE.JUMP;
 		else if (keyboard_check_pressed(vk_down))
 			curr_state = HELP_MENU_STATE.SLIDE;
@@ -37,14 +38,15 @@ switch (curr_state)
 		draw_sprite(spr_jump_instruction, 0, _xpos + 540, _ypos - 240);
 		draw_sprite(spr_skip_instruction, 0, _xpos + 20, _ypos + 150);
 					
-		draw_sprite(spr_up_key, 1, _xpos + 20, _ypos - 125);
-		draw_sprite(spr_down_key, 0, _xpos + 20, _ypos);
-		draw_sprite(spr_left_key, 0, _xpos - 180, _ypos);
-		draw_sprite(spr_right_key, 0, _xpos + 220, _ypos);
+		draw_sprite(spr_up_key, 1, _xpos + 20, _ypos - 165);
+		draw_sprite(spr_down_key, 0, _xpos + 20, _ypos - 40);
+		draw_sprite(spr_left_key, 0, _xpos - 180, _ypos - 40);
+		draw_sprite(spr_right_key, 0, _xpos + 220, _ypos - 40);
+		draw_sprite(spr_space_bar, 0, _xpos + 20, _ypos + 95);
 						
 		draw_sprite_ext(spr_jump_graphic, 0, _xpos + 540, _ypos + 110, scale, scale, 0, c_white, 1);
 						
-		if (keyboard_check_pressed(vk_up))
+		if (keyboard_check_pressed(vk_up) or keyboard_check_pressed(vk_space))
 			curr_state = HELP_MENU_STATE.IDLE;
 		else if (keyboard_check_pressed(vk_down))
 			curr_state = HELP_MENU_STATE.SLIDE;
@@ -57,14 +59,15 @@ switch (curr_state)
 		draw_sprite(spr_slide_instruction, 0, _xpos + 520, _ypos - 240);
 		draw_sprite(spr_skip_instruction, 0, _xpos + 20, _ypos + 150);
 					
-		draw_sprite(spr_up_key, 0, _xpos + 20, _ypos - 125);
-		draw_sprite(spr_down_key, 1, _xpos + 20, _ypos);
-		draw_sprite(spr_left_key, 0, _xpos - 180, _ypos);
-		draw_sprite(spr_right_key, 0, _xpos + 220, _ypos);
+		draw_sprite(spr_up_key, 0, _xpos + 20, _ypos - 165);
+		draw_sprite(spr_down_key, 1, _xpos + 20, _ypos - 40);
+		draw_sprite(spr_left_key, 0, _xpos - 180, _ypos - 40);
+		draw_sprite(spr_right_key, 0, _xpos + 220, _ypos - 40);
+		draw_sprite(spr_space_bar, 0, _xpos + 20, _ypos + 95);
 						
 		draw_sprite_ext(spr_slide_graphic, 0, _xpos + 540, _ypos + 110, scale, scale, 0, c_white, 1);
 						
-		if (keyboard_check_pressed(vk_up))
+		if (keyboard_check_pressed(vk_up) or keyboard_check_pressed(vk_space))
 			curr_state = HELP_MENU_STATE.JUMP;
 		else if (keyboard_check_pressed(vk_down))
 			curr_state = HELP_MENU_STATE.IDLE;
@@ -77,14 +80,15 @@ switch (curr_state)
 		draw_sprite(spr_attack_instruction, 0, _xpos + 540, _ypos - 240);
 		draw_sprite(spr_skip_instruction, 0, _xpos + 20, _ypos + 150);
 					
-		draw_sprite(spr_up_key, 0, _xpos + 20, _ypos - 125);
-		draw_sprite(spr_down_key, 0, _xpos + 20, _ypos);
-		draw_sprite(spr_left_key, 0, _xpos - 180, _ypos);
-		draw_sprite(spr_right_key, 1, _xpos + 220, _ypos);
+		draw_sprite(spr_up_key, 0, _xpos + 20, _ypos - 165);
+		draw_sprite(spr_down_key, 0, _xpos + 20, _ypos - 40);
+		draw_sprite(spr_left_key, 0, _xpos - 180, _ypos - 40);
+		draw_sprite(spr_right_key, 1, _xpos + 220, _ypos - 40);
+		draw_sprite(spr_space_bar, 0, _xpos + 20, _ypos + 95);
 						
 		draw_sprite_ext(spr_attack_graphic, 0, _xpos + 540, _ypos + 110, scale, scale, 0, c_white, 1);
 						
-		if (keyboard_check_pressed(vk_up))
+		if (keyboard_check_pressed(vk_up) or keyboard_check_pressed(vk_space))
 			curr_state = HELP_MENU_STATE.JUMP;
 		else if (keyboard_check_pressed(vk_down))
 			curr_state = HELP_MENU_STATE.SLIDE;
