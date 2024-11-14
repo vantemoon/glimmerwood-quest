@@ -98,4 +98,10 @@ if (global.game_complete)
 	obj_spawning_manager.ui_enabled = false;
 	
 	audio_group_stop_all(audiogroup_sfx);
+	
+	if (!victory_screen_drawn)
+	{
+		alarm[1] = 4 * global.game_fps;
+		victory_screen_drawn = true;
+	}
 }

@@ -26,3 +26,5 @@ global.game_complete = false;
 global.current_score = 0;
 global.monster_worth = 2;
 alarm[0] = 5;
+
+victory_screen_drawn = false;

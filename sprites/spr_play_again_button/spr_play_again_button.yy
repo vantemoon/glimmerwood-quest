@@ -27,8 +27,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Game Over",
-    "path":"folders/Sprites/UI/End Game/Game Over.yy",
+    "name":"End Game",
+    "path":"folders/Sprites/UI/End Game.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

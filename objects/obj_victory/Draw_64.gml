@@ -1,27 +1,58 @@
-/// @description Draw the game over screen
+/// @description Draw the victory screen
 
 var _xpos = display_get_gui_width() / 2;
 var _ypos = display_get_gui_height() / 2;
 
-instance_activate_object(obj_ground_tile);
-if (object_exists(obj_ground_tile))
-	obj_ground_tile.moving = false;
-
-layer_hspeed(layer1_id, 0);
-layer_hspeed(layer2_id, 0);
-layer_hspeed(layer3_id, 0);
-layer_hspeed(layer4_id, 0);
-layer_hspeed(layer5_id, 0);
-layer_hspeed(layer6_id, 0);
-layer_hspeed(layer7_id, 0);
+gpu_set_blendenable(true);
 
 draw_set_alpha(0.3);
 draw_rectangle_colour(0, 0, room_width, room_height, c_black, c_black, c_black, c_black, false);
 
 draw_set_alpha(1);
 draw_sprite(spr_pause_menu_bg, 0, _xpos, _ypos);
-draw_sprite(spr_game_over_text, 0, _xpos, _ypos - 220);
-draw_sprite(spr_game_over_message, 0, _xpos, _ypos);
+draw_sprite(spr_victory_text, 0, _xpos, _ypos - 220);
+draw_sprite(spr_victory_message, 0, _xpos, _ypos - 100);
+
+var _hours = obj_timer.hours;
+if (_hours > 0 and _hours < 10)
+	_hours = "0" + string(_hours);
+else
+{
+	_hours = string(_hours);
+}
+
+var _minutes = obj_timer.minutes;
+if (_minutes > 0 and _minutes < 10)
+	_minutes = "0" + string(_minutes);
+else
+{
+	_minutes = string(_minutes);
+}
+
+var _seconds = obj_timer.seconds;
+if (_seconds > 0 and _seconds < 10)
+	_seconds = "0" + string(_seconds);
+else
+{
+	_seconds = string(_seconds);
+}
+
+draw_set_halign(fa_center);
+draw_set_font(fnt_gentium_bold_92);
+if (obj_timer.hours > 0)
+{
+	draw_text(_xpos, _ypos - 50, _hours + ":" + _minutes + ":" + _seconds);
+}
+else if (obj_timer.minutes > 0)
+{
+	draw_text(_xpos, _ypos - 50, _minutes + ":" + _seconds);
+}
+else
+{
+	draw_text(_xpos, _ypos - 50, "00:" + _seconds);
+}
+
+draw_sprite(spr_time_taken, 0, _xpos, _ypos + 125);
 
 var _mousex = device_mouse_x_to_gui(0);
 var _mousey = device_mouse_y_to_gui(0);
