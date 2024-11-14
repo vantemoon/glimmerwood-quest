@@ -14,3 +14,5 @@ enum MONSTER_STATE
 }
 
 curr_state = MONSTER_STATE.NORMAL;
+sound_played = false;
+flower_gained = false;
