@@ -6,6 +6,12 @@ if (!sound_playing)
 	sound_playing = true;
 }
 
+if (!health_bar_exist)
+{
+	health_bar =  instance_create_layer(x, y, "UI", obj_dragon_health_bar);
+	health_bar_exist = true;
+}
+
 switch (curr_state)
 {
 	case MONSTER_STATE.NORMAL:
@@ -119,6 +125,7 @@ switch (curr_state)
 	case MONSTER_STATE.DEAD:
 		global.game_complete = true;
 		audio_play_sound(snd_dragon_death, 200, false);
+		instance_destroy(health_bar);
 		instance_destroy();
 		break;
 }

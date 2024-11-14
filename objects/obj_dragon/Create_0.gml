@@ -21,3 +21,6 @@ timer_on = false;
 
 sound_playing = false;
 tail_swing = false;
+
+health_bar_exist = false;
+health_bar = noone;
