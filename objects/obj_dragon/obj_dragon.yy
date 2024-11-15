@@ -16,7 +16,10 @@
     "name":"Monsters",
     "path":"folders/Objects/Monsters.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_monster",
+    "path":"objects/obj_monster/obj_monster.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
