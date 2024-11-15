@@ -2,7 +2,7 @@
 
 if (!sound_playing)
 {
-	audio_play_sound(snd_dragon_flapping_wings, 200, true);
+	wings_sound = audio_play_sound(snd_dragon_flapping_wings, 200, true);
 	sound_playing = true;
 }
 
@@ -136,6 +136,7 @@ switch (curr_state)
 		global.game_complete = true;
 		// audio_play_sound(snd_dragon_death, 200, false);
 		instance_destroy(health_bar);
+		audio_stop_sound(wings_sound);
 		
 		// Death animation
 		y = global.ground_level - 363;

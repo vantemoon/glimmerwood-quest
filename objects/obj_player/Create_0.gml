@@ -40,3 +40,4 @@ flash_colour = c_white;
 can_jump = 0;
 
 sound_playing = false;
+global.running_sound = undefined;

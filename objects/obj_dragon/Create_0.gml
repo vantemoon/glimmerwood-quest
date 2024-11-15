@@ -20,6 +20,7 @@ hit_list = ds_list_create();
 timer_on = false;
 
 sound_playing = false;
+wings_sound = noone;
 tail_swing = false;
 
 health_bar_exist = false;

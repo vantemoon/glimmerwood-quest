@@ -323,6 +323,8 @@ if (keyboard_check_pressed(vk_escape))
 		layer_hspeed(layer6_id, 0);
 		layer_hspeed(layer7_id, 0);
 		
+		audio_pause_sound(global.running_sound);
+		
 		instance_deactivate_all(true);
 		instance_activate_object(obj_sound_manager);
 		
@@ -350,6 +352,8 @@ if (keyboard_check_pressed(vk_escape))
 		layer_hspeed(layer5_id, bg_5_hsp);
 		layer_hspeed(layer6_id, bg_6_hsp);
 		layer_hspeed(layer7_id, bg_7_hsp);
+		
+		audio_resume_sound(global.running_sound);
 		
 		instance_activate_all();
 		if (surface_exists(paused_surf))

@@ -2,7 +2,7 @@
 
 if (!sound_playing)
 {
-	audio_play_sound(snd_player_running, 300, true);
+	global.running_sound = audio_play_sound(snd_player_running, 300, true);
 	sound_playing = true;
 }
 
